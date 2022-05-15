@@ -21,3 +21,7 @@ It is responsible for:
  - Enabling users for web to chat with ingame players.
  - and various other things like whois command /ww etc.
 
+
+:::caution MineTrax is Under Active Development
+Please note that project is under active development and is not marked as release candidate yet, so can introduce breaking changes in any commit.
+:::
