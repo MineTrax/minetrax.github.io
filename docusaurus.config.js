@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "MineTrax Suite",
-  tagline: "Websuite for minecraft servers.",
+  tagline: "Websuite & Analytics for minecraft servers.",
   url: "https://minetrax.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
