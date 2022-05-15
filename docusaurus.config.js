@@ -13,8 +13,10 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "minetrax", // Usually your GitHub org/user name.
+  organizationName: "MineTrax", // Usually your GitHub org/user name.
   projectName: "minetrax.github.io", // Usually your repo name.
+  deploymentBranch: "gh-pages",
+  trailingSlash: false,
 
   presets: [
     [
