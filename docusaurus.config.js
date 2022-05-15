@@ -96,15 +96,15 @@ const config = {
             items: [
               {
                 label: "Install Service",
-                href: "mailto:zishanansari1337@gmail.com"
+                href: "mailto:minetraxsuite@gmail.com"
               },
               {
                 label: "Managed Hosting",
-                href: "mailto:zishanansari1337@gmail.com"
+                href: "mailto:minetraxsuite@gmail.com"
               },
               {
                 label: "Development",
-                href: "mailto:zishanansari1337@gmail.com"
+                href: "mailto:minetraxsuite@gmail.com"
               }
             ]
           },
