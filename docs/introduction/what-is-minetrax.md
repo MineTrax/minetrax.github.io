@@ -20,3 +20,9 @@ MineTrax has lot of features, some of them are listed below, *for full list see 
  - ShoutBox for those who like shouting. (►__◄)
  - Post Feed to post random stuff for others to like and comment.
  - Dark Mode. Ofcoz (✿◠‿◠)
+
+## Upcoming
+ - Ban Management System
+ - Store System
+ - Rewards
+ - more...
