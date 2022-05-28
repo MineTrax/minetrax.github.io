@@ -9,3 +9,10 @@
   height: 200px;
   width: 200px;
 }
+
+.featuresTitle {
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+  text-align: center;
+}

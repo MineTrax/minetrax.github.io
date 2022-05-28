@@ -1,49 +1,81 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg: React.ComponentType<React.ComponentProps<"svg">>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "All in one",
+    Svg: require("@site/static/img/undraw_all_the_data_re_hh4w.svg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Everything included in one suite. Player Tracking, Ingame chat, Rating
+        system, Analytics, Shoutbox, Post Feed, Sharings, your name it!
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Player Tracking",
+    Svg: require("@site/static/img/undraw_developer_activity_re_39tg.svg")
+      .default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Minetrax will track the stats of players and show it in a nice way.
+        Users can signup on the website and link their players.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Custom Ranking Algorithm",
+    Svg: require("@site/static/img/undraw_mathematics_-4-otb.svg").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Every server has different need. That is why it give you option to
+        create your own player ranking and rating agorithms right from the admin
+        dashboard.
+      </>
+    ),
+  },
+  {
+    title: "Analytics",
+    Svg: require("@site/static/img/undraw_analytics_re_dkf8.svg").default,
+    description: (
+      <>
+        Player and Server Analytics and Intel report let you know your server
+        and its audience better.
+      </>
+    ),
+  },
+  {
+    title: "Ingame Chat",
+    Svg: require("@site/static/img/undraw_work_chat_re_qes4.svg").default,
+    description: (
+      <>
+        Let yours audience chat with in-game players live from website itself.
+        Also give admins option to manage the server and run commands.
+      </>
+    ),
+  },
+  {
+    title: "and much more...",
+    Svg: require("@site/static/img/undraw_load_more_re_482p.svg").default,
+    description: (
+      <>
+        Check out <a href="./docs/introduction/what-is-minetrax">more here</a> &
+        Install and see it yourself.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -57,14 +89,17 @@ function Feature({title, Svg, description}: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <>
+      <h1 className={styles.featuresTitle}>Features</h1>
+      <section className={styles.features}>
+        <div className="container">
+          <div className="row">
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
