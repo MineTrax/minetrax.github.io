@@ -21,6 +21,7 @@ function HomepageHeader() {
           </Link>
         </div>
       </div>
+      <img className={styles.bannerImage} src="/img/shots/homepage.png" alt="Homepage" />
     </header>
   );
 }

@@ -8,6 +8,18 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bannerImage {
+  padding-top: 2rem;
+}
+
+@media screen and (min-width: 996px) {
+  .bannerImage {
+  max-width: 75%;
+  }
 }
 
 @media screen and (max-width: 996px) {
