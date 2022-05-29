@@ -4,8 +4,8 @@ title: License
 id: license
 ---
 
-## Creative Commons Attribution 3.0 License
-All of minetrax suite, Web as well as Plugin is licensed under the [Creative Commons Atrribution 3.0 License](https://creativecommons.org/licenses/by/3.0/).
+## Creative Commons Attribution 4.0 License
+All of minetrax suite, Web as well as Plugin is licensed under the [Creative Commons Atrribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).
 
 ### ✅ What is allowed?
  - Use them for personal stuff.
