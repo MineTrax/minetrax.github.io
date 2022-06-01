@@ -96,15 +96,15 @@ const config = {
             items: [
               {
                 label: "Install Service",
-                href: "mailto:minetraxsuite@gmail.com"
+                href: "https://discord.gg/Hzfj27k"
               },
               {
                 label: "Managed Hosting",
-                href: "mailto:minetraxsuite@gmail.com"
+                href: "https://discord.gg/Hzfj27k"
               },
               {
                 label: "Development",
-                href: "mailto:minetraxsuite@gmail.com"
+                href: "https://discord.gg/Hzfj27k"
               }
             ]
           },
