@@ -89,6 +89,10 @@ const config = {
                 label: "Twitter",
                 href: "https://twitter.com/minetraxsuite",
               },
+              {
+                label: "SpigotMC",
+                href: "https://www.spigotmc.org/resources/minetrax-suite.102378/",
+              },
             ],
           },
           {
