@@ -48,7 +48,7 @@ sudo apt update
 
 Install PHP 8.1 and all required extensions.
 ```bash
-sudo apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip,intl}
+sudo apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip,intl,redis}
 ```
 
 ### MySQL / MariaDB
@@ -115,8 +115,8 @@ cd /var/www/minetrax
 
 Now clone the MineTrax git repo to the newly created folder and fix permissions.
 ```bash
-git clone git@github.com:minetrax/minetrax.git .
-chmod -R 755 storage/* bootstrap/cache/
+git clone https://github.com/MineTrax/minetrax.git .
+chmod -R 777 storage/* bootstrap/cache/
 ```
 
 ### Setup the Database
@@ -127,9 +127,9 @@ mysql -u root -p
 // Create the database
 CREATE DATABASE minetrax;
 // Create the user, change 'randomStrongPassword' to any strong password of your choice.
-CREATE USER 'minetrax'@'127.0.0.1' IDENTIFIED BY 'randomStrongPassword';
+CREATE USER 'minetrax'@'localhost' IDENTIFIED BY 'randomStrongPassword';
 // Give permission of the DB to user
-GRANT ALL PRIVILEGES ON minetrax.* TO 'minetrax'@'127.0.0.1' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON minetrax.* TO 'minetrax'@'locahost' WITH GRANT OPTION;
 exit
 ```
 
@@ -150,6 +150,14 @@ Install the npm dependencies and build frontend assets.
 npm install
 npm run prod
 ```
+
+:::info
+If above `npm install` gives you error of `ERESOVE could not resolve` then try running
+```
+npm install --save --legacy-peer-deps
+npm run prod
+```
+:::
 
 Now generate a new key using.
 ```bash
@@ -248,7 +256,7 @@ Pusher provide 200k messages per day in free tier, depending on your audience it
 
 1. Go to pusher.com and create a account.
 2. In dashboard click "Create app" option to create a new app.
-3. Name your app anything you like and choose a location closest to your server location. Choose `View.js` in Frontend and `Laravel` in Backend dropdowns.
+3. Name your app anything you like and choose a location closest to your server location. Choose `Vue.js` in Frontend and `Laravel` in Backend dropdowns.
 4. Click `Create App`.
 5. Now go to `App Keys` section and note down the `app_id`, `key`, `secret` and `cluster` variables.
 Eg:
@@ -271,6 +279,10 @@ Now rebuild your frontend assets.
 ```bash
 npm run prod
 ```
+
+:::info npm run prod getting killed?
+If `npm run prod` is getting `Killed` in your VPS then it is because of less RAM. Try configuring swap storage in your VPS or increase its RAM to fix the issue.
+:::
 
 ### Web Server Configuration
 Finally lets setup the web server to access the web.
@@ -348,7 +360,9 @@ sudo nano /etc/apache2/sites-available/minetrax.conf
 ```text title=/etc/apache2/sites-available/minetrax.conf
 <VirtualHost *:80>
   // highlight-next-line
-  ServerName your_domain.com www.your_domain.com
+  ServerName your_domain.com
+  // highlight-next-line
+  ServerAlias www.your_domain.com
   DocumentRoot "/var/www/minetrax/public"
   
   AllowEncodedSlashes On
@@ -379,6 +393,12 @@ sudo systemctl restart apache2
 
 ### Finalize
 Now minetrax should be up and running on your domain `http://your_domain.com`.
+
+A SuperAdmin user is created already for you, you can login and change the password:
+```
+Username: superadmin
+Password: admin123
+```
 
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
 ```js title=.env
