@@ -247,6 +247,13 @@ sudo supervisorctl start minetrax-worker-default:*
 sudo supervisorctl start minetrax-worker-long:*
 ```
 
+:::info Restart the queue
+Whenever any change is made to code, queue worker don't pick them up as they are long running. To make laravel queue restart we run:
+```
+php artisan queue:restart
+```
+:::
+
 ### WebSocket setup
 In this step we are going to setup [Pusher](https://pusher.com) as our websocket server.
 
@@ -275,6 +282,11 @@ PUSHER_APP_SECRET=41cc8be68c0d57fea4f3
 PUSHER_APP_CLUSTER=ap2
 ```
 
+Also change broadcast driver to pusher.
+```js title=.env
+BROADCAST_DRIVER=pusher
+```
+
 Now rebuild your frontend assets.
 ```bash
 npm run prod
@@ -283,6 +295,12 @@ npm run prod
 :::info npm run prod getting killed?
 If `npm run prod` is getting `Killed` in your VPS then it is because of less RAM. Try configuring swap storage in your VPS or increase its RAM to fix the issue.
 :::
+
+Next, restart the queue workers:
+```
+cd /var/www/minetrax
+php artisan queue:restart
+```
 
 ### Web Server Configuration
 Finally lets setup the web server to access the web.
