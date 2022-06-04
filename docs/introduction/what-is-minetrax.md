@@ -26,3 +26,11 @@ MineTrax has lot of features, some of them are listed below:
  - Store System
  - Rewards
  - more...
+
+## Demo Server
+You can check web demo at **[https://minetrax.live](https://minetrax.live)**
+
+**Join demo server**
+```
+play.minetrax.live
+```
