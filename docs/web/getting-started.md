@@ -258,7 +258,9 @@ php artisan queue:restart
 In this step we are going to setup [Pusher](https://pusher.com) as our websocket server.
 
 :::tip
-Pusher provide 200k messages per day in free tier, depending on your audience it might not be enough. In that case please check __[Websocket Options](./websocket-options.md)__ page to learn how to setup Pusher alternatives.
+Pusher provide 200k messages per day in free tier, depending on your audience it might not be enough. In that case please check __[Websocket Options](./websocket-options.md)__ page to learn how to setup Pusher alternatives. 
+
+*It is recommended to go for alternatives only after giving Pusher a try and its limit runs out.*
 :::
 
 1. Go to pusher.com and create a account.
