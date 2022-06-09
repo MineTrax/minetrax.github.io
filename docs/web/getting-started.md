@@ -19,7 +19,7 @@ Web requires a VPS or Dedicated Server with atleast 1GB of RAM and 1 CPU. Ubuntu
 
 Software Dependencies:
  - PHP 8.1+
- - MySQL 8+ or MariaDB 10+
+ - MySQL 5.7+ or MariaDB 10.2.7+
  - Apache2 or Nginx
  - NodeJS 12+
  - Redis Server
@@ -53,7 +53,7 @@ sudo apt -y install php8.1 php8.1-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xm
 
 ### MySQL / MariaDB
 :::caution
-Make sure to only install one. Either MySQL or MariaDB.
+Make sure to only install one. Either MySQL or MariaDB. If installing MariaDB, make sure its version is >10.2.7.
 :::
 
 To install MySQL run the below command in terminal.
@@ -129,7 +129,7 @@ CREATE DATABASE minetrax;
 // Create the user, change 'randomStrongPassword' to any strong password of your choice.
 CREATE USER 'minetrax'@'localhost' IDENTIFIED BY 'randomStrongPassword';
 // Give permission of the DB to user
-GRANT ALL PRIVILEGES ON minetrax.* TO 'minetrax'@'locahost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON minetrax.* TO 'minetrax'@'localhost' WITH GRANT OPTION;
 exit
 ```
 
