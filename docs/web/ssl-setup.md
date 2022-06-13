@@ -25,7 +25,7 @@ Run the certbot to issue certificates for these domains. Make sure to replace `y
 sudo certbot --nginx -d your_domain.com -d www.your_domain.com
 ```
 
-Finally it will ask you if you want to route all your traffic to https. Select yes in that case.
+Finally incase it ask you if you want to Redirect all your traffic to https. Select yes for it.
 
 ### Certbot (Apache2)
 Install Certbot and it's Nginx plugin with apt.
@@ -40,7 +40,7 @@ Run the certbot to issue certificates for these domains. Make sure to replace `y
 sudo certbot --apache -d your_domain.com -d www.your_domain.com
 ```
 
-Finally it will ask you if you want to route all your traffic to https. Select yes in that case.
+Finally incase it ask you if you want to Redirect all your traffic to https. Select yes for it.
 
 ### Setup Auto Renew
 LetsEncrypt certificates are valid only for 3 months. If you don't want to manually run these commands every 3 month then make sure to turn on auto renew for certbot

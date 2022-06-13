@@ -22,7 +22,7 @@ api-key:
 api-secret:
 server-id:
 webquery-host: 0.0.0.0
-webquery-port: 4000
+webquery-port: 25569
 ...
 ```
 
