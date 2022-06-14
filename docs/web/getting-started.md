@@ -164,9 +164,11 @@ Now generate a new key using.
 # Only run the if you are doing fresh install and don't have data in the database.
 php artisan key:generate --force
 ```
-:::caution
-Backup the encryption key (`APP_KEY`) from the `.env` file to some safe location. It is used to encrypt critical data before storing in database (eg: api keys and server credentials).
+:::danger VERY IMPORTANT
+Write down the encryption key (`APP_KEY`) from the `.env` file to some safe location. It is used to encrypt critical data before storing in database (eg: api keys and server credentials).
 Without that key recovering data won't be possible.
+
+Also, always keep that key secret.
 :::
 
 Next, change the database related variables in the `.env` file to match your database user credentials
