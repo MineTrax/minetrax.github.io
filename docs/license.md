@@ -4,18 +4,18 @@ title: License
 id: license
 ---
 
-## Creative Commons Attribution 4.0 License
-All of minetrax suite, Web as well as Plugin is licensed under the [Creative Commons Atrribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+## MIT License
+All of minetrax suite, Web as well as Plugin is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 ### ✅ What is allowed?
- - Use them for personal stuff.
- - Use them for commercial stuff.
- - Change them however you like.
+ - Private use.
+ - Commercial use.
+ - Distribution.
+ - Modification.
 
 
 ### ❌ What is not allowed?
- - You cannot resell Minetrax.
- - You cannot change the license.
+ - Re-license MineTrax.
 
 :::info Bonus
 Also! Credits are optional. Though sharing the work to your friends who might be interested in it is appretiated.
