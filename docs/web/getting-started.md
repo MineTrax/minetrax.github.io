@@ -264,7 +264,7 @@ Pusher provide 200k messages per day in free tier, depending on your audience it
 :::
 
 1. Go to pusher.com and create a account.
-2. In dashboard click "Create app" option to create a new app.
+2. In dashboard select "Channels" and then click "Create app" option to create a new app.
 3. Name your app anything you like and choose a location closest to your server location. Choose `Vue.js` in Frontend and `Laravel` in Backend dropdowns.
 4. Click `Create App`.
 5. Now go to `App Keys` section and note down the `app_id`, `key`, `secret` and `cluster` variables.
