@@ -26,6 +26,14 @@ webquery-port: 25569
 ...
 ```
 
+:::info WebQuery port must be available
+Plugin will try to open new connection to your defined **webquery-port** so that web can connect to it. It is important that nothing else is running on that port and your hosting provider or firewall allow opening the port you specified.
+
+Also make sure you choose a port which is always greater than 1024 (>1024) as non root user cannot open port less than it.
+
+Good Practice: If your join port is 25565, then choose something like 25569 or 25568 etc.
+:::
+
 ## Setup
 In next step you need to know few things:
  1. server-id
