@@ -23,8 +23,12 @@ MineTrax has lot of features, some of them are listed below:
 
 ## Upcoming
  - Ban Management System
+ - In-Depth Analytics for Server and Player
  - Store System
- - Rewards
+ - Automated Server Events
+ - Localization
+ - Rewards & Achievements
+ - Custom Theme
  - more...
 
 ## Demo Server
