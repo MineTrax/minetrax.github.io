@@ -139,6 +139,11 @@ const config = {
         textColor: "#091E42",
         isCloseable: true,
       },
+      algolia: {
+        appId: "AIFFXGFZ5Y",
+        apiKey: "5794bb50b04fbc1f2d432e887c8c4788",
+        indexName: "minetrax",
+      },
     }),
 };
 
