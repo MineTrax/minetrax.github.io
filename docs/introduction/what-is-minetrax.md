@@ -19,6 +19,7 @@ MineTrax has lot of features, some of them are listed below:
  - News and Announcements Section.
  - ShoutBox for those who like shouting. (►__◄)
  - Post Feed to post random stuff for others to like and comment.
+ - Localization. Translate to any language you want.
  - Dark Mode. Ofcoz (✿◠‿◠)
 
 ## Upcoming
@@ -26,7 +27,6 @@ MineTrax has lot of features, some of them are listed below:
  - In-Depth Analytics for Server and Player
  - Store System
  - Automated Server Events
- - Localization
  - Rewards & Achievements
  - Custom Theme
  - more...
