@@ -42,3 +42,8 @@ play.minetrax.live
 :::info
 MineTrax is very early in development. If you are stuck in any step during installation, please free to join [Discord](https://discord.gg/Hzfj27k) and ask for help or report the issue. We will sort it out as soon as possible.
 :::
+
+## Inspirations
+MineTrax is inspired by various plugins like:
+ - Player Analytics (Plans)
+ - DiscordSRV

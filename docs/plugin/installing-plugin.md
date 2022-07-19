@@ -11,7 +11,9 @@ You need to add your minecraft server to web before continuing to add Minetrax p
 :::
 
 ## Download
-Firstly, download the latest __[MineTrax.jar](https://github.com/MineTrax/plugin/releases)__ file from releases section of github and put it inside of `plugins` folder of your Minecraft server.
+Firstly, download the latest __[MineTrax.jar](https://github.com/MineTrax/plugin/releases)__ file from releases section of github and put it inside of `plugins` folder of your Minecraft server. 
+
+_Please note that MineTrax plugin should not be added to Proxy servers (Bungee, Velocity etc)._
 
 Start your server and it should create a `Minetrax/config.yml` file in your plugins folder, which should look something like:
 
