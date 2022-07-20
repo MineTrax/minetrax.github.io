@@ -13,10 +13,11 @@ It is highly recommened to always keep your version updated to get latest featur
 |1.0.0-alpha|1.0.0-alpha| |`8.1`|`1.16`, `1.17`|
 |1.0.1-alpha|1.0.1-alpha| |`8.1`|`1.16`, `1.17`, `1.18`|
 |1.0.2-alpha|1.0.2-alpha| |`8.1`|`1.16`, `1.17`, `1.18`|
-|<b>1.0.3-alpha</b>|<b>1.0.3-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
+|1.0.3-alpha|1.0.3-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
+|<b>1.0.4-alpha</b>|<b>1.0.4-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 
 ## Upgrading Web
-:::warning
+:::caution
 Upgrade guide for web consider `Ubuntu` as operating system. If you using some other OS you might have to tweak some commands accordingly.
 :::
 
