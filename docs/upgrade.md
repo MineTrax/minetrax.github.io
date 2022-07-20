@@ -31,7 +31,17 @@ cd /var/www/minetrax
 php artisan down
 ```
 
-### 2. Take the latest pull
+### 2. Clear compiled template & cache
+```
+cd /var/www/minetrax
+
+php artisan cache:clear
+php artisan view:clear
+php artisan config:clear
+php artisan clear
+```
+
+### 3. Take the latest pull
 Take latest pull from the Github web repo.
 ```
 cd /var/www/minetrax
@@ -55,7 +65,7 @@ cd /var/www/minetrax
 chmod -R 755 storage/* bootstrap/cache
 ```
 
-### 3. Update the composer & npm dependencies
+### 4. Update the composer & npm dependencies
 Install the latest dependencies changes from composer & npm
 ```
 cd /var/www/minetrax
@@ -63,15 +73,6 @@ cd /var/www/minetrax
 composer install
 npm install
 npm run prod
-```
-
-### 4. Clear compiled template & cache
-```
-cd /var/www/minetrax
-
-php artisan cache:clear
-php artisan view:clear
-php artisan config:clear
 ```
 
 ### 5. Run the migrations
