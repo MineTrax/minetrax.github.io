@@ -16,6 +16,10 @@ It is highly recommened to always keep your version updated to get latest featur
 |<b>1.0.3-alpha</b>|<b>1.0.3-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 
 ## Upgrading Web
+:::warning
+Upgrade guide for web consider `Ubuntu` as operating system. If you using some other OS you might have to tweak some commands accordingly.
+:::
+
 Follow the process step by step to upgrade web to latest version.
 
 ### 1. Enter Maintenance Mode
