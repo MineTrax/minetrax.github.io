@@ -107,6 +107,8 @@ Some version upgrade might introduce breaking changes. If so, it will be mention
 Make sure to read the release note on github and discord for any additional step required for upgrading to version with breaking changes.
 :::
 
+**Web Release Notes: [https://github.com/MineTrax/minetrax/releases](https://github.com/MineTrax/minetrax/releases)**
+
 ## Upgrading Plugin
 Upgrading your plugin is as simple as just downloading the latest version of the plugin and replacing old `Minetrax.jar` file with the new one. 
 
