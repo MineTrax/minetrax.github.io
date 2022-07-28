@@ -71,7 +71,7 @@ Install the latest dependencies changes from composer & npm
 cd /var/www/minetrax
 
 composer install
-npm install
+npm ci
 npm run prod
 ```
 
