@@ -31,8 +31,8 @@ First clear the cache. Localization are cached for performance improvements.
 php artisan cache:clear
 ```
 
-Then, change `APP_LOCALE` environment variable in your .env file to a valid language code for whatever language you want. Eg: en, fr, hi, ru etc.
-```js
+Then, Open your `.env` file in any text editor and change `APP_LOCALE` environment variable to a valid language code for whatever language you want. Eg: en, fr, hi, ru etc.
+```json title=.env
 // For german it should be
 APP_LOCALE=de
 ```
