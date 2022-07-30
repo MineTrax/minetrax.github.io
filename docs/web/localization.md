@@ -26,7 +26,12 @@ Below are list of languages which are already added by default.
 
 
 ## How to change language?
-First change `APP_LOCALE` environment variable in your .env file to a valid language code for whatever language you want. Eg: en, fr, hi, ru etc.
+First clear the cache. Localization are cached for performance improvements.
+```js
+php artisan cache:clear
+```
+
+Then, change `APP_LOCALE` environment variable in your .env file to a valid language code for whatever language you want. Eg: en, fr, hi, ru etc.
 ```js
 // For german it should be
 APP_LOCALE=de
