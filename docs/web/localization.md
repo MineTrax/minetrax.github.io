@@ -23,12 +23,14 @@ Below are list of languages which are already added by default.
 |Ukrainian|uk|
 |Hindi|hi|
 |Italian|it|
+|Chinese-HK|zh-hk|
 
 
 ## How to change language?
 First clear the cache. Localization are cached for performance improvements.
 ```js
 php artisan cache:clear
+php artisan config:clear
 ```
 
 Then, Open your `.env` file in any text editor and change `APP_LOCALE` environment variable to a valid language code for whatever language you want. Eg: en, fr, hi, ru etc.
