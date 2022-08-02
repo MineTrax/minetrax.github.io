@@ -87,6 +87,12 @@ Left side of the expression in both JSON and PHP files are `Key` and should not 
 
 Feel free to translate the right part as per requirements.
 
+After completing your changes clear the caches so your changes will reflect instantly.
+```
+cd /var/www/minetrax
+php artisan cache:clear
+```
+
 :::info
 Note that in some cases there is a colon (:) before some string, Eg: `:name`. Those are special placeholder which will be dynamically replaced to variables so those special placeholders should not be translated.
 :::
