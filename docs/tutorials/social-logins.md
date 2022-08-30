@@ -17,6 +17,36 @@ Minetrax support various social login like:
  5. Facebook
 
 ## Discord
+This is a simple tutorial for setting up Discord OAuth with Minetrax
+
+1. First go to https://discord.com/developers/applications and login/create an account.
+2. We first need to create a new application, use the `New Application` button in the top right, you can name it whatever you like.
+3. Now under the OAuth->General tab note down your CLIENT ID and CLIENT SECRET, you will need these later (Note: You will be required to reset the client secret to view it.)
+4. You now need to add a Redirect URL, Use the `Add Redirect` button  to do this. Your URL will be your base domain with '/auth/discord/callback' added onto the end. For example https://minetrax.live/ becomes https://minetrax.live/auth/discord/callback - Note this down aswell, you will need it later.
+
+After this open your .env file and update the related variables with the ones we noted down previously along with enabling Discord OAuth. Eg:
+
+```js
+DISCORD_OAUTH_ENABLED=true
+DISCORD_CLIENT_ID=123456789123456789
+DISCORD_CLIENT_SECRET=abcdefghijklmnopqrstuvwxyz
+DISCORD_REDIRECT_URI=https://minetrax.live/auth/discord/callback
+```
+
+Now simply rebuild your frontend assets.
+
+```bash
+npm run prod
+```
+
+And restart the queue workers:
+
+```
+cd /var/www/minetrax
+php artisan queue:restart
+```
+
+And your done, if all went well you shuld now get the option of using discord on your registration/login page!
 
 ## Twitter
 
