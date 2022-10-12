@@ -81,7 +81,7 @@ npm run prod
 ```
 cd /var/www/minetrax
 
-php artisan migrate --force
+php artisan migrate --force --seed
 ```
 
 ### 6. Restart the Queue Listeners
