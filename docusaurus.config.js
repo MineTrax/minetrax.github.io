@@ -58,6 +58,11 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
+            href: "https://discord.gg/Hzfj27k",
+            label: "Discord",
+            position: "left",
+          },
+          {
             href: "https://github.com/minetrax/minetrax",
             label: "GitHub",
             position: "right",
