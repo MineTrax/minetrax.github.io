@@ -19,7 +19,7 @@ It is highly recommened to always keep your version updated to get latest featur
 |<b>1.0.6-alpha</b>|<b>1.0.5-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 
 
-## Automatic Update Web
+## Automatic Upgrading Web
 Using this mode all you have to do is take latest pull and run a script.
 ```
 git pull origin main
