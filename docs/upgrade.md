@@ -18,7 +18,17 @@ It is highly recommened to always keep your version updated to get latest featur
 |1.0.5-alpha|1.0.5-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 |<b>1.0.6-alpha</b>|<b>1.0.5-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 
-## Upgrading Web
+
+## Automatic Update Web
+Using this mode all you have to do is take latest pull and run a script.
+```
+git pull origin main
+bash update.sh
+```
+
+Note: It should automatically update everything for you. If it fails you will have to manually handle update.
+
+## Manually Upgrading Web
 :::caution
 Upgrade guide for web consider `Ubuntu` as operating system. If you using some other OS you might have to tweak some commands accordingly.
 :::
