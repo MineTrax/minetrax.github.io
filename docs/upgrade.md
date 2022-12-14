@@ -20,6 +20,8 @@ It is highly recommened to always keep your version updated to get latest featur
 |<b>1.0.7-alpha</b>|<b>1.0.5-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 
 
+You can update your Web using either Automatic or Manual method.
+
 ## Automatic Upgrading Web
 Using this mode all you have to do is take latest pull and run a script.
 ```
@@ -27,7 +29,7 @@ git pull origin main
 bash update.sh
 ```
 
-Note: It should automatically update everything for you. If it fails you will have to manually handle update.
+Note: It should automatically update everything for you. If it fails you will have to manually handle update using below manual method.
 
 ## Manually Upgrading Web
 :::caution
