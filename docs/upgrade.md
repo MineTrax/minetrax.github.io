@@ -80,14 +80,12 @@ cd /var/www/minetrax
 chmod -R 755 storage/* bootstrap/cache
 ```
 
-### 4. Update the composer & npm dependencies
-Install the latest dependencies changes from composer & npm
+### 4. Update the composer
+Install the latest dependencies changes from composer
 ```
 cd /var/www/minetrax
 
 composer install
-npm install
-npm run prod
 ```
 
 ### 5. Run the migrations

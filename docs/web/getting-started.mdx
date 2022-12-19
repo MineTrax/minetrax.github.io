@@ -191,23 +191,6 @@ Install the composer dependencies.
 composer install
 ```
 
-Install the npm dependencies and build frontend assets.
-
-```bash
-npm install
-npm run prod
-```
-
-:::info
-If above `npm install` gives you error of `ERESOVE could not resolve` then try running
-
-```
-npm install --save --legacy-peer-deps
-npm run prod
-```
-
-:::
-
 Now generate a new key using.
 
 ```bash
@@ -339,10 +322,10 @@ _It is recommended to go for alternatives only after giving Pusher a try and its
    Eg:
 
 ```js
-app_id = "1367909"
-key = "4b48b850682acb371c34"
-secret = "41cc8be68c0d57fea4f3"
-cluster = "ap2"
+app_id = "1367909";
+key = "4b48b850682acb371c34";
+secret = "41cc8be68c0d57fea4f3";
+cluster = "ap2";
 ```
 
 After this open your `.env` file and replace the pusher related credentials to match above.
@@ -357,18 +340,8 @@ PUSHER_APP_CLUSTER=ap2
 Also change broadcast driver to pusher.
 
 ```js title=.env
-BROADCAST_DRIVER = pusher
+BROADCAST_DRIVER = pusher;
 ```
-
-Now rebuild your frontend assets.
-
-```bash
-npm run prod
-```
-
-:::info npm run prod getting killed?
-If `npm run prod` is getting `Killed` in your VPS then it is because of less RAM. Try configuring swap storage in your VPS or increase its RAM to fix the issue.
-:::
 
 Next, restart the queue workers:
 
@@ -517,9 +490,9 @@ Password: admin123
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
 
 ```js title=.env
-APP_NAME = YOUR_DESIRED_APP_NAME
-APP_ENV = production
-APP_DEBUG = false
+APP_NAME = YOUR_DESIRED_APP_NAME;
+APP_ENV = production;
+APP_DEBUG = false;
 ```
 
 :::danger DISABLE DEBUG MODE

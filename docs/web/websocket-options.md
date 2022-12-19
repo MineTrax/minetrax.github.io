@@ -102,6 +102,7 @@ window.Echo = new Echo({
 ```bash
 cd /var/www/minetrax
 
+npm install
 npm run prod
 
 php artisan queue:restart
