@@ -23,7 +23,8 @@ Below are list of languages which are already added by default.
 |Ukrainian|uk|
 |Hindi|hi|
 |Italian|it|
-|Chinese-HK|zh-hk|
+|Chinese (Traditional)|zh-hk|
+|Chinese (Simplified)|zh-cn|
 
 
 ## How to change language?
