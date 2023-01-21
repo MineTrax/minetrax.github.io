@@ -6,6 +6,7 @@ sidebar_position: 50
 
 Below are some of screenshots you might wanna look at before considering.
 
+![HomepageWithHero](./../static/img/shots/homewithhero.png)
 ![Homepage](./../static/img/shots/homepage.png)
 ![Custom Pages](./../static/img/shots/custom_pages.png)
 ![General Setting](./../static/img/shots/general_setting.png)
@@ -18,3 +19,4 @@ Below are some of screenshots you might wanna look at before considering.
 ![Servers](./../static/img/shots/servers.png)
 ![Stats](./../static/img/shots/stats.png)
 ![User roles](./../static/img/shots/user_roles.png)
+![Hero Settings](./../static/img/shots/hero_setting.png)
