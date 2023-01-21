@@ -81,7 +81,7 @@ cd /var/www/minetrax
 chmod -R 755 storage/* bootstrap/cache
 ```
 
-:::caution
+:::info
 If you get 500 error, then in some cases you might need to change storage permission to 777 instead.
 ```
 cd /var/www/minetrax
