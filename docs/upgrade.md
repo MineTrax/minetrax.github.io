@@ -17,7 +17,8 @@ It is highly recommened to always keep your version updated to get latest featur
 |1.0.4-alpha|1.0.4-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 |1.0.5-alpha|1.0.5-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 |1.0.6-alpha|1.0.5-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
-|<b>1.0.7-alpha</b>|<b>1.0.5-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
+|1.0.7-alpha|1.0.5-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
+|<b>1.0.8-alpha</b>|<b>1.0.5-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 
 
 You can update your Web using either Automatic or Manual method.
@@ -79,6 +80,14 @@ Once latest changes are pulled fix back the permissions for storage.
 cd /var/www/minetrax
 chmod -R 755 storage/* bootstrap/cache
 ```
+
+:::caution
+If you get 500 error, then in some cases you might need to change storage permission to 777 instead.
+```
+cd /var/www/minetrax
+chmod -R 777 storage/* bootstrap/cache
+```
+:::
 
 ### 4. Update the composer
 Install the latest dependencies changes from composer
