@@ -236,8 +236,8 @@ Also, always keep that key secret.
 
 Next, change the database related variables in the `.env` file to match your database user credentials
 
-```js title=.env
-APP_URL=http://minetrax.test //Change this to the URL which you wanna setup minetrax on.
+```bash title=.env
+APP_URL=http://your_domain.com # Change this to the URL which you wanna setup minetrax on.
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -359,7 +359,7 @@ cluster = "ap2";
 
 After this open your `.env` file and replace the pusher related credentials to match above.
 
-```js title=.env
+```bash title=.env
 PUSHER_APP_ID=1367909
 PUSHER_APP_KEY=4b48b850682acb371c34
 PUSHER_APP_SECRET=41cc8be68c0d57fea4f3
@@ -368,7 +368,7 @@ PUSHER_APP_CLUSTER=ap2
 
 Also change broadcast driver to pusher.
 
-```js title=.env
+```bash title=.env
 BROADCAST_DRIVER=pusher
 ```
 
@@ -518,7 +518,7 @@ Password: admin123
 
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
 
-```js title=.env
+```bash title=.env
 APP_NAME="YOUR_DESIRED_APP_NAME"
 APP_ENV=production
 APP_DEBUG=false
