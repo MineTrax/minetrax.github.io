@@ -17,7 +17,7 @@ You need to make sure the ownership of the files belongs to the user who is runn
 Give the permission by running below command.
 ```
 chown -R www-data:www-data /var/www/minetrax/storage
-chmod -R 755 /var/www/minetrax/storage
+chmod -R 775 /var/www/minetrax/storage
 ```
 
 ### 2. Out of Memory Error while Building Frontend Assets.

@@ -121,11 +121,11 @@ Change permission for `storage` and `bootstrap/cache` folders
 
 ```bash
 cd /var/www/minetrax
-chmod -R 755 storage/* bootstrap/cache
+chmod -R 775 storage/* bootstrap/cache
 ```
 
 :::caution
-In some rare cases if you are getting error like `The stream or file "/var/www/minetrax/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied` then you might have to change the permission of `storage/logs` folder to `777` instead of `755`.
+In some rare cases if you are getting error like `The stream or file "/var/www/minetrax/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied` then you might have to change the permission of `storage/logs` folder to `777` instead of `775`.
 
 ```bash
 cd /var/www/minetrax
