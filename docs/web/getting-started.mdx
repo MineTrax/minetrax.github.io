@@ -351,10 +351,10 @@ _It is recommended to go for alternatives only after giving Pusher a try and its
    Eg:
 
 ```js
-app_id = "1367909"
-key = "4b48b850682acb371c34"
-secret = "41cc8be68c0d57fea4f3"
-cluster = "ap2"
+app_id = "1367909";
+key = "4b48b850682acb371c34";
+secret = "41cc8be68c0d57fea4f3";
+cluster = "ap2";
 ```
 
 After this open your `.env` file and replace the pusher related credentials to match above.
@@ -369,7 +369,7 @@ PUSHER_APP_CLUSTER=ap2
 Also change broadcast driver to pusher.
 
 ```js title=.env
-BROADCAST_DRIVER = pusher
+BROADCAST_DRIVER=pusher
 ```
 
 Next, restart the queue workers:
@@ -519,9 +519,9 @@ Password: admin123
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
 
 ```js title=.env
-APP_NAME = YOUR_DESIRED_APP_NAME;
-APP_ENV = production;
-APP_DEBUG = false;
+APP_NAME="YOUR_DESIRED_APP_NAME"
+APP_ENV=production
+APP_DEBUG=false
 ```
 
 :::danger DISABLE DEBUG MODE
