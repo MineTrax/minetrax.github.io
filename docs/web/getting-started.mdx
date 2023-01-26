@@ -157,8 +157,37 @@ Now clone the MineTrax git repo to the newly created folder and fix permissions.
 
 ```bash
 git clone https://github.com/MineTrax/minetrax.git .
-chmod -R 777 storage/* bootstrap/cache/
+chmod -R 755 storage/* bootstrap/cache/
 ```
+
+### Fix permissions
+
+Fix permissions for the web folder so webserver can access the files.
+
+<Tabs groupId="apache-nginx">
+  <TabItem value="apache" label="Apache2">
+
+```bash
+# If using NGINX or Apache (not on CentOS):
+chown -R $USER:www-data /var/www/minetrax/*
+
+# or, If using Apache on CentOS
+chown -R $USER:apache /var/www/minetrax/*
+```
+
+  </TabItem>
+  <TabItem value="nginx" label="Nginx">
+
+```bash
+# If using NGINX or Apache (not on CentOS):
+chown -R $USER:www-data /var/www/minetrax/*
+
+# or, If using NGINX on CentOS:
+chown -R $USER:nginx /var/www/minetrax/*
+```
+
+  </TabItem>
+</Tabs>
 
 ### Setup the Database
 

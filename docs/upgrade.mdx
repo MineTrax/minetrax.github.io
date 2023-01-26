@@ -4,27 +4,32 @@ title: Upgrade Guide
 id: upgrade
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 This document covers the process of upgrading MineTrax from older version to latest.
 It is highly recommened to always keep your version updated to get latest features and bug fixes.
 
 ## Supported Versions
-|Web Version|Plugin Version|Supported|PHP Versions|Minecraft Versions|
-|---|---|---|---|---|
-|1.0.0-alpha|1.0.0-alpha| |`8.1`|`1.16`, `1.17`|
-|1.0.1-alpha|1.0.1-alpha| |`8.1`|`1.16`, `1.17`, `1.18`|
-|1.0.2-alpha|1.0.2-alpha| |`8.1`|`1.16`, `1.17`, `1.18`|
-|1.0.3-alpha|1.0.3-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
-|1.0.4-alpha|1.0.4-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
-|1.0.5-alpha|1.0.5-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
-|1.0.6-alpha|1.0.5-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
-|1.0.7-alpha|1.0.5-alpha| |`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
-|<b>1.0.8-alpha</b>|<b>1.0.5-alpha</b>|✅|`8.1`|`1.16`, `1.17`, `1.18`, `1.19`|
 
+| Web Version        | Plugin Version     | Supported | PHP Versions | Minecraft Versions             |
+| ------------------ | ------------------ | --------- | ------------ | ------------------------------ |
+| 1.0.0-alpha        | 1.0.0-alpha        |           | `8.1`        | `1.16`, `1.17`                 |
+| 1.0.1-alpha        | 1.0.1-alpha        |           | `8.1`        | `1.16`, `1.17`, `1.18`         |
+| 1.0.2-alpha        | 1.0.2-alpha        |           | `8.1`        | `1.16`, `1.17`, `1.18`         |
+| 1.0.3-alpha        | 1.0.3-alpha        |           | `8.1`        | `1.16`, `1.17`, `1.18`, `1.19` |
+| 1.0.4-alpha        | 1.0.4-alpha        |           | `8.1`        | `1.16`, `1.17`, `1.18`, `1.19` |
+| 1.0.5-alpha        | 1.0.5-alpha        |           | `8.1`        | `1.16`, `1.17`, `1.18`, `1.19` |
+| 1.0.6-alpha        | 1.0.5-alpha        |           | `8.1`        | `1.16`, `1.17`, `1.18`, `1.19` |
+| 1.0.7-alpha        | 1.0.5-alpha        |           | `8.1`        | `1.16`, `1.17`, `1.18`, `1.19` |
+| <b>1.0.8-alpha</b> | <b>1.0.5-alpha</b> | ✅        | `8.1`        | `1.16`, `1.17`, `1.18`, `1.19` |
 
 You can update your Web using either Automatic or Manual method.
 
 ## Automatic Upgrading Web
+
 Using this mode all you have to do is take latest pull and run a script.
+
 ```
 git pull origin main
 bash update.sh
@@ -33,6 +38,7 @@ bash update.sh
 Note: It should automatically update everything for you. If it fails you will have to manually handle update using below manual method.
 
 ## Manually Upgrading Web
+
 :::caution
 Upgrade guide for web consider `Ubuntu` as operating system. If you using some other OS you might have to tweak some commands accordingly.
 :::
@@ -40,7 +46,9 @@ Upgrade guide for web consider `Ubuntu` as operating system. If you using some o
 Follow the process step by step to upgrade web to latest version.
 
 ### 1. Enter Maintenance Mode
+
 Maintenance mode will disable the web for end user so we don't expose any unexpected error or logs to them.
+
 ```
 cd /var/www/minetrax
 
@@ -48,6 +56,7 @@ php artisan down
 ```
 
 ### 2. Clear compiled template & cache
+
 ```
 cd /var/www/minetrax
 
@@ -58,7 +67,9 @@ php artisan clear
 ```
 
 ### 3. Take the latest pull
+
 Take latest pull from the Github web repo.
+
 ```
 cd /var/www/minetrax
 
@@ -67,30 +78,66 @@ git pull origin main
 
 :::caution
 If you have made any changes to the code, this process might fail and you have to revert back your changes before taking the pull. If the process fail then stash out your local changes and try to pull again. Make sure to backup your changes so you can add them back.
+
 ```
 cd /var/www/minetrax
 
 git stash
 git pull origin main
 ```
+
 :::
 
-Once latest changes are pulled fix back the permissions for storage.
+### 4. Fix Permissions
+
+Once latest changes are pulled fix back the permissions for files.
+
+<Tabs groupId="apache-nginx">
+  <TabItem value="apache" label="Apache2">
+
+```bash
+# If using NGINX or Apache (not on CentOS):
+chown -R $USER:www-data /var/www/minetrax/*
+
+# or, If using Apache on CentOS
+chown -R $USER:apache /var/www/minetrax/*
 ```
+
+  </TabItem>
+  <TabItem value="nginx" label="Nginx">
+
+```bash
+# If using NGINX or Apache (not on CentOS):
+chown -R $USER:www-data /var/www/minetrax/*
+
+# or, If using NGINX on CentOS:
+chown -R $USER:nginx /var/www/minetrax/*
+```
+
+  </TabItem>
+</Tabs>
+
+Change permission for `storage` and `bootstrap/cache` folders
+
+```bash
 cd /var/www/minetrax
 chmod -R 755 storage/* bootstrap/cache
 ```
 
-:::info
-If you get 500 error, then in some cases you might need to change storage permission to 777 instead.
-```
+:::caution
+In some rare cases if you are getting error like `The stream or file "/var/www/minetrax/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied` then you might have to change the permission of `storage/logs` folder to `777` instead of `755`.
+
+```bash
 cd /var/www/minetrax
 chmod -R 777 storage/* bootstrap/cache
 ```
+
 :::
 
 ### 4. Update the composer
+
 Install the latest dependencies changes from composer
+
 ```
 cd /var/www/minetrax
 
@@ -98,6 +145,7 @@ composer install
 ```
 
 ### 5. Run the migrations
+
 ```
 cd /var/www/minetrax
 
@@ -105,6 +153,7 @@ php artisan migrate --force --seed
 ```
 
 ### 6. Restart the Queue Listeners
+
 ```
 cd /var/www/minetrax
 
@@ -112,18 +161,20 @@ php artisan queue:restart
 ```
 
 ### 7. Fix Permissions
+
 ```
 chown -R www-data:www-data /var/www/minetrax/*
 ```
 
 ### 8. Exit the Maintenance Mode
+
 Everything is done! Now lets turn back the site up for everyone.
+
 ```
 cd /var/www/minetrax
 
 php artisan up
 ```
-
 
 :::danger Note on Breaking changes
 Some version upgrade might introduce breaking changes. If so, it will be mentioned in the release note and discord.
@@ -133,11 +184,12 @@ Make sure to read the release note on github and discord for any additional step
 **Web Release Notes: [https://github.com/MineTrax/minetrax/releases](https://github.com/MineTrax/minetrax/releases)**
 
 ## Upgrading Plugin
-Upgrading your plugin is as simple as just downloading the latest version of the plugin and replacing old `Minetrax.jar` file with the new one. 
+
+Upgrading your plugin is as simple as just downloading the latest version of the plugin and replacing old `Minetrax.jar` file with the new one.
 
 **Download Link: [https://github.com/MineTrax/plugin/releases](https://github.com/MineTrax/plugin/releases)**
 
 :::info
-Make sure to replace the file and not keep two version of it in plugins directory. 
+Make sure to replace the file and not keep two version of it in plugins directory.
 Eg: If you have `Minetrax-1.0.2.jar` and upgrading to `Minetrax-1.0.3.jar` make sure to delete the old file i.e., `Minetrax-1.0.2.jar`.
 :::
