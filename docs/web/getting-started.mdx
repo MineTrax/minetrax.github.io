@@ -343,7 +343,7 @@ Pusher provide 200k messages per day in free tier, depending on your audience it
 _It is recommended to go for alternatives only after giving Pusher a try and its limit runs out._
 :::
 
-1. Go to pusher.com and create a account.
+1. Go to [pusher.com](https://pusher.com) and create a account.
 2. In dashboard select "Channels" and then click "Create app" option to create a new app.
 3. Name your app anything you like and choose a location closest to your server location. Choose `Vue.js` in Frontend and `Laravel` in Backend dropdowns.
 4. Click `Create App`.
@@ -351,10 +351,10 @@ _It is recommended to go for alternatives only after giving Pusher a try and its
    Eg:
 
 ```js
-app_id = "1367909";
-key = "4b48b850682acb371c34";
-secret = "41cc8be68c0d57fea4f3";
-cluster = "ap2";
+app_id = "1367909"
+key = "4b48b850682acb371c34"
+secret = "41cc8be68c0d57fea4f3"
+cluster = "ap2"
 ```
 
 After this open your `.env` file and replace the pusher related credentials to match above.
@@ -369,7 +369,7 @@ PUSHER_APP_CLUSTER=ap2
 Also change broadcast driver to pusher.
 
 ```js title=.env
-BROADCAST_DRIVER = pusher;
+BROADCAST_DRIVER = pusher
 ```
 
 Next, restart the queue workers:
