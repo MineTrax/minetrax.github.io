@@ -7,7 +7,7 @@ id: installing-plugin
 :::tip Add your minecraft server first!
 You need to add your minecraft server to web before continuing to add Minetrax plugin.
 
-[Create here](../tutorials/adding-minecraft-server.md) to know how to add your server.
+[Click here](../tutorials/adding-minecraft-server.md) to know how to add your server.
 :::
 
 ## Download

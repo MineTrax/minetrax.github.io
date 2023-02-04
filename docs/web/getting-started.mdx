@@ -157,7 +157,7 @@ Now clone the MineTrax git repo to the newly created folder and fix permissions.
 
 ```bash
 git clone https://github.com/MineTrax/minetrax.git .
-chmod -R 775 storage/* bootstrap/cache/
+sudo chmod -R 775 storage/* bootstrap/cache/
 ```
 
 ### Fix permissions
@@ -194,6 +194,7 @@ chown -R $USER:nginx /var/www/minetrax/*
 You need to create a MySQL/MariaDB database and a user with all permission to that database.
 
 ```sql
+// If below command ask for password just press enter. If not work then try sudo mysql
 mysql -u root -p
 
 // Create the database
@@ -227,13 +228,6 @@ Now generate a new key using.
 php artisan key:generate --force
 ```
 
-:::danger VERY IMPORTANT
-Write down the encryption key (`APP_KEY`) from the `.env` file to some safe location. It is used to encrypt critical data before storing in database (eg: api keys and server credentials).
-Without that key recovering data won't be possible.
-
-Also, always keep that key secret.
-:::
-
 Next, change the database related variables in the `.env` file to match your database user credentials
 
 ```bash title=.env
@@ -258,6 +252,13 @@ Create symlink for storage
 ```
 php artisan storage:link
 ```
+
+:::danger IMPORTANT
+It is highly recommended to copy `.env` file and backup it somewhere safe. It contain very important information like `APP_KEY` which is used to encrypt critical data before storing in database (eg: api keys and server credentials).
+Without that key recovering data won't be possible.
+
+Also, always keep that key secret.
+:::
 
 ### Setup Queue Listeners
 
@@ -333,15 +334,15 @@ php artisan queue:restart
 
 :::
 
-### WebSocket setup
+### WebSocket setup (optional)
+
+:::info Recommendation
+This step is optional but highly recommended. By default minetrax will use polling to fetch and reload data from server without reloading. (eg: every 5 seconds).
+
+If you want your site to feel more responsive and instant or you have a large audience and want to reduce the load on your server then you should setup websocket.
+:::
 
 In this step we are going to setup [Pusher](https://pusher.com) as our websocket server.
-
-:::tip
-Pusher provide 200k messages per day in free tier, depending on your audience it might not be enough. In that case please check **[Websocket Options](./websocket-options.md)** page to learn how to setup Pusher alternatives.
-
-_It is recommended to go for alternatives only after giving Pusher a try and its limit runs out._
-:::
 
 1. Go to [pusher.com](https://pusher.com) and create a account.
 2. In dashboard select "Channels" and then click "Create app" option to create a new app.
@@ -378,6 +379,12 @@ Next, restart the queue workers:
 cd /var/www/minetrax
 php artisan queue:restart
 ```
+
+:::tip pusher alternatives
+Pusher provide 200k messages per day in free tier, which is more than enough for most cases, but if you have a very large userbase that might not be enough. In that case please check **[Websocket Options](./websocket-options.md)** page to learn how to setup Pusher alternatives.
+
+_It is recommended to go for alternatives only after giving Pusher a try and its limit runs out._
+:::
 
 ### Web Server Configuration
 
@@ -428,7 +435,7 @@ sudo systemctl restart apache2
 You should disable default site `/etc/apache2/sites-enabled/000-default.conf`.
 
 ```bash
-a2dissite 000-default.conf
+sudo a2dissite 000-default.conf
 sudo systemctl restart apache2
 ```
 
@@ -496,7 +503,7 @@ sudo systemctl reload nginx
 If this is a new VPS, you should disable default site `/etc/nginx/sites-enabled/default` by removing it.
 
 ```bash
-rm /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-enabled/default
 sudo systemctl reload nginx
 ```
 
@@ -529,3 +536,10 @@ It is very important that you change your **APP_ENV** to `production` and **APP_
 
 **Keeping APP_ENV to `local` or APP_DEBUG to `true` might expose sensitive information to end users.**
 :::
+
+### What's Next?
+
+Now you are all set to go, you can start using minetrax and add your servers to it.
+
+1. [Add your First Minecraft Server to Web](../tutorials/adding-minecraft-server)
+2. [Install Plugin on your Minecraft Server](../plugin/installing-plugin)
