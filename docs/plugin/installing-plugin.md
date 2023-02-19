@@ -4,7 +4,7 @@ title: Installing Plugin
 id: installing-plugin
 ---
 
-:::tip Add your minecraft server first!
+:::info Add your minecraft server first!
 You need to add your minecraft server to web before continuing to add Minetrax plugin.
 
 [Click here](../tutorials/adding-minecraft-server.md) to know how to add your server.
@@ -55,3 +55,5 @@ API key and secret are keys used to protect communication between minetrax plugi
 :::warning
 Make sure to keep your api key and secret private and not share those with anyone. It's are not public information.
 :::
+
+Enter all the details in `config.yml` file and restart your server.
