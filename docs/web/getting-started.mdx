@@ -261,6 +261,7 @@ chown -R $USER:nginx /var/www/minetrax/*
   </TabItem>
 </Tabs>
 
+
 ### Setup Queue Listeners
 
 Queue are used to run long running task like sending email, clearing stale data and importing data from servers. Queue workers in need to setup for these tasks to run.
@@ -523,6 +524,13 @@ A SuperAdmin user is created already for you, you can login and change the passw
 Username: superadmin
 Password: admin123
 ```
+
+:::danger CHANGE PASSWORD & EMAIL
+It is very important that you change the **password** & **email** of the `superadmin` user after logging in.
+
+*You can change password from `Edit Profile` section and email from `Admin > Users` section*
+:::
+
 
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
 
