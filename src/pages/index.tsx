@@ -23,7 +23,7 @@ function HomepageHeader() {
           &nbsp;
           <Link
             className="button button--primary button--lg"
-            to="https://minetrax.live"
+            to="https://minetrax.xinecraft.com"
           >
             Demo
           </Link>

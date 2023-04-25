@@ -20,7 +20,7 @@ In this section we will discuss about the details of those variables.
 
 # This will enable or disable the Minetrax plugin
 enabled: true
-# The website address that will be linked. (Example: https://minetrax.live)
+# The website address that will be linked. (Example: https://minetrax.xinecraft.com)
 api-host:
 # This is found on your website.  In Admin Section > Settings > Plugin
 api-key:

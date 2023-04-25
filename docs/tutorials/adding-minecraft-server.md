@@ -64,7 +64,7 @@ Once you have filled all details, click on save, and it should add your server t
 Next, You need to note down few things which you gonna use while adding the Plugin.
 1. `server-id` -> This is the id of your server. You can find it in the server listing page. First column `Id` which your server id. (Eg: `1`).
 2. `api-key` and `api-secret` -> These are secret keys which is used to encrypt data while communicating with plugin. You can find these in `Admin > Settings > Plugin Setting`.
-3. `api-host` -> This is the URL where web is hosted. Eg: `https://minetrax.live`
+3. `api-host` -> This is the URL where web is hosted. Eg: `https://minetrax.xinecraft.com`
 4. `webquery-port` -> This is the webquery port which you have set while creating server in web.
 
 ## Adding MineTrax Plugin to Server
