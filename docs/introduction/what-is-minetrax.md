@@ -20,7 +20,7 @@ MineTrax has lot of features, some of them are listed below:
  - ShoutBox for those who like shouting. (►__◄)
  - Post Feed to post random stuff for others to like and comment.
  - Localization. Translate to any language you want.
- - Custom Navigation Menu.
+ - Custom Navigation Menu. (Customize navbar as per your liking using drag and drop)
  - Custom Pages.
  - Dark Mode. Ofcoz (✿◠‿◠)
 

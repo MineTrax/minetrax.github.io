@@ -31,7 +31,7 @@ function HomepageHeader() {
       </div>
       <img
         className={styles.bannerImage}
-        src="/img/shots/homepage.png"
+        src="/img/shots/homepage_v2.png"
         alt="Homepage"
       />
     </header>

@@ -19,4 +19,5 @@ Below are some of screenshots you might wanna look at before considering.
 ![Servers](./../static/img/shots/servers.png)
 ![Stats](./../static/img/shots/stats.png)
 ![User roles](./../static/img/shots/user_roles.png)
+![Custom Navigation](./../static/img/shots/custom_nav.png)
 ![Hero Settings](./../static/img/shots/hero_setting.png)
