@@ -49,3 +49,9 @@ And your done, if all went well you should now get the option of using discord o
 ## Github
 
 ## Facebook
+
+## Login to account using any Social
+By default MineTrax will only allow Login from a social app if you have created your account using that social auth first time. If you want minetrax to let you login from any social auth given your email address is same then change the given environment variable in your .env file to true.
+```
+ALLOW_ANY_PROVIDER_SOCIAL_AUTH=true
+```
