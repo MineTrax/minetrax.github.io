@@ -33,20 +33,14 @@ DISCORD_CLIENT_SECRET=abcdefghijklmnopqrstuvwxyz
 DISCORD_REDIRECT_URI=https://minetrax.live/auth/discord/callback
 ```
 
-Now simply rebuild your frontend assets.
-
-```bash
-npm run prod
-```
-
-And restart the queue workers:
+Next Restart the queue workers:
 
 ```
 cd /var/www/minetrax
 php artisan queue:restart
 ```
 
-And your done, if all went well you shuld now get the option of using discord on your registration/login page!
+And your done, if all went well you should now get the option of using discord on your registration/login page!
 
 ## Twitter
 
