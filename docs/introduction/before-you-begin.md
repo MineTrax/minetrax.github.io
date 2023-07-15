@@ -9,7 +9,7 @@ MineTrax has two parts:
  - Plugin
 
 You can just install Web if you don't need extra functionalities which Plugin provide.
-Though it is recommended to install both web and plugin to get the full experience.
+Though it is highly recommended to install both web and plugin to get the full experience.
 
 ## Web
 https://github.com/minetrax/minetrax
@@ -25,3 +25,7 @@ It is responsible for:
  - Sending chat and servers log to web if enabled.
  - Enabling users for web to chat with ingame players.
  - and various other things like whois command /ww etc.
+
+## Flow Diagram
+Here is a flow diagram to understand how MineTrax works.
+![Hero Settings](./../../static/img/diagram_light_bg.png)

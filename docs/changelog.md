@@ -1,5 +1,5 @@
 ---
-sidebar_position: 101
+sidebar_position: 200
 title: Changelog
 id: changelog
 ---

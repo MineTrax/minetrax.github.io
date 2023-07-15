@@ -8,6 +8,7 @@ MineTrax is a web suite & analytics tool for your minecraft servers. Using it yo
 
 ## Features
 MineTrax has lot of features, some of them are listed below:
+ - In-Depth Analytics for Server and Player (Intel)
  - Track player & server data and perform various analysis on them.
  - Player Rating System let you calculate the rank of player based on your own custom ranking algorithm.
  - Let users to register in website and link to ingame player character.
@@ -26,11 +27,12 @@ MineTrax has lot of features, some of them are listed below:
 
 ## Upcoming
  - Ban Management System
- - In-Depth Analytics for Server and Player
+ - Staff Recruitment System
  - Store System
  - Automated Server Events
- - Rewards & Achievements
  - Custom Theme
+ - Rewards & Achievements
+ - Advertisements & Monetisations
  - more...
 
 ## Demo Server
@@ -42,10 +44,9 @@ minetrax.xinecraft.com
 ```
 
 :::info
-MineTrax is very early in development. If you are stuck in any step during installation, please free to join [Discord](https://discord.gg/Hzfj27k) and ask for help or report the issue. We will sort it out as soon as possible.
+If you are stuck in any step during installation, please free to join **[Discord](https://discord.gg/Hzfj27k)** and ask for help or report the issue. We will sort it out as soon as possible.
 :::
 
 ## Inspirations
-MineTrax is inspired by various plugins like:
  - Player Analytics (Plans)
  - DiscordSRV

@@ -20,7 +20,7 @@ In this section we will discuss about the details of those variables.
 
 # This will enable or disable the Minetrax plugin
 enabled: true
-# The website address that will be linked. (Example: https://minetrax.xinecraft.com)
+# The website address that will be linked. (Example: https://minetrax.live)
 api-host:
 # This is found on your website.  In Admin Section > Settings > Plugin
 api-key:
@@ -41,7 +41,7 @@ report-server-intel: true
 # Sends player intel to website for better analysis.
 report-player-intel: true
 # Message format that will be sent when sending message from website to game
-web-message-format: '&b[WEB]&r {USERNAME} {MESSAGE}:&r'
+web-message-format: '&b[WEB]&r {USERNAME}: {MESSAGE}&r'
 # Sends a reminder to player to link their account to website.
 remind-player-to-link: true
 # How often to send the reminder to player.  This value is in seconds (300 seconds = 5 minutes)
@@ -98,4 +98,15 @@ enable-firework-on-player-join: false
 enable-firework-on-player-first-join: false
 # How many fireworks will be sent when player joins
 join-fireworks-amount: 2
+# If enabled the plugin will send more log data in console for better debugging.
+debug-mode: false
+# If enabled only whitelisted commands (whitelisted-commands-from-web) can be sent from web. other custom command will be discarded.
+allow-only-whitelisted-commands-from-web: false
+whitelisted-commands-from-web:
+  - kill
+  - kick
+  - mute
+  - emute
+  - ban
+  - broadcast
 ```

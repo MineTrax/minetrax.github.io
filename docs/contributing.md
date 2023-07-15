@@ -1,5 +1,5 @@
 ---
-sidebar_position: 99
+sidebar_position: 199
 title: Contribution Guide
 id: contributing
 ---

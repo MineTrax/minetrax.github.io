@@ -1,7 +1,7 @@
 ---
 title: Screenshots
 id: screenshots
-sidebar_position: 50
+sidebar_position: 197
 ---
 
 Below are some of screenshots you might wanna look at before considering.
