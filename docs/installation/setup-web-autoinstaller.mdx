@@ -42,16 +42,15 @@ If you looking for affordable & good VPS providers, you can try [DigitalOcean](h
 :::
 
 ## Installation
-SSH into your VPS/Dedicated Server and run the following command:
+SSH into your VPS/Dedicated Server and run the following command (Use `root` user or a user with `sudo` access):
 
 ```
-curl -s "https://minetrax.github.io/install.sh" | bash
+curl -o ~/install.sh https://minetrax.github.io/install.sh && chmod +x ~/install.sh && ~/install.sh
 ```
 
 It will start the installation process and will take some time to complete.
-1. During the installation process, you will be asked to confirm installation by pressing `y` and enter a few time.
-2. You will also get prompted to enter a database name and password for minetrax installation, Enter your desired data there and press enter.
-3. In final step you will be asked to enter Domain name which will open up minetrax. Enter your domain name there and press enter.
+1. You will be prompted to enter Domain name which will open up minetrax. Enter your domain name there and press enter. Eg: `example.com`
+2. Next, you will also get prompted to enter a database name and password for minetrax installation, Enter your desired data there and press enter. (Do not include any spaces in database name and password)
 
 :::info
 Domain name can be either a subdomain or a domain. For example, `minetrax.example.com` or `example.com` both are valid. 
