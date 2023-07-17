@@ -4,25 +4,13 @@
 update_and_upgrade() {
     echo "Updating package lists..."
     sudo apt update
-
-    echo "Upgrading packages..."
-    sudo apt upgrade -y
 }
 
 # Function to check and install MySQL if needed
 install_mysql() {
     if ! dpkg -l | grep -q "mysql-server"; then
-        read -p "[PROMPT] MySQL is not installed. Do you want to install it? (y/n): " choice
-        case "$choice" in
-            y|Y|"" )
-                echo "Installing MySQL..."
-                sudo apt install mysql-server -y
-                ;;
-            * )
-                echo "ERROR: MySQL installation skipped."
-                exit 1  # Exit the script with an error code
-                ;;
-        esac
+            echo "Installing MySQL..."
+            sudo apt install mysql-server -y
     else
         echo "MySQL is already installed. continuing..."
     fi
@@ -31,20 +19,11 @@ install_mysql() {
 # Function to check and install PHP if needed
 install_php() {
     if ! dpkg -l | grep -q "php8.2"; then
-        read -p "[PROMPT] PHP 8.2 is not installed. Do you want to install it? (y/n): " choice
-        case "$choice" in
-            y|Y|"" )
-                echo "Installing PHP..."
-                sudo apt install software-properties-common -y
-                sudo add-apt-repository ppa:ondrej/php -y
-                sudo apt update
-				sudo apt -y install curl php8.2 php8.2-cli php8.2-gd php8.2-mysql php8.2-pdo php8.2-mbstring php8.2-tokenizer php8.2-bcmath php8.2-xml php8.2-fpm php8.2-curl php8.2-zip php8.2-intl php8.2-redis
-                ;;
-            * )
-                echo "ERROR: PHP installation skipped."
-                exit 1  # Exit the script with an error code
-                ;;
-        esac
+            echo "Installing PHP..."
+            sudo apt install software-properties-common -y
+            sudo add-apt-repository ppa:ondrej/php -y
+            sudo apt update
+			sudo apt -y install curl php8.2 php8.2-cli php8.2-gd php8.2-mysql php8.2-pdo php8.2-mbstring php8.2-tokenizer php8.2-bcmath php8.2-xml php8.2-fpm php8.2-curl php8.2-zip php8.2-intl php8.2-redis
     else
         echo "PHP 8.2 is already installed. continuing..."
     fi
@@ -73,10 +52,6 @@ install_miscellaneous() {
 
 # Function to setup the database and store the password in a variable
 setup_database() {
-	echo "[PROMPT] Please enter name of the Database for MineTrax Installation (eg: minetrax) -> "
-	read database_name
-	echo "[PROMPT] Please enter a strong password for your newly created database -> "
-	read database_password
     echo "Setting up the database..."	
     if ! sudo mysql <<EOF
 CREATE DATABASE $database_name;
@@ -172,10 +147,6 @@ stopwaitsecs=3660" | sudo tee /etc/supervisor/conf.d/minetrax-worker-long.conf
 setup_nginx_config() {
     echo "Setting up Nginx for MineTrax..."
 
-    # Prompt user for the domain name
-	echo "[PROMPT] Please enter your domain where MineTrax will be hosted (eg: your_domain.com) -> "
-	read domain_name
-
     sudo sed -i "s#APP_URL=http://localhost#APP_URL=http://$domain_name#" /var/www/minetrax/.env
 
     # Create Nginx configuration file
@@ -225,6 +196,18 @@ update_minetrax() {
  cd /var/www/minetrax
  sudo sh update.sh
 }
+
+# Prompt Everything at start
+
+# Prompt user for the domain name
+echo "[PROMPT] Please enter your Domain where MineTrax will open, Use just domain, dont include http:// (eg: your_domain.com) -> "
+read domain_name
+
+echo "[PROMPT] Please enter desired name of the MySQL database for MineTrax Installation (eg: minetrax) -> "
+read database_name
+
+echo "[PROMPT] Please enter a strong password for your newly created MySQL database -> "
+read database_password
 
 
 # Main script execution
