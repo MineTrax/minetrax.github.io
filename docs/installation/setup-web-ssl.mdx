@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Setup Web SSL
 id: setup-web-ssl
 ---
@@ -59,6 +59,26 @@ Finally incase it ask you if you want to Redirect all your traffic to https. Sel
 
   </TabItem>
 </Tabs>
+
+Now you should be able to access your website with `https://YOUR_DOMAIN`.
+
+### Update .env to use HTTPS
+
+Now that we have HTTPS enabled on the website. We need to update our `.env` file to use HTTPS instead of HTTP.
+
+Open the `.env` file in your favorite editor and update the `APP_URL` from `http://YOUR_DOMAIN` to `https://YOUR_DOMAIN`.
+
+```bash
+cd /var/www/minetrax
+nano .env
+```
+
+```bash
+APP_URL=https://YOUR_DOMAIN
+```
+
+Save the file and that's it.
+
 
 ### Verify Certbot Auto-Renewal
 

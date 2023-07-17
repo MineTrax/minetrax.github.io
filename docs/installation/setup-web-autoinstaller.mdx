@@ -1,0 +1,102 @@
+---
+sidebar_position: 1
+title: Setup Web (AutoInstaller)
+id: setup-web-autoinstaller
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+:::tip
+You only need to follow either AutoInstaller or Manual, not both.
+
+If you want us to install minetrax for your servers or stuck in any step and need help, Feel free to join our [**Discord group**](https://discord.gg/Hzfj27k) and ask in help section or ping `Xinecraft#2139`. Its free. ¯\\\_(ツ)\_/¯
+:::
+
+AutoInstaller helps you to install minetrax on your server with just one command. It will install all the dependencies and setup everything for you. 
+You just need to run one command and it will do the rest for you.
+
+AutoInstaller should only be used in a fresh VPS/Dedicated Server with Ubuntu (LTS) installed.
+
+## Server Requirements
+:::note
+As of today, MineTrax cannot be installed on a Shared Hosting. VPS or Dedicated Server is required.
+:::
+
+AutoInstaller requires a fresh VPS with Ubuntu (LTS). It is recommended to have atleast 1GB of RAM and 1 vCPU.
+
+It is important that you choose LTS version of Ubuntu as AutoInstaller will fail on Non-LTS releases, Below are some Ubuntu releases and their support status:
+
+| Release | Codename | Supported
+| -------------- | -------- | ---------- |
+| Ubuntu 22.04 LTS | Jammy Jellyfish | ✅ |
+| Ubuntu 20.04 LTS | Focal Fossa | ✅ |
+| Ubuntu 18.04 LTS | Bionic Beaver | ✅ |
+| Ubuntu 23.04 | Lunar Lobster | ❌ |
+| Ubuntu 22.10 | Kinetic Kudu | ❌ |
+
+Simply select one of supported releases during creation of the VPS in your provider panel.
+
+:::tip
+If you looking for affordable & good VPS providers, you can try [DigitalOcean](https://m.do.co/c/aece040492d0) & [Hetzner](https://hetzner.cloud/?ref=UBpE7ZNeerEj). Both give credit upto 100$ to get started for free.
+:::
+
+## Installation
+SSH into your VPS/Dedicated Server and run the following command:
+
+```
+curl -s "https://minetrax.github.io/install.sh" | bash
+```
+
+It will start the installation process and will take some time to complete.
+1. During the installation process, you will be asked to confirm installation by pressing `y` and enter a few time.
+2. You will also get prompted to enter a database name and password for minetrax installation, Enter your desired data there and press enter.
+3. In final step you will be asked to enter Domain name which will open up minetrax. Enter your domain name there and press enter.
+
+:::info
+Domain name can be either a subdomain or a domain. For example, `minetrax.example.com` or `example.com` both are valid. 
+Make sure you create a DNS record for your domain/subdomain pointing to your server IP.
+:::
+
+
+
+## Finalize
+
+Once the installation is complete, you will be able to access minetrax on your domain `http://your_domain.com`.
+
+A SuperAdmin user is created already for you, you can login and change the password:
+
+```
+Username: superadmin
+Password: admin123
+```
+
+:::danger CHANGE PASSWORD & EMAIL
+It is very important that you change the **password** & **email** of the `superadmin` user after logging in.
+
+*You can change password from `Edit Profile` section and email from `Admin > Users` section*
+:::
+
+
+After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file created at `/var/www/minetrax`.
+
+```bash title=.env
+APP_NAME="YOUR_DESIRED_APP_NAME"
+APP_ENV=production
+APP_DEBUG=false
+```
+
+:::danger DISABLE DEBUG MODE
+It is very important that you change your **APP_ENV** to `production` and **APP_DEBUG** to `false` in the `.env` file when you are done testing and setting up the site.
+
+**Keeping APP_ENV to `local` or APP_DEBUG to `true` might expose sensitive information to end users.**
+:::
+
+## What's Next?
+
+Now you are all set to go, you can start using minetrax and add your servers to it.
+Below are some steps to follow next:
+
+1. [Secure your Web with SSL Certificate](../installation/setup-web-ssl)
+2. [Add your First Minecraft Server to Web](../web/adding-minecraft-server)
+3. [Install Plugin on your Minecraft Server](../installation/setup-plugin)

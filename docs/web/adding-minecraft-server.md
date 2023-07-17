@@ -72,7 +72,7 @@ Next, You need to note down few things which you gonna use while adding the Plug
 ## Adding MineTrax Plugin to Server
 Follow steps in this tutorial to add MineTrax plugin to your server.
 
-[How to Add Plugin to Minecraft Server](/docs/plugin/installing-plugin)
+[How to Add Plugin to Minecraft Server](../installation/setup-plugin.md)
 
 After you have configured plugin using above tutorial,
 Verify by going to server listing page in admin section and make sure it show `online` there.

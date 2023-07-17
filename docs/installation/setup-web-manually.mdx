@@ -1,15 +1,20 @@
 ---
-sidebar_position: 1
-title: Setup MineTrax Web
-id: setup-web
+sidebar_position: 2
+title: Setup Web (Manually)
+id: setup-web-manually
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 :::tip
+You only need to follow either AutoInstaller or Manual, not both.
+
 If you want us to install minetrax for your servers or stuck in any step and need help, Feel free to join our [**Discord group**](https://discord.gg/Hzfj27k) and ask in help section or ping `Xinecraft#2139`. Its free. ¯\\\_(ツ)\_/¯
 :::
+
+Manual Install give you flexibility to install MineTrax in more different distributions of Linux & options to choose between Apache2 or Nginx, MySQL or MariaDB, etc.
+Also, you can install on your existing server or a new server.
 
 ## Server Requirements
 
@@ -231,7 +236,6 @@ Without that key recovering data won't be possible.
 Also, always keep that key secret.
 :::
 
-
 ### Fix permissions
 
 Fix permissions for the web folder so webserver can access the files.
@@ -260,7 +264,6 @@ chown -R $USER:nginx /var/www/minetrax/*
 
   </TabItem>
 </Tabs>
-
 
 ### Setup Queue Listeners
 
@@ -339,7 +342,7 @@ php artisan queue:restart
 ### WebSocket setup (optional)
 
 :::info Recommendation
-This step is optional but highly recommended. By default minetrax will use polling to fetch and reload data from server without reloading. (eg: every 5 seconds).
+This step is optional but recommended. By default minetrax will use polling to fetch and reload data from server without reloading. (eg: every 5 seconds).
 
 If you want your site to feel more responsive and instant or you have a large audience and want to reduce the load on your server then you should setup websocket.
 :::
@@ -383,7 +386,7 @@ php artisan queue:restart
 ```
 
 :::tip pusher alternatives
-Pusher provide 200k messages per day in free tier, which is more than enough for most cases, but if you have a very large userbase that might not be enough. In that case please check **[Websocket Options](./websocket-options.md)** page to learn how to setup Pusher alternatives.
+Pusher provide 200k messages per day in free tier, which is more than enough for most cases, but if you have a very large userbase that might not be enough. In that case please check **[Websocket Options](../web/websocket-options)** page to learn how to setup Pusher alternatives.
 
 _It is recommended to go for alternatives only after giving Pusher a try and its limit runs out._
 :::
@@ -528,9 +531,8 @@ Password: admin123
 :::danger CHANGE PASSWORD & EMAIL
 It is very important that you change the **password** & **email** of the `superadmin` user after logging in.
 
-*You can change password from `Edit Profile` section and email from `Admin > Users` section*
+_You can change password from `Edit Profile` section and email from `Admin > Users` section_
 :::
-
 
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
 
@@ -549,6 +551,8 @@ It is very important that you change your **APP_ENV** to `production` and **APP_
 ### What's Next?
 
 Now you are all set to go, you can start using minetrax and add your servers to it.
+Below are some steps to follow next:
 
-1. [Add your First Minecraft Server to Web](../tutorials/adding-minecraft-server)
-2. [Install Plugin on your Minecraft Server](../plugin/installing-plugin)
+1. [Secure your Web with SSL Certificate](../installation/setup-web-ssl)
+2. [Add your First Minecraft Server to Web](../web/adding-minecraft-server)
+3. [Install Plugin on your Minecraft Server](../installation/setup-plugin)

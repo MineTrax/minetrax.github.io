@@ -1,13 +1,13 @@
 ---
-sidebar_position: 3
-title: Setup MineTrax Plugin
+sidebar_position: 4
+title: Setup Plugin
 id: setup-plugin
 ---
 
 :::caution Add your minecraft server first!
 You need to add your minecraft server to web before continuing to add Minetrax plugin.
 
-[Click here](../tutorials/adding-minecraft-server.md) to know how to add your server.
+[Click here](../web/adding-minecraft-server.md) to know how to add your server.
 :::
 
 ## Download
@@ -45,7 +45,7 @@ In next step you need to know few things:
 
 ### server-id
 This is unique identifier of your server.
-After you have [added your server](../tutorials/adding-minecraft-server.md), you can view your server id from listing page.
+After you have [added your server](../web/adding-minecraft-server.md), you can view your server id from listing page.
 
 ### api-host
 API host is your url at which minetrax will be running. eg: `https://yourdomain.com`
