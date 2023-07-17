@@ -28,7 +28,7 @@ const FeatureList: TestiomonialItem[] = [
     textSize: "text-base",
     name: "Reedpasse",
     avatarUrl:
-      "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
+      "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=wavatar&f=y",
     testionial: (
       <>
         I have to say, it is working like a charm! Not only is the functionality
@@ -57,7 +57,7 @@ const FeatureList: TestiomonialItem[] = [
     name: "xteri",
     server: "WarNetwork",
     avatarUrl:
-      "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
+      "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=robohash&f=y",
     testionial: (
       <>
         Minetrax is the top choice among Minecraft server management suites.
@@ -115,7 +115,7 @@ const FeatureList: TestiomonialItem[] = [
     textSize: "text-2xl",
     name: "MarshyO_o",
     avatarUrl:
-      "https://secure.gravatar.com/avatar/01fb6fc9a5d9b3f83aeef75939feda61?s=48&d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_s.png",
+      "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
     testionial: (
       <>
         This is such a great plugin the owner of the plugin is so helpful he
@@ -128,7 +128,7 @@ const FeatureList: TestiomonialItem[] = [
     textSize: "text-lg",
     name: "Duster911",
     avatarUrl:
-      "https://secure.gravatar.com/avatar/01fb6fc9a5d9b3f83aeef75939feda61?s=48&d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_s.png",
+      "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
     testionial: (
       <>
         MineTrax is exactly the type of web information for my server I was
@@ -144,7 +144,7 @@ const FeatureList: TestiomonialItem[] = [
     textSize: "text-3xl",
     name: "rkfsociety",
     avatarUrl:
-      "https://secure.gravatar.com/avatar/01fb6fc9a5d9b3f83aeef75939feda61?s=48&d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_s.png",
+      "https://www.spigotmc.org/data/avatars/s/1188/1188692.jpg?1622659300",
     testionial: (
       <>
         The functionality is amazing. The most user-friendly website and the

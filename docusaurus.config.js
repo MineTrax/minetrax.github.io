@@ -81,6 +81,10 @@ const config = {
       },
       footer: {
         style: "dark",
+        logo: {
+          alt: 'MineTrax Logo',
+          src: 'img/minetrax-full-dark.png',
+        },
         links: [
           {
             title: "Documentation",
@@ -96,15 +100,15 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.gg/Hzfj27k",
+                to: "https://discord.gg/Hzfj27k",
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/minetraxsuite",
+                to: "https://twitter.com/minetraxsuite",
               },
               {
                 label: "SpigotMC",
-                href: "https://www.spigotmc.org/resources/minetrax-suite.102378/",
+                to: "https://www.spigotmc.org/resources/minetrax-suite.102378/",
               },
             ],
           },
@@ -113,15 +117,15 @@ const config = {
             items: [
               {
                 label: "Install Service",
-                href: "https://discord.gg/Hzfj27k",
+                to: "https://discord.gg/Hzfj27k",
               },
               {
                 label: "Managed Hosting",
-                href: "https://discord.gg/Hzfj27k",
+                to: "https://craftdeploy.com",
               },
               {
                 label: "Development",
-                href: "https://discord.gg/Hzfj27k",
+                to: "https://discord.gg/Hzfj27k",
               },
             ],
           },
@@ -134,7 +138,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/minetrax/minetrax",
+                to: "https://github.com/minetrax/minetrax",
               },
             ],
           },

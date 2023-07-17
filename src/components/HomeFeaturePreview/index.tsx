@@ -9,17 +9,18 @@ export default function HomeFeaturePreview({}: Props) {
         <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
           <img
             className="w-full"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
+            src="./img/charts.png"
             alt="dashboard image"
           />
           <div className="mt-4 md:mt-0">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-              Let's create more tools and ideas that brings us together.
+              Gain deeper understanding of your server.
             </h2>
-            <p className="mb-6 font-light text-gray-500 md:text-lg">
-              Flowbite helps you connect with friends and communities of people
-              who share your interests. Connecting with your friends and family
-              as well as discovering new ones is easy with features like Groups.
+            <p className="mb-6 text-gray-500">
+              With Intel, you can keep track of your server's performance and
+              player activity. Intel is a powerful tool that helps you
+              understand various insights about your server and players, detect
+              suspicious activity, and more.
             </p>
           </div>
         </div>
@@ -31,17 +32,17 @@ export default function HomeFeaturePreview({}: Props) {
         <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
           <div className="mt-4 md:mt-0">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-              Let's create more tools and ideas that brings us together.
+              Craft your unique experience.
             </h2>
-            <p className="mb-6 font-light text-gray-500 md:text-lg">
-              Flowbite helps you connect with friends and communities of people
-              who share your interests. Connecting with your friends and family
-              as well as discovering new ones is easy with features like Groups.
+            <p className="mb-6 text-gray-500">
+              You can customize MineTrax to fit your server's needs. Customize
+              player rating and scoring system, Custom navigation, custom pages,
+              Custom hero sections, and more.
             </p>
           </div>
           <img
             className="w-full"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
+            src="img/customize.png"
             alt="dashboard image"
           />
         </div>

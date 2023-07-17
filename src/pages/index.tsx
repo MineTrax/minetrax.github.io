@@ -12,8 +12,8 @@ import HomeCraftDeploy from "../components/HomeCraftDeploy";
 
 function getRandomTitle() {
   const titles = [
-    "The Modern Way to Grow Your Minecraft Server",
-    "The Growth Potion for Your Minecraft Server",
+    "The Modern Way to Grow Your Minecraft Servers",
+    "The Growth Potion for Your Minecraft Servers",
   ];
   return titles[Math.floor(Math.random() * titles.length)];
 }
