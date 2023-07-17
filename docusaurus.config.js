@@ -116,12 +116,12 @@ const config = {
             title: "Services",
             items: [
               {
-                label: "Install Service",
-                to: "https://discord.gg/Hzfj27k",
-              },
-              {
                 label: "Managed Hosting",
                 to: "https://craftdeploy.com",
+              },
+              {
+                label: "Install Service",
+                to: "https://discord.gg/Hzfj27k",
               },
               {
                 label: "Development",
