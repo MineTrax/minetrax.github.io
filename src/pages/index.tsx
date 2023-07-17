@@ -8,6 +8,7 @@ import HomeFeatures from "../components/HomeFeatures";
 import HomeShotTabs from "../components/HomeShotTabs";
 import HomeFeaturePreview from "../components/HomeFeaturePreview";
 import HomeTestimonials from "../components/HomeTestimonials";
+import HomeCraftDeploy from "../components/HomeCraftDeploy";
 
 function getRandomTitle() {
   const titles = [
@@ -28,17 +29,17 @@ function HomepageHeader() {
           </h1>
           <p className="text-gray-400 w-4/5 lg:w-1/2 text-sm lg:text-lg">
             MineTrax helps you build a thriving community with powerful
-            analytics, custom rankings, and chat features. Attract new players,
+            analytics, user engagement, custom rankings, and chat features. Attract new players,
             retain existing players, and keep them coming back.
           </p>
         </div>
 
-        <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+        <div className="flex flex-col mb-8 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <Link
             to="/docs/introduction/what-is-minetrax"
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-sky-500 hover:bg-sky-600 focus:outline-none hover:no-underline hover:text-white"
           >
-            Get Started
+            Get Started, It's Free
             <svg
               className="ml-2 -mr-1 w-5 h-5"
               fill="currentColor"
@@ -82,7 +83,7 @@ function HomepageHeader() {
       </div>
       <img
         className={styles.bannerImage}
-        src="/img/shots/homepage_v2.png"
+        src="/img/shots/hero-min.png"
         alt="Homepage"
       />
     </header>
@@ -100,6 +101,7 @@ export default function Home(): JSX.Element {
       <main>
         <HomeFeatures />
         <HomeShotTabs />
+        <HomeCraftDeploy />
         <HomeFeaturePreview />
         <HomeTestimonials />
 

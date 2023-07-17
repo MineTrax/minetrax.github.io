@@ -47,3 +47,7 @@
 .header-icon-link {
   display: inline-flex
 }
+
+.imgFeaturePreview {
+  max-width: 1000px;
+}

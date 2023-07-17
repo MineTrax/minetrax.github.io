@@ -17,7 +17,7 @@ const settings = {
 
 type TestiomonialItem = {
   name: string;
-  server: string;
+  server?: string;
   avatarUrl: string;
   testionial: JSX.Element;
   textSize?: string;
@@ -25,8 +25,24 @@ type TestiomonialItem = {
 
 const FeatureList: TestiomonialItem[] = [
   {
+    textSize: "text-base",
+    name: "Reedpasse",
+    avatarUrl:
+      "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
+    testionial: (
+      <>
+        I have to say, it is working like a charm! Not only is the functionality
+        top-notch, but the creator of the plugin is also incredibly accessible
+        and helpful in getting everything set up. I have had a great experience
+        using this plugin and highly recommend it to others. The creator is
+        amazing to work with and very responsive to any questions or concerns.
+        Overall, this plugin is a fantastic I couldn't be happier with it.
+      </>
+    ),
+  },
+  {
+    textSize: "text-3xl",
     name: "Lukiqq",
-    server: "Proton Servers",
     avatarUrl:
       "https://www.spigotmc.org/data/avatars/s/493/493884.jpg?1651003136",
     testionial: (
@@ -38,18 +54,101 @@ const FeatureList: TestiomonialItem[] = [
   },
   {
     textSize: "text-sm",
-    name: "Reedpasse",
-    server: "X Servers",
+    name: "xteri",
+    server: "WarNetwork",
     avatarUrl:
       "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
     testionial: (
       <>
-        I have to say, it is working like a charm! Not only is the functionality
-        top-notch, but the creator of the plugin is also incredibly accessible
-        and helpful in getting everything set up. I have had a great experience
-        using this plugin and highly recommend it to others. The creator is
-        amazing to work with and very responsive to any questions or concerns.
-        Overall, this plugin is a fantastic I couldn't be happier with it.
+        Minetrax is the top choice among Minecraft server management suites.
+        This open-source software offers exceptional performance while using
+        minimal system resources. Its dedication to open-source principles
+        allows server owners to customize and optimize their server
+        environments. Minetrax stands out for its efficiency, delivering smooth
+        gameplay even on servers with limited resources. The owner's active
+        involvement and responsiveness to user feedback ensure continuous
+        improvements and updates. For Minecraft server owners seeking the
+        ultimate management solution, Minetrax is highly recommended for its
+        open-source nature, outstanding performance, and dedicated developer.
+      </>
+    ),
+  },
+  {
+    textSize: "text-2xl",
+    name: "audiodk",
+    server: "RedQueenGaming",
+    avatarUrl:
+      "https://www.spigotmc.org/data/avatars/s/550/550112.jpg?1655555597",
+    testionial: (
+      <>
+        Been friends with this man for many years and seen some amazing things
+        done by him. This is a very well put together website with features you
+        will not see on most sites.
+      </>
+    ),
+  },
+  {
+    textSize: "text-sm",
+    name: "dchu096",
+    avatarUrl:
+      "https://secure.gravatar.com/avatar/01fb6fc9a5d9b3f83aeef75939feda61?s=48&d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_s.png",
+    testionial: (
+      <>
+        Have a brief look into minetrax, and its amazing. Although there are a
+        few issues I am running into, Xinecraft is being really helpful and
+        sorted my issue in no time. The GUI looks amazing and with customization
+        features such as a the banner it shows (unfortunately not the tab icon
+        but i hope they can resolve that soon) Minetrax is also feature-packed
+        so i can put my voting links for user to vote and also discord linking*
+        There is a big in-game chat for registered user to type on the website
+        and will send to the server which is a bit like discordsrv but on the
+        web, pretty neat and ofc I love the staff menu where you can
+        kill/kick/ban and mute user on the website. There is quite a bit of
+        stats, although i prefer plan better for stats logging but at least this
+        feature is here. * minetrax uses its own discord linking which im in
+        contact with xinecraft to see if it can hook to dsrv instead but either
+        ways, amazing panel and deserve a try.
+      </>
+    ),
+  },
+  {
+    textSize: "text-2xl",
+    name: "MarshyO_o",
+    avatarUrl:
+      "https://secure.gravatar.com/avatar/01fb6fc9a5d9b3f83aeef75939feda61?s=48&d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_s.png",
+    testionial: (
+      <>
+        This is such a great plugin the owner of the plugin is so helpful he
+        pretty much walked me through it he goes out of his way to help I would
+        so recommend this if you need a website 10/10
+      </>
+    ),
+  },
+  {
+    textSize: "text-lg",
+    name: "Duster911",
+    avatarUrl:
+      "https://secure.gravatar.com/avatar/01fb6fc9a5d9b3f83aeef75939feda61?s=48&d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_s.png",
+    testionial: (
+      <>
+        MineTrax is exactly the type of web information for my server I was
+        looking for. You have options for live chat, player stats, and different
+        ways to sign in! The instructions provided on the wiki is excellent! It
+        does require a VPS or self hosted server to run it. The developer,
+        Xinecraft is very responsive on discord and will even help others
+        install it if needed.
+      </>
+    ),
+  },
+  {
+    textSize: "text-3xl",
+    name: "rkfsociety",
+    avatarUrl:
+      "https://secure.gravatar.com/avatar/01fb6fc9a5d9b3f83aeef75939feda61?s=48&d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_s.png",
+    testionial: (
+      <>
+        The functionality is amazing. The most user-friendly website and the
+        best support. Problems are fixed as soon as possible.
       </>
     ),
   },
@@ -78,11 +177,7 @@ function Testimonial({
             />
           </svg>
           <blockquote className="border-none">
-            <p
-              className={["font-medium text-gray-900", textSize].join(
-                " "
-              )}
-            >
+            <p className={["font-medium text-gray-900", textSize].join(" ")}>
               {testionial}
             </p>
           </blockquote>
@@ -113,9 +208,19 @@ export default function HomeTestimonials({}: Props) {
           <h2 className="mb-4 text-4xl text-center tracking-tight font-extrabold text-gray-900">
             Don't just take our word for it.
           </h2>
+
+          <p className="text-center m-0">
+            <a
+              className="text-gray-500 text-sm hover:text-sky-500 hover:no-underline"
+              href="https://www.spigotmc.org/resources/minetrax-suite.102378"
+              target="_blank"
+            >
+              Check all Reviews on Spigot
+            </a>
+          </p>
         </div>
 
-        <Slider styles={styles.slider} {...settings}>
+        <Slider {...settings}>
           {FeatureList.map((item) => (
             <Testimonial
               key={item.name}
@@ -131,44 +236,3 @@ export default function HomeTestimonials({}: Props) {
     </div>
   );
 }
-
-const styles = {
-  slider: {
-    ".slick-list": {
-      // mx: [null, null, null, null, -2, 0],
-    },
-    ".slick-slide": {
-      // mr: [null, null, null, null, 4, 0],
-    },
-    ".slick-dots": {
-      display: "flex !important",
-      margin: 0,
-      padding: 0,
-      listStyle: "none",
-      alignItems: "center",
-      justifyContent: "center",
-      marginTop: [3, null, null, 13],
-      li: {
-        mx: 1,
-        display: "flex",
-      },
-      button: {
-        backgroundColor: "rgb(45 61 80 / 15%)",
-        borderRadius: 50,
-        border: 0,
-        cursor: "pointer",
-        padding: 0,
-        overflow: "hidden",
-        textIndent: "-9999em",
-        width: 10,
-        height: 6,
-        outline: 0,
-        transition: "all 0.3s ease-in-out 0s",
-      },
-      ".slick-active button": {
-        backgroundColor: "rgb(45 61 80 / 40%)",
-        width: 20,
-      },
-    },
-  },
-};
