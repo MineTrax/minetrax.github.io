@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkminetrax_github_io=self.webpackChunkminetrax_github_io||[]).push([[6945],{6945:function(i,e,t){t.r(e)}}]);
