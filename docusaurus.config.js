@@ -53,6 +53,10 @@ const config = {
           content: "https://minetrax.github.io/img/shots/hero-min.png",
         },
         {
+          name: "twitter:site",
+          content: "@minetraxsuite",
+        },
+        {
           name: 'keywords', 
           content: 'minecraft, site, minetrax, spigot, bukkit, analytics, web, suite, free, open source'
         }
