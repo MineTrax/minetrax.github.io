@@ -43,6 +43,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: "og:image",
+          content: "https://minetrax.github.io/img/shots/hero-min.png",
+        },
+        {
+          name: "twitter:image",
+          content: "https://minetrax.github.io/img/shots/hero-min.png",
+        },
+        {
+          name: 'keywords', 
+          content: 'minecraft, site, minetrax, spigot, bukkit, analytics, web, suite, free, open source'
+        }
+      ],
       colorMode: {
         defaultMode: 'dark',
       },

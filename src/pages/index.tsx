@@ -24,10 +24,10 @@ function HomepageHeader() {
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <div className="flex flex-col justify-center items-center mb-2 md:mb-5">
-          <h1 className="text-gray-100 text-3xl md:text-5xl lg:text-7xl leading-tight w-4/5">
+          <h1 className="text-gray-100 text-3xl md:text-5xl lg:text-7xl leading-tight md:w-4/5 font-extrabold">
             {getRandomTitle()}
           </h1>
-          <p className="text-gray-400 w-4/5 lg:w-1/2 text-sm lg:text-lg">
+          <p className="text-gray-400 md:w-4/5 lg:w-1/2 text-sm lg:text-lg">
             MineTrax helps you build a thriving community with powerful
             analytics, user engagement, custom rankings, and chat features. Attract new players,
             retain existing players, and keep them coming back.
