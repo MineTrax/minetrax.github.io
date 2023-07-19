@@ -1,5 +1,5 @@
 ---
-sidebar_position: 99
+sidebar_position: 9
 title: Custom Themes
 id: custom-themes
 ---
