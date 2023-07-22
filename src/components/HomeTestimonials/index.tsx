@@ -47,6 +47,18 @@ const FeatureList: TestiomonialItem[] = [
       "https://www.spigotmc.org/data/avatars/s/493/493884.jpg?1651003136",
     testionial: (
       <>
+        Minetrax really is the best web suite for Minecraft!!!! Even the other
+        paid web suites are no match for it.
+      </>
+    ),
+  },
+  {
+    textSize: "text-3xl",
+    name: "coolroi",
+    avatarUrl:
+      "https://www.spigotmc.org/data/avatars/s/75/75735.jpg?1578513663",
+    testionial: (
+      <>
         This is the best site that exists for free to manage a minecraft server
         at the moment!
       </>
@@ -149,6 +161,37 @@ const FeatureList: TestiomonialItem[] = [
       <>
         The functionality is amazing. The most user-friendly website and the
         best support. Problems are fixed as soon as possible.
+      </>
+    ),
+  },
+  {
+    textSize: "text-base",
+    name: "Fentoes",
+    avatarUrl:
+      "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
+    testionial: (
+      <>
+        Amazing developer, and even better plugin. He's absolutely outdone
+        himself. For one, I don't understand how he doesn't charge for this.
+        It's packed to the brim with features and makes no issues. I joined the
+        discord to ask about setup for windows (which me and the developer do
+        not recommend) and he helped me through it, basically doing the entire
+        thing for me. Premium Support + Premium plugin. Absolutely the best
+        free(and possibly paid) solution for an amazing website.
+      </>
+    ),
+  },
+  {
+    textSize: "text-2xl",
+    name: "Knight-Mare",
+    avatarUrl:
+      "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
+    testionial: (
+      <>
+        I've used many Minecraft websuites and statistics plugins, but this one
+        is hands down the best. The developer is incredibly kind and helpful,
+        always willing to answer questions and provide support. Highly
+        recommended!
       </>
     ),
   },
