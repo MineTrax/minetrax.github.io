@@ -59,7 +59,7 @@ export default function HomeFeaturePreview({}: Props) {
           />
           <div className="mt-4 md:mt-0">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-              AskDB - Powerful AI base database query system.
+              AskDB - Powerful AI based database query system.
             </h2>
             <p className="mb-6 text-gray-500">
               AskDB is a powerful AI base database query system that allows you
