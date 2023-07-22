@@ -13,6 +13,15 @@ AskDB is a powerful AI base database query system that allows you to ask questio
 AskDB uses OpenAI GPT-3 to answer your questions. It uses the data from your server to answer your questions.
 Since it uses OpenAI APIs, you need to have an OpenAI account and API key to use AskDB.
 
+:::info OpenAI Pricing
+OpenAI is a paid service and it charges you for every API request you make.
+You can check the pricing of OpenAI [here](https://openai.com/pricing/).
+
+Its always good to be careful and add usage limit in your OpenAI account setting. 
+
+_Rough Cost Estimate: 1 query to AskDB will cost you around $0.0010 in OpenAI usage._
+:::
+
 ## How to enable AskDB?
 
 AskDB is disabled by default. To enable it, you need to follow these steps:
