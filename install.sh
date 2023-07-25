@@ -11,6 +11,7 @@ install_mysql() {
     if ! dpkg -l | grep -q "mysql-server"; then
             echo "Installing MySQL..."
             sudo apt install mysql-server -y
+            sudo service mysql restart
     else
         echo "MySQL is already installed. continuing..."
     fi
