@@ -35,6 +35,7 @@ install_miscellaneous() {
     echo "Installing miscellaneous packages (Nginx, NodeJS, Redis Server, Git, Sendmail, Supervisor, Composer)..."
     # Install Nginx
     sudo apt install nginx -y
+    sudo service nginx restart
 
     # Install NodeJS
     curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
