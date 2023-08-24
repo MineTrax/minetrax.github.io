@@ -40,7 +40,7 @@ You can check web demo at **[https://minetrax.xinecraft.com](https://minetrax.xi
 
 **Join demo server**
 ```
-minetrax.xinecraft.com
+mtx.xinecraft.com
 ```
 
 :::info
