@@ -16,6 +16,7 @@ Firstly, download the latest __[MineTrax.jar](https://github.com/MineTrax/plugin
 :::note
 1. MineTrax plugin should not be added to Proxy servers (Bungee, Velocity etc). It is only for Spigot, Paper, Bukkit etc servers.
 2. Vault plugin is required for Minetrax to work. If you don't have it, download it from [here](https://github.com/MilkBowl/Vault/releases/latest).
+3. It is recomended to have ViaVersion in your servers if you want to track player's client version in Web.
 :::
 
 
