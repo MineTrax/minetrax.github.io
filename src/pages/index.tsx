@@ -54,7 +54,7 @@ function HomepageHeader() {
             </svg>
           </Link>
           <Link
-            to="https://minetrax.xinecraft.com"
+            to="https://www.minetrax.live"
             className="inline-flex hover:no-underline justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg border border-solid focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800"
           >
             <svg

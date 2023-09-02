@@ -36,11 +36,11 @@ MineTrax has lot of features, some of them are listed below:
  - more...
 
 ## Demo Server
-You can check web demo at **[https://minetrax.xinecraft.com](https://minetrax.xinecraft.com)**
+You can check web demo at **[https://www.minetrax.live](https://www.minetrax.live)**
 
 **Join demo server**
 ```
-mtx.xinecraft.com
+play.minetrax.live
 ```
 
 :::info
