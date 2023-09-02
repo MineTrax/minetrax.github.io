@@ -24,7 +24,7 @@ function HomepageHeader() {
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <div className="flex flex-col justify-center items-center mb-2 md:mb-5">
-          <h1 className="text-gray-100 text-4xl md:text-5xl lg:text-7xl leading-tight tracking-tight md:w-4/5 font-extrabold">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-teal-300 text-4xl md:text-5xl lg:text-7xl leading-tight tracking-tight md:w-4/5 font-extrabold">
             {getRandomTitle()}
           </h1>
           <p className="text-gray-400 md:w-4/5 lg:w-1/2 text-sm lg:text-lg">

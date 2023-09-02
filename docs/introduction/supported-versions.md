@@ -18,3 +18,4 @@ Please note you don't need to have any of them to run Minetrax.
 - Chatty
 - EpicCore
 - PlaceholderAPI
+- ViaVersion
