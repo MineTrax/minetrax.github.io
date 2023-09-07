@@ -8,7 +8,7 @@ update_and_upgrade() {
 
 # Function to check and install MySQL if needed
 install_mysql() {
-    if ! (dpkg -l | grep -q "mysql-server" || dpkg -l | grep -q "mariadb-server"); then
+    if ! dpkg -l | grep -q "mysql-server"; then
             echo "Installing MySQL..."
             sudo apt install mysql-server -y
             sudo service mysql restart
