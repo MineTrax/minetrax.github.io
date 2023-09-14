@@ -199,7 +199,7 @@ export default function HomeFeatures(): JSX.Element {
           <p className="text-gray-500 sm:text-xl">
             Everything included in one suite. Player Tracking, Ingame chat,
             Rating system, Analytics, Shoutbox, Post Feed, News & Announcements,
-            Polls, CustomPages, Sharings, your name it!
+            Polls, CustomPages, Sharings, you name it!
           </p>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
