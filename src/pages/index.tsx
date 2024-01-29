@@ -113,7 +113,7 @@ export default function Home(): JSX.Element {
                   to="/docs/introduction/what-is-minetrax"
                   className="inline-flex justify-center items-center py-4 px-16 text-base font-medium text-center text-white rounded-lg bg-sky-500 hover:bg-sky-600 focus:outline-none hover:no-underline hover:text-white"
                 >
-                  Read the Docs
+                  RTFM!
                 </Link>
               </div>
             </div>

@@ -4,9 +4,6 @@ title: Setup Web (AutoInstaller)
 id: setup-web-autoinstaller
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 :::tip
 You only need to follow either AutoInstaller or Manual, not both.
 
@@ -42,6 +39,10 @@ If you looking for affordable & good VPS providers, you can try [DigitalOcean](h
 :::
 
 ## Installation
+:::caution
+AutoInstaller should only be used in a fresh VPS/Dedicated Server. Do not use it on a server with any other software installed, use [Manual Installation](../installation/setup-web-manually) instead for such case.
+:::
+
 SSH into your VPS/Dedicated Server and run the following command (Make sure to run the script with `root` user, if you are not logged in as root, you can switch to root using `sudo su root` command):
 
 ```

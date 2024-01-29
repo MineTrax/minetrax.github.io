@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 90
 title: WebSocket Options
 id: websocket-options
 ---

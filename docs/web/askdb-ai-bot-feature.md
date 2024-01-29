@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 70
 title: AskDB AI Bot
 id: askdb-ai-bot
 ---

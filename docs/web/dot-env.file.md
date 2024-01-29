@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 100
 title: .env Config File
 id: dot-env-file
 ---
@@ -126,4 +126,33 @@ FETCH_AVATAR_FROM_URL_USING_CURL=false # It is recommended to keep it as it is.
 PLAYER_FETCHER_CRON_INTERVAL=hourly # MineTrax automatically scans your servers for new players every hour by default. You can change it to one of these: `everyThirtyMinutes`, `everyFifteenMinutes`, `everyFiveMinutes` if you want to do rescan more frequently. It is recommended to keep it as it is.
 
 ALLOW_ANY_PROVIDER_SOCIAL_AUTH=false # By default, When a user signup using a Social Auth like Google their account get created and attached to that social account. Now if the same user try to login using a different social account like Facebook having same email address, it will fail. Set this to true if you want to allow login to an account with email using any social auth. Eg: if you enable this, User will be able to login via Google, Facebook etc to same account given that they have same email address.
+
+
+ASKDB_ENABLED=false # Enable AskDB - AI Based Database Query Feature.
+OPENAI_API_KEY= # OpenAI API Key used by AskDB.
+
+BACKUP_ENABLED=true # Automatic Daily backup of database and files.
+BACKUP_APP_NAME="${APP_NAME}-backup" # It is recommended to keep it as it is.
+BACKUP_DISK=local # Disk where backup should be stored. Available Options: local, sftp, s3-private
+BACKUP_ARCHIVE_PASSWORD=null # If you want to encrypt the archieve with a password
+BACKUP_NOTIFICATION_EMAIL= # If you want to email after backup is successful or failed.
+
+POWERED_BY_EXTRA_NAME= # Co-powered by name in footer
+POWERED_BY_EXTRA_LINK= # Co-powered by URL link in footer
+
+PING_PROXY_SERVER_USING_IP_ADDRESS=false # If want to PING minecraft server using IP address instead of hostname.
+QUERY_PROXY_SERVER_USING_IP_ADDRESS=true # If want to QUERY minecraft server using IP address instead of hostname.
+
+MAX_USER_PROFILE_PHOTO_SIZE_KB=512  # Maximum size of user profile photo in KB.
+MAX_USER_COVER_PHOTO_SIZE_KB=1024 # Maximum size of user cover photo in KB.
+MAX_POST_FEED_MEDIA_SIZE_KB=1024 # Maximum size of post feed media in KB.
+
+RATELIMIT_API_PER_MINUTE=600 # Maximum number of API requests per minute.
+
+# If you want SFTP backup, you need to set these variables.
+SFTP_DISK_HOST= # SFTP Hostname
+SFTP_DISK_USERNAME= # SFTP Username
+SFTP_DISK_PASSWORD= # SFTP Password
+SFTP_DISK_PORT=22 # SFTP Port
+
 ```

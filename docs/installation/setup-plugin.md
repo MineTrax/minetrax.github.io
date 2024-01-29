@@ -1,6 +1,6 @@
 ---
-sidebar_position: 4
-title: Setup Plugin
+sidebar_position: 5
+title: Setup Plugin on MC Server
 id: setup-plugin
 ---
 

@@ -5,5 +5,5 @@ id: changelog
 ---
 
 :::caution
-Work in progress! Check this page later.
+This page will always remain under construction. 🙂
 :::
