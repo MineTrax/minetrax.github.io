@@ -155,4 +155,6 @@ SFTP_DISK_USERNAME= # SFTP Username
 SFTP_DISK_PASSWORD= # SFTP Password
 SFTP_DISK_PORT=22 # SFTP Port
 
+PLAYER_SKIN_CHANGER_ENABLED=true # Enable Player Skin Changer Feature.
+PLAYER_SKIN_CHANGER_COOLDOWN_IN_SECONDS=60 # Cooldown in seconds for changing skin.
 ```
