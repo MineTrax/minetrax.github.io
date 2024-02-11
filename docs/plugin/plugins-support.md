@@ -29,3 +29,9 @@ Minetrax supports PlaceholderAPI. Here is the list of placeholders supported by 
 ## ViaVersion
 
 Minetrax uses ViaVersion to track player's client version. If you have ViaVersion installed in your server, Minetrax will automatically track player's client version and show it in web.
+
+## SkinsRestorer
+
+Minetrax uses SkinsRestorer to provide skin changing functionality to players. If you have SkinsRestorer installed in your server, Minetrax will:
+1. Use it to *fetch* player's skin. Using this correct avatar for skin will be shown in web even for cracked players.
+2. Use it to *change* player's skin. If you have enabled skin changing feature in Minetrax, players will be able to change their skin from web.

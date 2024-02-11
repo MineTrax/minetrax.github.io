@@ -63,12 +63,13 @@ Below are some of screenshots you might wanna look at before considering.
 ## Link Players
 ![LinkPlayers](./../static/img/shots/new/linkplayers.png)
 
+## Change Player Skin
+![ChangePlayerSkin](./../static/img/shots/new/change-player-skin.png)
+
 ## Players
 ![PlayerStats](./../static/img/shots/new/playerstats.png)
 
 ![PlayerDetails](./../static/img/shots/new/playerdetails.png)
-
-
 
 ## More screenshots
 ![HomepageWithHero](./../static/img/shots/homewithhero.png)

@@ -22,3 +22,4 @@ Please note you don't need to have any of them to run Minetrax.
 - EpicCore (EpicCoreChat)
 - PlaceholderAPI
 - ViaVersion
+- SkinsRestorer
