@@ -28,26 +28,20 @@ Below are list of languages which are already added by default.
 |Japanese|ja|
 
 
-## How to change language?
-First clear the cache. Localization are cached for performance improvements.
-```js
-php artisan cache:clear
-php artisan config:clear
-```
-
-Then, Open your `.env` file in any text editor and change `APP_LOCALE` environment variable to a valid language code for whatever language you want. Eg: en, fr, hi, ru etc.
+## How to change default language?
+Open your `.env` file in any text editor and change `APP_LOCALE` environment variable to a valid language code for whatever language you want. Eg: en, fr, hi, ru etc.
 ```json title=.env
 // For german it should be
 APP_LOCALE=de
 ```
 
-Next, restart the queue listeners,
-```
+Next, clear the cache by running `update.sh` script so your changes will reflect instantly.
+```bash
 cd /var/www/minetrax
-php artisan queue:restart
+sudo sh update.sh
 ```
 
-Done! Now open your website and it should be translated.
+Done! Now open your website default language will be changed to the language you set.
 
 ## How to make changes to language files?
 The default included translations was done using automatic translation script might not be correct, so it is recommended that you review the translation files for your language and make changes as per requirements.
@@ -98,6 +92,19 @@ php artisan cache:clear
 :::info
 Note that in some cases there is a colon (:) before some string, Eg: `:name`. Those are special placeholder which will be dynamically replaced to variables so those special placeholders should not be translated.
 :::
+
+## Language Switcher Feature
+MineTrax comes with a language switcher which allows users to change the language of the website. It is enabled by default and allows users to change to any supported language.
+
+To disable the language switcher, open your `.env` file and change `AVAILABLE_LOCALES` to `null`.
+```bash title=.env
+AVAILABLE_LOCALES=null
+```
+
+If you want to enable only specific languages, you can set the `AVAILABLE_LOCALES` to a comma separated list of language codes.
+```bash title=.env
+AVAILABLE_LOCALES=en,de,fr,ru
+```
 
 ## How to add a new language?
 It is very simple to add new language if your desired language is not included in the list.

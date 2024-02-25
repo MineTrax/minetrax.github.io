@@ -269,6 +269,54 @@ Check [Custom NavBar](./custom-navbar) page for more information.
 Whether to enable custom footer. If enabled, you will be able to customize the footer.
 Check [Custom Footer](./custom-footer) page for more information.
 
+## SEO Settings
+
+### 1. Favicon Image
+The favicon image of the site. This is the icon that appears in the browser tab.
+
+### 2. Title Main
+The main title of the site. This is the title of homepage.
+Example: 
+```
+MineTrax World - Play, Build, Survive, Explore
+```
+
+### 3. Title Suffix
+The title suffix of the site. This is the suffix that get appended after title for all pages.
+Example: 
+```
+| MineTrax.live
+```
+
+For give above example, the final title will look like this:
+1. MineTrax World - Play, Build, Survive, Explore - MineTrax World | MineTrax.live
+2. Leaderboards | MineTrax.live
+3. SEO Settings | MineTrax.live
+
+### 4. Meta Tags
+You can add meta tags here. This can be used to add meta tags like description, keywords, etc.
+
+### 5. Code Injections (Inject at Head)
+Any code you want to inject in head section of the site. This can be used to add meta tags, css, etc.
+
+### 6. Code Injections (Inject at Body Start)
+Any code you want to inject at start of body section of the site. This can be used to add analytics, etc.
+
+### 7. Code Injections (Inject at Body End)
+Any code you want to inject at end of body section of the site. This can be used to add chatbot, widgets, etc.
+
+:::danger Be careful with Code Injections
+1. Code Injection allows you to inject custom HTML/JS/CSS code into all pages of your website. 
+1. This can be very powerful tool for things like adding Widgets etc. 
+1. This can also be very dangerous if you don't know what you are doing.
+1. Be sure to validate your code before adding here to prevent breaking the site. Invalid code can lead to site malfunction and you may have to reset SEO settings by running command to fix your site.
+
+```bash
+cd /var/www/minetrax
+php artisan settings:seo:reset
+```
+:::
+
 ## Dangerzone Settings
 This section is only visible to superadmin.
 
