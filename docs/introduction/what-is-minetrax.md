@@ -28,6 +28,7 @@ MineTrax has lot of features, some of them are listed below:
  - Downloads.
  - AskDB - AI based database query system.
  - Dark Mode. Ofcoz (✿◠‿◠)
+ - Language Switcher.
  - more...
 
 ## Upcoming
