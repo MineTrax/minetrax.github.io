@@ -6,6 +6,29 @@ id: troubleshooting
 
 This document covers some known issues and the process to debug and fix them.
 
+### 1. Player Avatar image not showing for Bedrock Edition Players.
+
+If you see broken image for bedrock edition players, it is mostly due to a Nginx configuration which prevents accessing any URL with `.` in it.
+
+Open your Nginx configuration file for MineTrax (mostly `/etc/nginx/sites-available/minetrax.conf`) and find for below line.
+
+```nginx title="/etc/nginx/sites-available/minetrax.conf"
+...
+
+location ~ /\.(?!well-known).* {
+   deny all;
+}
+
+...
+```
+Delete the above block and then restart Nginx.
+
+```bash
+sudo systemctl restart nginx
+```
+
+Check if the issue is fixed.
+
 ### 1. laravel.log permission issue.
 If you get some error like:
 ```
@@ -28,18 +51,15 @@ chown -R $USER:www-data /var/www/minetrax
 ```
 
 ### 2. Player Stats are not getting tracked.
-Player statistics are tracked using the SFTP/FTP/Local connection. Make sure you have configured the connection correctly. 
 
-You can verify that by going to `Admin > Server > Edit Server` and then clicking on `Test Connection` button.
+If player stats are not getting tracked, it is mostly due to queue workers not working properly.
 
-Once you have verified the connection is getting successful. You can try fixing file permissions & then restarting queue workers.
+You can try fixing file permissions & then restarting queue workers.
 Run below command
 ```
 sh update.sh
 sudo supervisorctl restart all
 ```
-
-Once done. Do a manual rescan from server listing page and see if it fixes the issue.
 
 *Ping us on discord if issue persists*
 
