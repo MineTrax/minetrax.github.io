@@ -29,7 +29,7 @@ sudo systemctl restart nginx
 
 Check if the issue is fixed.
 
-### 1. laravel.log permission issue.
+### 2. laravel.log permission issue.
 If you get some error like:
 ```
 Error in exception handler: The stream or file "/var/www/minetrax/app/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /var/www/minetrax/bootstrap/compiled.php:8423
@@ -50,7 +50,7 @@ chmod -R 775 /var/www/minetrax/storage/* var/www/minetrax/bootstrap/cache
 chown -R $USER:www-data /var/www/minetrax
 ```
 
-### 2. Player Stats are not getting tracked.
+### 3. Player Stats are not getting tracked.
 
 If player stats are not getting tracked, it is mostly due to queue workers not working properly.
 
@@ -63,7 +63,7 @@ sudo supervisorctl restart all
 
 *Ping us on discord if issue persists*
 
-### 3. Minetrax taking too much CPU and Memory.
+### 4. Minetrax taking too much CPU and Memory.
 If your queue workers are not working properly, it can cause high CPU and Memory usage.
 
 Queue workers fails mostly due to permission issues. You can fix permission and then restart queue workers by running below command.
@@ -76,7 +76,7 @@ After that it should be fixed. Not not then check logs in /var/www/minetrax/stor
 
 *Feel free to ping us on discord*
 
-### 4. Out of Memory Error while Building Frontend Assets.
+### 5. Out of Memory Error while Building Frontend Assets.
 :::info
 This happen only if you rebuilding frontend assets.
 :::
