@@ -21,7 +21,7 @@ location ~ /\.(?!well-known).* {
 
 ...
 ```
-Delete the above block and then restart Nginx.
+Delete the above block of 3 lines and then restart Nginx.
 
 ```bash
 sudo systemctl restart nginx
