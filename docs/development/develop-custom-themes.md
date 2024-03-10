@@ -132,6 +132,20 @@ You can then reference these assets in your theme's frontend code using the `/th
 
 While sharing your theme with others, you will have to include it in your theme package and instruct the users to copy those to the `public/theme-assets` directory.
 
+## How to Keep Your Theme Updated with MineTrax
+
+When MineTrax is updated to include new feature (which make changes in frontend), you will have to update your theme theme to support those changes.
+
+Currently we recommend:
+1. You can create a fork of MineTrax repository (for each of ur custom theme) and keep it synced with the original repository changes. (You will have to resolve conflicts of `resources/js` directory to keep your changes).
+2. Version your theme to same version as MineTrax. (Eg: If MineTrax is at v4.3.0, your theme should be at v4.3.0).
+
+Going forward, MineTrax will not introduce any breaking changes in minor versions (Eg: v4.3.0 to v4.4.0) so your theme not break for minor version updates.
+
+:::info DX Improvement
+Please note this initial version of custom theme support.
+This process will continuously be improved to make it easier for theme developers to keep their themes updated with MineTrax.
+:::
 
 ## FAQ
 
