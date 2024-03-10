@@ -242,6 +242,15 @@ This process will continuously be improved to make it easier for theme developer
 
 Yes, Join [Discord](https://discord.gg/Hzfj27k) server and create a request for it.
 
+### 2. Do I need to update every file in my theme to create a new theme?
+
+No, you only need to change files that you want to customize. You can leave the rest of the files as it is.
+
+Eg:
+1. If you want to change only the User End of the website and not the Admin Dashboard, you can do so by editing only concerned files.
+1. If you want to change the color of the website, you can edit `tailwind.config.js` file.
+1. and so on.
+
 ### 2. Can I use a different CSS framework instead of Tailwind?
 
 Yes, you can use any CSS framework or write plain old css yourself. 
