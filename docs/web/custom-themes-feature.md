@@ -58,6 +58,7 @@ cd /var/www/minetrax
 sh update.sh
 ```
 
+Visit your MineTrax site and you should see the new theme applied.
 
 ## Develop Custom Themes
 
