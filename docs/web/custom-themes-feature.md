@@ -60,6 +60,10 @@ sh update.sh
 
 Visit your MineTrax site and you should see the new theme applied.
 
+:::info Addtional Steps
+Some themes may require additional steps to be followed (eg: uploading some file to `public/theme-assets` folder). Check the theme documentation for more information.
+:::
+
 ## Develop Custom Themes
 
 Check out the guide on how to develop your own custom themes for MineTrax [here](../development/develop-custom-themes).
