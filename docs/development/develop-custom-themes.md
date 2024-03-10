@@ -34,18 +34,30 @@ Using Tailwind is optional, If you are not familiar with Tailwind or don't want 
 
 The frontend of MineTrax is built using Vue.js and Inertia. The frontend is located in the `resources/js` directory. This is the directory where you will be editing the frontend code for your custom theme.
 
+Each theme has its own directory in the `resources/js` directory. The default theme is located in the `resources/js/default` directory.
+
 ## Getting Started
 
 Open your MineTrax project in any code editor.
 
-### 1. Update .env variable
+### 1. Create a New Theme Directory
 
-Open your `.env` file and update the `APP_THEME` variable to some unique name for your new theme.
+Create a new directory for your theme in the `resources/js` directory by copying the `default` directory. Eg: If you want to name your theme `my-shiny-theme` then create a new directory named `my-shiny-theme` in the `resources/js` directory and copy the contents of the `default` directory to it.
 
-For example, if you want to name your theme `my-shiny-theme` then update the `APP_THEME` variable like this:
+Now your directory structure should look like this:
 
-```php title=".env"
-APP_THEME=my-shiny-theme
+```plaintext
+resources/
+├── default/
+│   ├── css/
+│   ├── js/
+│   ├── markdown/
+│   ├── views/
+├── my-shiny-theme/
+│   ├── css/
+│   ├── js/
+│   ├── markdown/
+│   ├── views/
 ```
 
 :::info Keep your theme name unique
@@ -55,18 +67,49 @@ Try to keep the name unique to avoid conflicts with other themes.
 Don't use `default` as the theme name as it is reserved for the default theme.
 :::
 
-### 2. Start Frontend Development Server
 
+### 1. Update .env variable
+
+Open your `.env` file and update the `APP_THEME` variable to the name of your new theme.
+
+
+```php title=".env"
+APP_THEME=my-shiny-theme
+```
+
+### 2. Start Developing Your Theme
+
+#### a. Update `jsconfig.json` file
+Open `jsconfig.json` located in the root directory of your project and `resources/default/js/*` to `resources/my-shiny-theme/js/*`
+
+```json title="jsconfig.json"
+...
+"compilerOptions": {
+  "allowJs": true,
+  "jsx": "preserve",
+  "baseUrl": ".",
+  "paths": {
+	"@/*": [
+        // highlight-next-line
+	  "resources/my-shiny-theme/js/*"
+	]
+  }
+}
+...
+```
+This will help your code editor to understand the path of your theme files and help you with intellisense for auto imports.
+
+#### b. Start Dev Server
 Run the following command to start the frontend server for development: 
 
 ```bash
 npm run dev
 ```
 
-This will start the development server and watch for changes to the frontend assets.
+This will start the dev server and watch for changes to the frontend assets.
 Open your web browser and go to `http://minetrax.test` and you should see the MineTrax homepage.
 
-Start developing your custom theme by editing the frontend code in the `resources/js` directory.
+Start developing your custom theme by editing the frontend code in the `resources/js/my-shiny-theme/` directory.
 
 :::note basic example
 As an example, lets try to change primary color of website by editing `tailwind.config.js` file.
@@ -93,23 +136,56 @@ When you are done with the development, run the following command to build the a
 npm run prod
 ```
 
-This will build & optimize the assets for production. You can find your new theme in the `public/build` directory.
+This will build & optimize the assets for production. You can find your new theme build in the `public/build/my-shiny-theme/` directory.
 
-### 4. Share Your Theme
+### 4. Pack your Theme for Sharing
 
-You can zip your theme folder located in the `public/build` directory and share it with others. They can then install it unzipping it in the same directory (e.g. `public/build`), and then update the `.env` file to use your theme.
+There are two directories you need to pack for sharing your theme with others:
 
-```php title=".env"
-APP_THEME=my-shiny-theme
+1. `resources/js/my-shiny-theme/` - This is the directory where you have developed your theme, and it also contains views and other assets.
+2. `public/build/my-shiny-theme/` - This is the directory where your build files for production are located.
+
+Its recommended to keep the structure of your theme same as the end user will have to copy the files to the same directory.
+
+Eg: If your theme is named `my-shiny-theme` then you can pack the theme directory like this:
+```sql
+my-theme-v4/
+├── how-to-install.txt               # (optional) Instructions for installing the theme.
+├── resources/
+│   ├── my-shiny-theme/
+│   │   ├── css/
+│   │   ├── js/
+│   │   ├── markdown/
+│   │   ├── views/
+├── public/
+│   ├── build/
+│   │   ├── my-shiny-theme/
+│   │   │   ├── assets/
+│   │   │   ├── manifest.json
+│   ├── theme-assets/               # (optional) If additional assets required by the theme.
+│   │   ├── my-shiny-theme/         
+│   │   │   ├── images/
 ```
 
-:::info .env variable change
-In non-development environments, whenver something is changed in `.env`, user will have to run `sh update.sh` so that the changes are reflected in the application. Instruct your theme users to do so.
-:::
+You can create a zip file of the `my-theme-v4` and share it with others. Make sure you are only including the necessary files from `resources` and `public` directories, and not the entire MineTrax project.
 
-Check [Custom Theme](../web/custom-themes) to know how to use custom themes.
+#### How end user can install your theme?
 
-**Join [Discord](https://discord.gg/Hzfj27k) server and share your theme with others or for any queries.**
+Your theme users will have to:
+1. Unzip your theme archive.
+2. Copy the `resources/my-shiny-theme` directory to the `resources` directory of their MineTrax project. 
+3. Copy the `public/build/my-shiny-theme` directory to the `public/build` directory of their MineTrax project.
+4. Copy any additional assets if theme requires. Eg: `public/theme-assets/my-shiny-theme` directory to the `public/theme-assets` directory of their MineTrax project.
+5. Update the `.env` file to use your theme.
+    ```php title=".env"
+    APP_THEME=my-shiny-theme
+    ```
+6. Run `sh update.sh` so that the changes are reflected in the application.
+
+Check [Custom Theme](../web/custom-themes) for more details.
+
+
+**Join [Discord](https://discord.gg/Hzfj27k) server to share your theme with others or for any queries.**
 
 ### 5. Become `Theme Developer`
 
@@ -134,16 +210,17 @@ While sharing your theme with others, you will have to include it in your theme 
 
 ## How to Keep Your Theme Updated with MineTrax
 
-When MineTrax is updated to include new feature (which make changes in frontend), you will have to update your theme theme to support those changes.
+When MineTrax is updated to include new feature (which make changes in frontend), you will have to update your theme theme to support those changes. 
 
-Currently we recommend:
-1. You can create a fork of MineTrax repository (for each of ur custom theme) and keep it synced with the original repository changes. (You will have to resolve conflicts of `resources/js` directory to keep your changes).
-2. Version your theme to same version as MineTrax. (Eg: If MineTrax is at v4.3.0, your theme should be at v4.3.0).
+Whenever new update is released, a changelog will be provided with the changes made in the frontend so that you can update your theme accordingly.
 
-Going forward, MineTrax will not introduce any breaking changes in minor versions (Eg: v4.3.0 to v4.4.0) so your theme not break for minor version updates.
+You will take latest pull of MineTrax and update your theme by comparing the changes in the default theme with your theme. Eg: If a new feature is added in the default theme, you will have to add that feature to your theme as well.
+
+We recommend you to version your theme to same version as MineTrax. (Eg: If MineTrax is at v4.3.0, your theme should be at v4.3.0).
+
+Going forward, MineTrax will try not introduce any breaking changes in minor versions (Eg: v4.4.0 to v4.5.0) so your theme not break for minor version updates.
 
 :::info DX Improvement
-Please note this initial version of custom theme support.
 This process will continuously be improved to make it easier for theme developers to keep their themes updated with MineTrax.
 :::
 
@@ -159,7 +236,7 @@ Yes, you can use any CSS framework or write plain old css yourself.
 
 ### 3. Can I use a different JavaScript framework instead of Vue.js?
 
-No, currently MineTrax uses Vue.js with Inertia for the frontend. 
+Though its technically possible, we recommend you to use Vue.js as it is the default framework used in MineTrax.
 
 ### 4. Do I need my custom theme to be customizable like the default theme? (Eg: having multiple Footer styles.)
 
