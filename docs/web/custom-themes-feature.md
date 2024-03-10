@@ -25,7 +25,7 @@ my-theme/
 
 1. Connect to your server using any SFTP client like BitviseSSH or MobaXterm using your SSH credentials.
 2. Navigate to your MineTrax installation directory. Usually, it's located at `/var/www/minetrax`.
-3. Upload the theme directory in `public/build` directory.
+3. Unzip & Upload the theme directory in `public/build` directory.
 
 After uploading, the directory structure will look like this:
 
