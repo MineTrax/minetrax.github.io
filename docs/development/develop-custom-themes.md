@@ -68,6 +68,23 @@ Open your web browser and go to `http://minetrax.test` and you should see the Mi
 
 Start developing your custom theme by editing the frontend code in the `resources/js` directory.
 
+:::note basic example
+As an example, lets try to change primary color of website by editing `tailwind.config.js` file.
+
+Find for `colors` object and change the `light-blue` color value from `colors.sky` to `colors.lime` or something of ur liking and see the changes in the browser.
+
+```js title="tailwind.config.js"
+...
+colors: {
+// highlight-next-line
+    'light-blue': colors.lime,
+    'cool-gray': colors.gray,
+    'orange': colors.orange,
+    'lime': colors.lime,
+...
+```
+:::
+
 ### 3. Build for Production
 
 When you are done with the development, run the following command to build the assets for production:
