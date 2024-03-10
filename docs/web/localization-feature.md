@@ -47,7 +47,7 @@ Done! Now open your website default language will be changed to the language you
 The default included translations was done using automatic translation script might not be correct, so it is recommended that you review the translation files for your language and make changes as per requirements.
 
 Translations files are stored in folder `lang` in the root directory.
-To change text for your language you will have to edit all files in folder of your language code & {lang}.json.
+To change text for your language you will have to edit all files in folder of your language code & \{lang\}.json.
 Eg, to edit for german you edit:
 ```js
 /lang
@@ -116,7 +116,7 @@ To add support for new language you have two methods:
 1. copy `lang/en` folder to `lang/YOUR_LANGUAGE_CODE` Eg: `lang/hr`.
 1. copy `lang/en.json` file to `lang/YOUR_LANGUAGE_CODE.json` Eg: `lang/en.json`.
 1. Now start adding translations in the newly created files as [described above](#how-to-make-changes-to-language-files).
-1. Change the locale of your site to the new language by changing `APP_LOCALE` env variable as [described here](#how-to-change-language).
+1. Change the locale of your site to the new language by changing `APP_LOCALE` env variable as [described here](#how-to-change-default-language).
 
 Using the above method might get cumbersome as you will have to add translations for every text manually. Follow the second method instead if you prefer automatic translation from google translate.
 
@@ -213,4 +213,4 @@ Eg: Google translate will translate to word `Steam` in translation text but it s
 Now open the newly created folder & files in `lang` directory for your language and review/edit them as required.
 
 #### 4. Finally change locale of Web to newly added language
-Change the locale of your site to the new language by changing `APP_LOCALE` env variable as [described here](#how-to-change-language).
+Change the locale of your site to the new language by changing `APP_LOCALE` env variable as [described here](#how-to-change-default-language).

@@ -176,7 +176,7 @@ Whether to enable account link feature. If enabled, users will be able to link t
 The maximum number of players that can be linked to a single web account. Default is 1.
 
 ### 5. Account Link Success Command
-The command to execute when the account link is successful. This command will be executed on the server. You can use this to give rewards to the player for linking their account. {PLAYER} will be replaced with the player name.
+The command to execute when the account link is successful. This command will be executed on the server. You can use this to give rewards to the player for linking their account. \{PLAYER\} will be replaced with the player name.
 
 Eg:
 ```
@@ -189,7 +189,7 @@ give {PLAYER} diamond 1
 :::
 
 ### 6. Account Link Success Broadcast
-The broadcast message to send when the account link is successful. This message will be sent to all players on the server. You can use this to notify players about the account link. {PLAYER} will be replaced with the player name.
+The broadcast message to send when the account link is successful. This message will be sent to all players on the server. You can use this to notify players about the account link. \{PLAYER\} will be replaced with the player name.
 
 Eg:
 ```
