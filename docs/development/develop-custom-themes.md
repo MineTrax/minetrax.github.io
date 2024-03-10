@@ -42,9 +42,16 @@ Open your MineTrax project in any code editor.
 
 ### 1. Create a New Theme Directory
 
+:::info Keep your theme name unique
+The name should be lowercase letters, numbers, hyphens(-), and underscores(_) only. No spaces or special characters are allowed.
+Try to keep the name unique to avoid conflicts with other themes.
+
+Don't use `default` as the theme name as it is reserved for the default theme.
+:::
+
 Create a new directory for your theme in the `resources/js` directory by copying the `default` directory. Eg: If you want to name your theme `my-shiny-theme` then create a new directory named `my-shiny-theme` in the `resources/js` directory and copy the contents of the `default` directory to it.
 
-Now your directory structure should look like this:
+Now your `resources` directory structure should look like this:
 
 ```plaintext
 resources/
@@ -60,11 +67,16 @@ resources/
 │   ├── views/
 ```
 
-:::info Keep your theme name unique
-The name should be lowercase letters, numbers, hyphens(-), and underscores(_) only. No spaces or special characters are allowed.
-Try to keep the name unique to avoid conflicts with other themes.
+:::warning Why My theme directory don't show up in code editor
+Every directory (except `default`) in `resources` directory is added to `.gitignore` file. So, if you are using a code editor like VSCode. You can add exclusion for your theme directory in `.gitignore` like its added for `default` theme.
 
-Don't use `default` as the theme name as it is reserved for the default theme.
+```plaintext title=".gitignore"
+...
+/resources/*
+!/resources/default/
+// highlight-next-line
+!/resources/my-shiny-theme/
+```
 :::
 
 
