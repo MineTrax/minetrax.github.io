@@ -111,6 +111,16 @@ Check [Custom Theme](../web/custom-themes) to know how to use custom themes.
 
 **Join [Discord](https://discord.gg/Hzfj27k) server and share your theme with others or for any queries.**
 
+### 5. Become `Theme Developer`
+
+If you are interested in developing themes for MineTrax and want to share/sell them with others, you can become a `Theme Developer`. 
+
+Join [Discord](https://discord.gg/Hzfj27k) server and ping @Xinecraft to get the `Theme Developer` role.
+
+:::info Role Requirement
+You may be required to provide link to your previous works, a demo theme & GitHub profile to get the role.
+:::
+
 
 ## Images & Other Assets
 
