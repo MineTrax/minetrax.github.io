@@ -206,7 +206,7 @@ php artisan key:generate --force
 
 Next, change the database related variables in the `.env` file to match your database user credentials
 
-```bash title=.env
+```bash title=".env"
 APP_URL=http://your_domain.com # Change this to the URL which you wanna setup minetrax on.
 
 DB_CONNECTION=mysql
@@ -288,7 +288,7 @@ Configuration file for supervisor are stored in folder `/etc/supervisor/conf.d`.
 
 Create a new file called `minetrax-worker-default.conf` and put below context in there.
 
-```bash title=/etc/supervisor/conf.d/minetrax-worker-default.conf
+```bash title="/etc/supervisor/conf.d/minetrax-worker-default.conf"
 [program:minetrax-worker-default]
 process_name=%(program_name)s_%(process_num)02d
 command=php /var/www/minetrax/artisan queue:work --sleep=3 --tries=3 --max-time=3600
@@ -306,7 +306,7 @@ stopwaitsecs=3660
 
 Create a new file called `minetrax-worker-long.conf` and put below context in there.
 
-```bash title=/etc/supervisor/conf.d/minetrax-worker-long.conf
+```bash title="/etc/supervisor/conf.d/minetrax-worker-long.conf"
 [program:minetrax-worker-long]
 process_name=%(program_name)s_%(process_num)02d
 command=php /var/www/minetrax/artisan queue:work --queue=longtask,default redis-longtask --timeout=0 --sleep=3 --tries=3 --max-jobs=500
@@ -365,7 +365,7 @@ cluster = "ap2";
 
 After this open your `.env` file and replace the pusher related credentials to match above.
 
-```bash title=.env
+```bash title=".env"
 PUSHER_APP_ID=1367909
 PUSHER_APP_KEY=4b48b850682acb371c34
 PUSHER_APP_SECRET=41cc8be68c0d57fea4f3
@@ -374,7 +374,7 @@ PUSHER_APP_CLUSTER=ap2
 
 Also change broadcast driver to pusher.
 
-```bash title=.env
+```bash title=".env"
 BROADCAST_DRIVER=pusher
 ```
 
@@ -410,7 +410,7 @@ First, Create a new file with any name(eg: `minetrax.conf`) in the Apache2 sites
 sudo nano /etc/apache2/sites-available/minetrax.conf
 ```
 
-```text title=/etc/apache2/sites-available/minetrax.conf
+```text title="/etc/apache2/sites-available/minetrax.conf"
 <VirtualHost *:80>
   // highlight-next-line
   ServerName your_domain.com
@@ -456,7 +456,7 @@ First, Create a new file with any name(eg: `minetrax.conf`) in the Nginx sites d
 sudo nano /etc/nginx/sites-available/minetrax.conf
 ```
 
-```text title=/etc/nginx/sites-available/minetrax.conf
+```text title="/etc/nginx/sites-available/minetrax.conf"
 server {
     listen 80;
     listen [::]:80;
@@ -536,7 +536,7 @@ _You can change password from `Edit Profile` section and email from `Admin > Use
 
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
 
-```bash title=.env
+```bash title=".env"
 APP_NAME="YOUR_DESIRED_APP_NAME"
 APP_ENV=production
 APP_DEBUG=false

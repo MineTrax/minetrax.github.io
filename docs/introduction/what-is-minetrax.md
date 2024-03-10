@@ -10,6 +10,7 @@ MineTrax is a web suite & analytics tool for your minecraft servers. Using it yo
 MineTrax has lot of features, some of them are listed below:
  - In-Depth Analytics for Server and Player (Intel).
  - Track player & server data and perform various analysis on them.
+ - Custom Theme & Branding - Customize website as per your server theme.
  - SkinChanger - Let players change their skin from website.
  - Player Rating System let you calculate the rank of player based on your own custom ranking algorithm.
  - Let users to register in website and link to ingame player character.
@@ -36,7 +37,6 @@ MineTrax has lot of features, some of them are listed below:
  - Staff Recruitment System
  - Store System
  - Automated Server Events
- - Custom Theme
  - Rewards & Achievements
  - Advertisements & Server monetization
  - more...

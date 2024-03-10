@@ -22,7 +22,7 @@ Firstly, download the latest __[MineTrax.jar](https://github.com/MineTrax/plugin
 
 Start your server and it should create a `Minetrax/config.yml` file in your plugins folder, which should look something like:
 
-```yml title=plugins/Minetrax/config.yml
+```yml title="plugins/Minetrax/config.yml"
 enabled: true
 api-host:
 api-key:

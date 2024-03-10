@@ -80,7 +80,8 @@ After that it should be fixed. Not not then check logs in /var/www/minetrax/stor
 :::info
 This happen only if you rebuilding frontend assets.
 :::
-Building frontend assets(`npm run prod`) is memory intensive task. If your server RAM where web is hosted is low (<2GB), the build process might get failed with message like `Killed` or `ERR_WORKER_OUT_OF_MEMORY`.
+
+Building frontend assets(`npm run prod`) is memory intensive task. If your server RAM where web is hosted is low (&lt;2GB), the build process might get failed with message like `Killed` or `ERR_WORKER_OUT_OF_MEMORY`.
 
 In such cases, you need to do two things.
 1. Increase node memory limit. 

@@ -30,7 +30,7 @@ Below are list of languages which are already added by default.
 
 ## How to change default language?
 Open your `.env` file in any text editor and change `APP_LOCALE` environment variable to a valid language code for whatever language you want. Eg: en, fr, hi, ru etc.
-```json title=.env
+```json title=".env"
 // For german it should be
 APP_LOCALE=de
 ```
@@ -63,7 +63,7 @@ Eg, to edit for german you edit:
 
 Translation files will look something like this.
 1. JSON file:
-```json title=lang/de.json
+```json title="lang/de.json"
 {
 	"Thanks": "Vielen Dank",
 	"Hey :name": "Hallo :name",
@@ -71,7 +71,7 @@ Translation files will look something like this.
 ```
 
 2. PHP File:
-```php title=lang/de/auth.php
+```php title="lang/de/auth.php"
 <?php 
 return [
   'failed' => 'Diese Anmeldeinformationen stimmen nicht mit unseren Aufzeichnungen überein.',
@@ -97,12 +97,12 @@ Note that in some cases there is a colon (:) before some string, Eg: `:name`. Th
 MineTrax comes with a language switcher which allows users to change the language of the website. It is enabled by default and allows users to change to any supported language.
 
 To disable the language switcher, open your `.env` file and change `AVAILABLE_LOCALES` to `null`.
-```bash title=.env
+```bash title=".env"
 AVAILABLE_LOCALES=null
 ```
 
 If you want to enable only specific languages, you can set the `AVAILABLE_LOCALES` to a comma separated list of language codes.
-```bash title=.env
+```bash title=".env"
 AVAILABLE_LOCALES=en,de,fr,ru
 ```
 

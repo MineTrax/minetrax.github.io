@@ -102,6 +102,7 @@ const config = {
         logo: {
           alt: 'MineTrax Logo',
           src: 'img/minetrax-full-dark.png',
+          className: 'w-64'
         },
         links: [
           {

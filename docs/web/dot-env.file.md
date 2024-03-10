@@ -10,12 +10,15 @@ Most of the time you won't need to change anything in this file after initial se
 Read below to know about all variable and their usage:
 
 
-```bash title=".env"
+```php title=".env"
 APP_NAME=MineTrax # Name of your website. If your site name contains space, use quotes. e.g. APP_NAME="My Site"
 APP_ENV=production # This is environment of deployment. Always set this to production when you are ready to go live. e.g. APP_ENV=production
 APP_KEY=base64:Xk6mFYx... # This is key used to encrypt critical data and sessions. Never change it after initial setup.
 APP_DEBUG=false # This is used to enable debug mode. 
-APP_URL=https://yourdomain.com # This is the URL of your website. e.g. APP_URL=https://minetrax.live
+APP_URL="https://yourdomain.com" # This is the URL of your website. e.g. APP_URL=https://minetrax.live
+APP_THEME=default # This is used to change your website theme to any custom theme.
+APP_TIMEZONE=UTC # This is used to set the timezone of your website. Don't change it unless you know what you are doing.
+
 DEBUGBAR_ENABLED=false # This is used to enable debug bar. It is recommended to keep it disabled in production.
 TELESCOPE_ENABLED=false # This is used to enable telescope which is used to debug issues. It is recommended to keep it disabled in production.
 
@@ -110,8 +113,11 @@ SETTINGS_CACHE_ENABLED=false # It is recommended to keep it as it is.
 RANDOM_USER_AVATARS=true # User who haven't uploaded any profile image get a unique randomly generated profile image by default. Set this false if you want to disable this feature.
 
 APP_LOCALE=en # This is used to set the app locale. Change it to your locale if you want to change the app locale. Eg: `de`
+AVAILABLE_LOCALES=en,es,ru,sk,de,pl,uk,hi,it,zh-hk,zh-cn,ja # This is used in language switcher. This is list of all locales which are made available in the switcher. Set it to empty if you want to disable language switcher.
+
 DISABLE_USER_REGISTRATION=false # Set this true if you want to disable user registration.
 VERIFY_USER_EMAIL=false # Set this true if you want to verify user email before allowing them to do major actions on web.
+DISABLE_EMAIL_PASSWORD_AUTH=false # Set this true if you want to disable email password authentication and only allow social auth.
 
 SHOW_POWERED_BY=true # Set this false if you don't want to show powered by text in footer.
 SHOW_HOME_BUTTON=false # Set this true if you want to show home button in default navbar. It is recommended to keep it as it is.

@@ -8,7 +8,7 @@ Using `config.yml` you can modify various aspect of the plugin to suite your nee
 In this section we will discuss about the details of those variables.
 
 #### Content of config.yml
-```yml title=plugins/Minetrax/config.yml
+```yml title="plugins/Minetrax/config.yml"
 #    ███╗   ███╗██╗███╗   ██╗███████╗████████╗██████╗  █████╗ ██╗  ██╗
 #    ████╗ ████║██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██╔══██╗╚██╗██╔╝
 #    ██╔████╔██║██║██╔██╗ ██║█████╗     ██║   ██████╔╝███████║ ╚███╔╝

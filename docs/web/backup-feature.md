@@ -21,7 +21,7 @@ After changing any environment variable, make sure to run `sh update.sh` to appl
 To enable backup, you need to set the `BACKUP_ENABLED` environment variable to `true`. 
 You can do this by editing the `.env` file.
 
-```bash title=.env
+```bash title=".env"
 BACKUP_ENABLED=true
 
 # OTHER BACKUP CONFIGURATIONS
@@ -44,13 +44,13 @@ New backup will be created daily and will be stored in the `storage/app/${APP_NA
 
 You can store your backup in S3. To do this, you need to set the `BACKUP_DISK` environment variable to `s3-private`.
 
-```bash title=.env
+```bash title=".env"
 BACKUP_DISK=s3-private
 ```
 
 For this to work, you need create a S3 bucket and update the following environment variables in the `.env` file to match your S3 bucket details. 
 
-```bash title=.env
+```bash title=".env"
 # Your AWS Access Key (with S3 access)
 AWS_ACCESS_KEY_ID=your-aws-access-key
 # Your AWS Secret Key
@@ -73,13 +73,13 @@ You can set `AWS_BUCKET` to anything dummy since it is not used for private back
 
 You can store your backup in a SFTP server. To do this, you need to set the `BACKUP_DISK` environment variable to `sftp`.
 
-```bash title=.env
+```bash title=".env"
 BACKUP_DISK=sftp
 ```
 
 For this to work, you need to update the following environment variables in the `.env` file to match your SFTP server details. 
 
-```bash title=.env
+```bash title=".env"
 # IP or Hostname of the SFTP server
 SFTP_DISK_HOST=sftp.example.com
 # Username to login

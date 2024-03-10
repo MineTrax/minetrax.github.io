@@ -46,7 +46,7 @@ The `websockets:serve` should always be running to accept connection. This is wh
 
 Create a new supervisor conf file in `/etc/supervisor/conf.d` folder called `minetrax-websocket.conf` and paste below content in there.
 
-```bash title=/etc/supervisor/conf.d/minetrax-websocket.conf
+```bash title="/etc/supervisor/conf.d/minetrax-websocket.conf"
 [program:minetrax-websockets]
 command=/usr/bin/php /var/www/minetrax/artisan websockets:serve
 numprocs=1
@@ -63,7 +63,7 @@ supervisorctl start minetrax-websockets
 
 ### Change broadcasting configuration
 You need to add `host` and `port` config key in the `config/broadcasting.php` and add it to the `pusher` section. The default port of the Laravel WebSocket server is 6001
-```php title='config/broadcasting.php'
+```php title="config/broadcasting.php"
 'pusher' => [
     'driver' => 'pusher',
     'key' => env('PUSHER_APP_KEY'),

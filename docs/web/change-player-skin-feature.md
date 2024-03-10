@@ -12,7 +12,7 @@ Using this feature, users can change their Minecraft player skin from the MineTr
 
 This feature is enabled by default. You can change as per your need by setting the `PLAYER_SKIN_CHANGER_ENABLED` environment variable to `true` or `false` in the `.env` file.
 
-```bash title=.env
+```bash title=".env"
 PLAYER_SKIN_CHANGER_ENABLED=true
 
 # Cooldown in seconds for changing skin. Default to 60 seconds. (won't apply to staff members)
