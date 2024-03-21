@@ -27,6 +27,7 @@ MineTrax has lot of features, some of them are listed below:
  - Custom Pages.
  - Custom Forms.
  - Downloads.
+ - Staff Recruitment System
  - AskDB - AI based database query system.
  - Dark Mode. Ofcoz (✿◠‿◠)
  - Language Switcher.
@@ -34,7 +35,6 @@ MineTrax has lot of features, some of them are listed below:
 
 ## Upcoming
  - Ban Management System
- - Staff Recruitment System
  - Store System
  - Automated Server Events
  - Rewards & Achievements
