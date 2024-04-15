@@ -36,7 +36,7 @@ chmod u+x docker-run.sh
 ```
 
 :::info Change default http Port
-By default MineTrax in Docker runs on port `80`. If you want to change the port, you can do so by updating `APP_PORT` variable in the `.env` files.
+By default MineTrax in Docker runs on port `80`. If you want to change the port, you can do so by adding `APP_PORT` variable in the `.env` file.
 ```php title=".env"
 APP_PORT=8080
 ```
@@ -90,20 +90,65 @@ It is very important that you change your **APP_ENV** to `production` and **APP_
 ### SSL & Domain Setup
 
 Current docker setup does not include SSL setup and let you setup your own as per your needs.
-If you want to enable SSL on your site you can use Proxy or Cloudflare.
+If you want to enable SSL on your site you can use Proxy (eg: Nginx) or Cloudflare.
 
-#### Cloudflare (Flexi)
+#### SSL with Nginx Reverse Proxy
 
-If you are using Cloudflare as your domain DNS provider you can follow below steps to enable SSL on your site quickly:
+If you want to use SSL with Nginx Proxy, you can follow below steps:
 
-1. Point your domain/subdomain to the VPS IP address in your Cloudflare DNS setting with `A record`. (make sure to keep `Proxied` enabled).
-2. Go to Cloudflare `SSL/TLS` section and enable `Flexible` SSL.
-3. Wait for a few minutes and your site should be accessible with `https`.
-4. Update your `APP_URL` variable in `.env` file to use your domain with `https` & run `bash docker-run.sh optimize` again.
+1. Point your domain/subdomain to the VPS IP address in your Domain Provider DNS setting with `A record`.
 
-#### Others
+2. Add `APP_PORT` variable in `.env` file with some different port than 80 (eg: 8080) so it does not conflict with Nginx.
 
-There are many other ways to setup SSL with docker which you can use. You can use `nginx-proxy` or any other proxy to handle SSL for you.
+3. Update your `APP_URL` variable in `.env` file to use your domain with `https` & run `bash docker-run.sh optimize` again.
+    ```bash title=".env"
+    APP_URL=https://yourdomain.com
+    APP_PORT=8080
+    ```
+
+4. Install Nginx on your server if not already there and then setup a reverse proxy to the docker container.
+   ```
+   vim /etc/nginx/sites-available/minetrax.conf
+   ```
+
+    Add below configuration to the file and save it. Make sure to replace `yourdomain.com` with your actual domain.
+    ```nginx title="/etc/nginx/sites-available/minetrax.conf"
+    server {
+    listen 80;
+    // highlight-next-line
+    server_name yourdomain.com www.yourdomain.com;
+
+    location / {
+        proxy_pass http://localhost:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+    ```
+
+5. Enable the site and restart Nginx.
+    ```bash
+    ln -s /etc/nginx/sites-available/minetrax.conf /etc/nginx/sites-enabled/minetrax.conf
+    systemctl restart nginx
+    ```
+
+6. Install CertBot to get SSL certificate for your domain.
+    ```bash
+    apt-get install certbot python3-certbot-nginx
+    ```
+
+7. Run below command to get SSL certificate for your domain.
+    ```bash
+    certbot --nginx -d yourdomain.com -d www.yourdomain.com
+    ```
+
+8. Your site should now be accessible with `https` and SSL enabled.
+
+#### Others Ways
+
+There are multiple other ways to setup SSL on your site, you can use Cloudflare, Custom Certificate or any other service you prefer.
 Ping us on Discord if you need help with setting up SSL.
 
 ### Updating to Latest Version
