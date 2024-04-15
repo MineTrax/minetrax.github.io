@@ -35,6 +35,13 @@ cp .env.example .env
 chmod u+x docker-run.sh
 ```
 
+:::info Change default http Port
+By default MineTrax in Docker runs on port `80`. If you want to change the port, you can do so by updating `APP_PORT` variable in the `.env` files.
+```php title=".env"
+APP_PORT=8080
+```
+:::
+
 ### Running the Docker
 
 Run the `docker-run.sh` script to start MineTrax.
