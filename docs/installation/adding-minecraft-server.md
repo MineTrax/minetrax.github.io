@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: Adding Server on Web
 id: adding-minecraft-server
 ---

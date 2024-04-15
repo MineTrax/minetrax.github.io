@@ -26,6 +26,7 @@ Below are list of languages which are already added by default.
 |Chinese (Traditional)|zh-hk|
 |Chinese (Simplified)|zh-cn|
 |Japanese|ja|
+|Hungarian|hu|
 
 
 ## How to change default language?

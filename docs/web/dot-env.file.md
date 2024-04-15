@@ -108,6 +108,7 @@ DISCORD_OAUTH_ENABLED=false # Set this true if you want to enable Login with Dis
 DISCORD_CLIENT_ID= # This is used to set the discord client id. It is required if you are using discord for oauth.
 DISCORD_CLIENT_SECRET= # This is used to set the discord client secret. It is required if you are using discord for oauth.
 DISCORD_REDIRECT_URI=http://minetrax.live/auth/discord/callback # Just change the domain part of this url to your domain. You will need this url while creating discord oauth app.
+DISCORD_BOT_TOKEN= # Bot token for discord bot.
 
 SETTINGS_CACHE_ENABLED=false # It is recommended to keep it as it is.
 RANDOM_USER_AVATARS=true # User who haven't uploaded any profile image get a unique randomly generated profile image by default. Set this false if you want to disable this feature.

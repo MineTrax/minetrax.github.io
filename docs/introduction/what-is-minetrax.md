@@ -31,6 +31,7 @@ MineTrax has lot of features, some of them are listed below:
  - AskDB - AI based database query system.
  - Dark Mode. Ofcoz (✿◠‿◠)
  - Language Switcher.
+ - Discord Integration (Notifications, Linked Roles and Webhooks)
  - more...
 
 ## Upcoming

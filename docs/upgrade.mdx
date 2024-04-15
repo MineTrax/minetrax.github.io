@@ -18,11 +18,14 @@ It is highly recommened to always keep your version updated to get latest featur
 | 2.1.0        | 2.0.0          |           | `8.1+`       | `1.16`, `1.17`, `1.18`, `1.19`, `1.20` |
 | 3.1.0        | 3.0.0          |           | `8.1+`       | `1.16`, `1.17`, `1.18`, `1.19`, `1.20` |
 | 3.5.0        | 3.5.0          |           | `8.1+`       | `1.16`, `1.17`, `1.18`, `1.19`, `1.20` |
-| <b>4.3.0</b> | <b>4.0.2</b>   | ✅        | `8.1+`       | `1.16`, `1.17`, `1.18`, `1.19`, `1.20` |
+| 4.3.0        | 4.0.2          |           | `8.1+`       | `1.16`, `1.17`, `1.18`, `1.19`, `1.20` |
+| <b>5.1.0</b> | <b>5.0.0</b>   | ✅        | `8.1+`       | `1.16`, `1.17`, `1.18`, `1.19`, `1.20` |
 
 You can update your Web using either Automatic or Manual method.
 
 ## Automatic Upgrading Web
+
+### AutoInstaller or Manually
 
 Using this mode all you have to do is take latest pull and run a script.
 
@@ -33,10 +36,23 @@ bash update.sh
 
 Note: It should automatically update everything for you. If it fails you will have to manually handle update using below manual method.
 
+### Docker
+
+If you installed minetrax using docker then cd into minetrax directory and run:
+
+```bash
+bash docker-run.sh down
+bash docker-run.sh up
+```
+
+It should automatically update everything for you. Check `bash docker-run.sh logs` for any issue.
+
 ## Manually Upgrading Web
 
 :::caution
 Upgrade guide for web consider `Ubuntu` as operating system. If you using some other OS you might have to tweak some commands accordingly.
+
+Only when you installed using `AuthInstaller` or `Manually`
 :::
 
 Follow the process step by step to upgrade web to latest version.
