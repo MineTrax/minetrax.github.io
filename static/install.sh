@@ -93,7 +93,7 @@ clone_and_setup_code() {
     echo "Updating .env file with database password..."
     sudo sed -i "s/DB_PASSWORD=password/DB_PASSWORD=$database_password/" .env
 	sudo sed -i "s/DB_DATABASE=minetrax/DB_DATABASE=$database_name/" .env
-	sudo sed -i "s/DB_USERNAME=root/DB_USERNAME=$database_name/" .env
+	sudo sed -i "s/DB_USERNAME=minetrax/DB_USERNAME=$database_name/" .env
 
     echo "Installing project dependencies..."
     yes | sudo composer install
