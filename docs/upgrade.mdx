@@ -27,10 +27,11 @@ You can update your Web using either Automatic or Manual method.
 
 ### AutoInstaller or Manually
 
+When you have installed minetrax using `AutoInstaller` or `Manually` you can use this method to upgrade your web to latest version.
 Using this mode all you have to do is take latest pull and run a script.
 
 ```
-git pull origin main
+cd /var/www/minetrax
 bash update.sh
 ```
 
@@ -38,9 +39,11 @@ Note: It should automatically update everything for you. If it fails you will ha
 
 ### Docker
 
+When you have installed minetrax using `Docker` you can use this method to upgrade your web to latest version.
 If you installed minetrax using docker then cd into minetrax directory and run:
 
 ```bash
+cd /var/www/minetrax
 bash docker-run.sh down
 bash docker-run.sh up
 ```
