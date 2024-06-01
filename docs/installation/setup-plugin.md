@@ -11,13 +11,14 @@ You need to add your minecraft server to web before continuing to add Minetrax p
 :::
 
 ## Download
-Firstly, download the latest __[MineTrax.jar](https://github.com/MineTrax/plugin/releases)__ file from releases section of github and put it inside of `plugins` folder of your Minecraft server. 
-
 :::note
-1. MineTrax plugin should not be added to Proxy servers (Bungee, Velocity etc). It is only for Spigot, Paper, Bukkit etc servers.
-2. Vault plugin is required for Minetrax to work. If you don't have it, download it from [here](https://github.com/MilkBowl/Vault/releases/latest).
-3. It is recomended to have ViaVersion in your servers if you want to track player's client version in Web.
+1. It is recommended to add MineTrax plugin to all servers you have. Both Proxy servers (Bungee, Velocity etc) as well as Spigot, Paper, Bukkit etc servers.
+2. Vault plugin is required for Minetrax to work (for spigot). If you don't have it, download it from [here](https://github.com/MilkBowl/Vault/releases/latest).
+3. It is recommended to have ViaVersion in your servers if you want to track player's client version in Web.
+4. It is recommended to have SkinsRestorer in your servers if you want to show correct skin of player in web for offline servers, or wanna allow player to change skin from web.
 :::
+
+Firstly, download the latest __[MineTrax.jar](https://github.com/MineTrax/plugin/releases)__ file from releases section of github and put it inside of `plugins` folder of your Minecraft server. 
 
 
 Start your server and it should create a `Minetrax/config.yml` file in your plugins folder, which should look something like:

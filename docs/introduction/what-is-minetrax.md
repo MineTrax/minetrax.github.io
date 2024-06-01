@@ -12,6 +12,7 @@ MineTrax has lot of features, some of them are listed below:
  - Track player & server data and perform various analysis on them.
  - Custom Theme & Branding - Customize website as per your server theme.
  - SkinChanger - Let players change their skin from website.
+ - Command Runner - Run or schedule commands to be run on servers from website.
  - Player Rating System let you calculate the rank of player based on your own custom ranking algorithm.
  - Let users to register in website and link to ingame player character.
  - Social Logins with Fb, Twitter etc.

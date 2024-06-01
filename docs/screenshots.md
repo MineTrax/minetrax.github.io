@@ -66,6 +66,10 @@ Below are some of screenshots you might wanna look at before considering.
 ## Change Player Skin
 ![ChangePlayerSkin](./../static/img/shots/new/change-player-skin.png)
 
+## Command Runner
+![CommandRunner](./../static/img/shots/new/command-runner.png)
+![CommandHistory](./../static/img/shots/new/command-history.png)
+
 ## Players
 ![PlayerStats](./../static/img/shots/new/playerstats.png)
 

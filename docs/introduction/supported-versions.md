@@ -9,7 +9,7 @@ Currently it is tested to work with any Bukkit flavored(Spigot, Paper etc) serve
 
 ## Plugin Requirements
 MineTrax requires following plugins to work:
-- Vault
+- Vault (required on spigot servers)
 
 ## Other Plugins support
 Below are some plugins whose APIs are used for extra functionality at Minetrax.
@@ -23,3 +23,4 @@ Please note you don't need to have any of them to run Minetrax.
 - PlaceholderAPI
 - ViaVersion
 - SkinsRestorer
+- Vanish Plugins (Essentials, SuperVanish etc)

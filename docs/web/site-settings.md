@@ -176,27 +176,19 @@ Whether to enable account link feature. If enabled, users will be able to link t
 The maximum number of players that can be linked to a single web account. Default is 1.
 
 ### 5. Account Link Success Command
-The command to execute when the account link is successful. This command will be executed on the server. You can use this to give rewards to the player for linking their account. \{PLAYER\} will be replaced with the player name.
+List of commands which should be executed when account link is successful. You can use this to give rewards to the player for linking their account. \{PLAYER_USERNAME\} will be replaced with the player name & \{PLAYER_UUID\} will be replaced with the player UUID.
 
 Eg:
 ```
-give {PLAYER} diamond 1
+give {PLAYER_USERNAME} diamond 1
 ```
 
-:::note 
-1. This command will only run for initial link. It will not be executed when player intentionally unlinks and link their account again. This is to prevent players from abusing this feature.
-2. If `Max Player Per Account` is set to more than 1, this command can be executed multiple times depending on `Max Player Per Account` value. Eg: If `Max Player Per Account` is set to 3, this command can be executed upto 3 times per user as they have option to link upto 3 players.
-:::
+### 5. Account UnLink Success Command
 
-### 6. Account Link Success Broadcast
-The broadcast message to send when the account link is successful. This message will be sent to all players on the server. You can use this to notify players about the account link. \{PLAYER\} will be replaced with the player name.
+List of commands which should be executed when user unlink a player from his account. Its similar to Account Link Success Command. \{PLAYER_USERNAME\} will be replaced with the player name & \{PLAYER_UUID\} will be replaced with the player UUID.
 
-Eg:
-```
-{PLAYER} has successfully linked his account and won an ultra key.
-```
 
-### 7. Enable Player Rank Sync
+### 6. Enable Player Rank Sync
 Using this feature, Rank in website will be synced with rank in server instead of web calculated rank. This will require you to create a rank for each group you have in server making sure rank shortname matches the name of your player group in server. Eg: If you have a group named `VIP` in server, you will have to create a rank with shortname `VIP` in web.
 
 Currently rank sync can be done only from one server. You will have to choose which server you want to sync rank with.

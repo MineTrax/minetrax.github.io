@@ -60,11 +60,13 @@ Below is a table which will help you decide which method to choose.
 ## Plugin
 https://github.com/minetrax/plugin
 
-This is the spigot plugin which you need to install on your Minecraft server.
+This is the spigot & proxy plugin which you need to install on your Minecraft server. You should install it on all your spigot servers as well as proxy server (Bungee/Velocity) if you have one.
 It is responsible for:
  - Calculating and sending Player & Server Intel data to Web.
  - Sending chat and servers log to web if enabled.
  - Enabling users for web to chat with ingame players.
+ - Running commands on server from web.
+ - Features related to various plugins like SkinsRestorer, Permissions etc.
  - and various other things like whois command /ww etc.
 
 ## Flow Diagram
