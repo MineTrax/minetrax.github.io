@@ -20,7 +20,8 @@ APP_THEME=default # This is used to change your website theme to any custom them
 APP_TIMEZONE=UTC # This is used to set the timezone of your website. Don't change it unless you know what you are doing.
 
 DEBUGBAR_ENABLED=false # This is used to enable debug bar. It is recommended to keep it disabled in production.
-TELESCOPE_ENABLED=false # This is used to enable telescope which is used to debug issues. It is recommended to keep it disabled in production.
+TELESCOPE_ENABLED=false # This is used to enable telescope which is used to debug issues. It is highly recommended to keep it disabled in production.
+PULSE_ENABLED=false # This is used to enable pulse which is used to monitor your application.
 
 LOG_CHANNEL=stack # This is used to set the log channel. It is recommended to keep it as it is.
 LOG_DEPRECATIONS_CHANNEL=null # This is used to set the log channel for deprecations. It is recommended to keep it as it is.
@@ -127,6 +128,7 @@ COOKIE_CONSENT_ENABLED=false # Set this true if you want to show cookie consent 
 USE_LEGACY_FTP_DRIVER=false # Sometimes FTP connection to your server fails which you are adding your server due to your hosting provider using old version of FTP server. In such cases you can set it to `true` and try adding your server again. It is recommended to keep it as it is unless you are sure that your hosting provider is using old version of FTP server.
 
 MARK_USER_VERIFYED_ON_ACCOUNT_LINK=true # When a user links their minecraft account to their web account, their web account is marked as verified. Set this to false if you want to disable this functionality.
+DISABLE_PLAYER_UNLINKING=false # Set this true if you want to disable unlinking of players from their web account.
 USE_USERNAME_FOR_SKINS=false # Set this true if you want to use username for fetching skins instead of uuid. It is useful if you are using cracked server or running server in offline mode.
 FETCH_AVATAR_FROM_URL_USING_CURL=false # It is recommended to keep it as it is.
 
@@ -164,4 +166,6 @@ SFTP_DISK_PORT=22 # SFTP Port
 
 PLAYER_SKIN_CHANGER_ENABLED=true # Enable Player Skin Changer Feature.
 PLAYER_SKIN_CHANGER_COOLDOWN_IN_SECONDS=60 # Cooldown in seconds for changing skin.
+
+HIDE_PLAYER_NEXT_RANK=false # Hide player's next rank in player profile.
 ```
