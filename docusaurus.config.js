@@ -58,7 +58,7 @@ const config = {
         },
         {
           name: 'keywords', 
-          content: 'minecraft, site, minetrax, spigot, bukkit, analytics, web, suite, free, open source'
+          content: 'Minecraft, MineTrax, Spigot, Bukkit, Minecraft analytics, web suite, free analytics tool, open source analytics, Minecraft server tools, player analytics, server performance, Minecraft plugins, server monitoring, Spigot plugins, Bukkit plugins, Minecraft web integration, Minecraft server suite, server statistics, player tracking, skinsrestorer, command runner'
         }
       ],
       colorMode: {
