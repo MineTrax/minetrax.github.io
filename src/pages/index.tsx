@@ -14,6 +14,10 @@ function getRandomTitle() {
   const titles = [
     "The Modern Way to Grow Your Minecraft Servers",
     "The Growth Potion for Your Minecraft Servers",
+    "Minecraft Analytics: Gain Modern Insights for Your Server",
+    "Complete All-in-One Minecraft Website Solution",
+    "Minecraft Self-Hosted Store: Keep 100% of Your Profits",
+    "Modern Analytics for Minecraft: Make Data-Driven Decisions",
   ];
   return titles[Math.floor(Math.random() * titles.length)];
 }
@@ -28,9 +32,7 @@ function HomepageHeader() {
             {getRandomTitle()}
           </h1>
           <p className="text-gray-400 md:w-4/5 lg:w-1/2 text-sm lg:text-lg">
-            MineTrax helps you build a thriving community with powerful
-            analytics, user engagement, custom rankings, and chat features. Attract new players,
-            retain existing players, and keep them coming back.
+            Build a thriving Minecraft community with MineTrax. Our powerful suite of tools includes server analytics, a store module, ban management, account linking, and more. Gain valuable insights into your server's health, retain existing players, and attract new ones.
           </p>
         </div>
 
