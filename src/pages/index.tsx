@@ -96,8 +96,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title="Free Web & Analytics Suite for Minecraft Servers"
-      description="MineTrax is a web suite & analytics tool for your minecraft servers. Using it you can improve your server engagement by providing a unified dashboard for players to visit and view their player data, or you can keep everything private and use it only for analytics, choice is yours."
+      title="Free Analytics Suite & Store for Minecraft Servers"
+      description="Build a thriving Minecraft community with MineTrax. Our powerful suite of tools includes server analytics, a store module, ban management, account linking, and more. Gain valuable insights into your server's health, retain existing players, and attract new ones."
     >
       <HomepageHeader />
       <main>
