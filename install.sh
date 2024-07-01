@@ -6,8 +6,9 @@ php_version=php8.3
 
 clear
 
-echo "Make sure the server you want to install Minetrax on is a server that actually just installed the OS without any package installation to prevent errors.
-     because there are several scripts that change the default settings and this can cause installation failure"
+echo "==========NOTE=========="
+echo "This autoinstaller is meant for Ubuntu 20.04 LTS and above on a fresh server. Do not run this on an existing server with other services running."
+echo "========================"
 echo "Before starting the installation, you must use the root user with the command sudo -s (in Ubuntu) "
 
 #=================================================================================================================================================================#
@@ -372,7 +373,7 @@ echo "Done! Check above messages for SUCCESS or ERROR."
 #=================================================================================================================================================================#
 
 while true; do
-    exho ""
+    echo ""
     echo "Select Nginx or Apache2"
     echo "1. nginx (default)"
     echo "2. apache2"
