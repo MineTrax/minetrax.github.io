@@ -60,8 +60,8 @@ const FeatureList: FeatureItem[] = [
     ),
     description: (
       <>
-        Users can signup on the website and link their players for rewards. Your
-        user can also view detailed stats about their player profile and compare
+        Users can signup on the website and link their players for rewards & security. Your
+        user can also view detailed stats about their player and compare
         against other players.
       </>
     ),
@@ -198,7 +198,7 @@ export default function HomeFeatures(): JSX.Element {
           </h2>
           <p className="text-gray-500 sm:text-xl">
             Everything included in one suite. Player Tracking, Ingame chat,
-            Rating system, Analytics, Shoutbox, Post Feed, News,
+            Rating System, Punishments (BanWarden), Analytics, Shoutbox, Post Feed, News,
             Polls, Pages, Forms, Themes, your name it!
           </p>
         </div>

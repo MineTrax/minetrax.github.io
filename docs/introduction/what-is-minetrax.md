@@ -10,6 +10,7 @@ MineTrax is a web suite & analytics tool for your minecraft servers. Using it yo
 MineTrax has lot of features, some of them are listed below:
  - In-Depth Analytics for Server and Player (Intel).
  - Track player & server data and perform various analysis on them.
+ - BanWarden - Punishment tracking system which hooks into your favorite punishment plugin.
  - Custom Theme & Branding - Customize website as per your server theme.
  - SkinChanger - Let players change their skin from website.
  - Command Runner - Run or schedule commands to be run on servers from website.
@@ -36,7 +37,6 @@ MineTrax has lot of features, some of them are listed below:
  - more...
 
 ## Upcoming
- - Ban Management System
  - Store System
  - Automated Server Events
  - Rewards & Achievements

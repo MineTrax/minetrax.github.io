@@ -75,6 +75,12 @@ Below are some of screenshots you might wanna look at before considering.
 
 ![PlayerDetails](./../static/img/shots/new/playerdetails.png)
 
+
+## BanWarden
+![Index](./../static/img/shots/new/index-banwarden.png)
+
+![Show](./../static/img/shots/new/show-banwarden.png)
+
 ## More screenshots
 ![HomepageWithHero](./../static/img/shots/homewithhero.png)
 ![Intel Overview](./../static/img/shots/intel_overview.png)
