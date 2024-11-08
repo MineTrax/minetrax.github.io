@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkminetrax_github_io=self.webpackChunkminetrax_github_io||[]).push([[8947],{6600:e=>{e.exports=JSON.parse('{"authors":[{"name":"Xinecraft","title":"MineTrax Developer","url":"https://github.com/xinecraft","imageURL":"https://github.com/xinecraft.png","key":"xinecraft","page":null,"count":2}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkminetrax_github_io=self.webpackChunkminetrax_github_io||[]).push([[8158],{8158:(a,e,i)=>{i.r(e),i.d(e,{DocSearchModal:()=>h.a1});var h=i(3219)}}]);
