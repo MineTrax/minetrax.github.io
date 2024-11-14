@@ -277,13 +277,13 @@ MineTrax World - Play, Build, Survive, Explore
 The title suffix of the site. This is the suffix that get appended after title for all pages.
 Example: 
 ```
-| MineTrax.live
+| MineTrax.world
 ```
 
 For give above example, the final title will look like this:
-1. MineTrax World - Play, Build, Survive, Explore - MineTrax World | MineTrax.live
-2. Leaderboards | MineTrax.live
-3. SEO Settings | MineTrax.live
+1. MineTrax World - Play, Build, Survive, Explore - MineTrax World | MineTrax.world
+2. Leaderboards | MineTrax.world
+3. SEO Settings | MineTrax.world
 
 ### 4. Meta Tags
 You can add meta tags here. This can be used to add meta tags like description, keywords, etc.

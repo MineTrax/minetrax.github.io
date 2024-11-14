@@ -24,7 +24,7 @@ Future planned integrations:
 
 2. Now go to `OAuth2` tab and note down `CLIENT ID` and `CLIENT SECRET` from there. You will have to `Reset Secret` once to view it.
 
-3. You now need to add a Redirect URL, Use the `Add Redirect` button to do this. Your URL will be your base domain with `/auth/discord/callback` added onto the end. For example for base `https://minetrax.live` our callback becomes `https://minetrax.live/auth/discord/callback`. Enter the callback there and click `Save Changes`.
+3. You now need to add a Redirect URL, Use the `Add Redirect` button to do this. Your URL will be your base domain with `/auth/discord/callback` added onto the end. For example for base `https://minetrax.world` our callback becomes `https://minetrax.world/auth/discord/callback`. Enter the callback there and click `Save Changes`.
 
 4. Next go to `Bot` tab, and find your `TOKEN` (You will have to `Reset Token` once to view it). Copy and note down the that bot token we will need it in next steps.
 

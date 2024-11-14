@@ -15,7 +15,7 @@ APP_NAME=MineTrax # Name of your website. If your site name contains space, use 
 APP_ENV=production # This is environment of deployment. Always set this to production when you are ready to go live. e.g. APP_ENV=production
 APP_KEY=base64:Xk6mFYx... # This is key used to encrypt critical data and sessions. Never change it after initial setup.
 APP_DEBUG=false # This is used to enable debug mode. 
-APP_URL="https://yourdomain.com" # This is the URL of your website. e.g. APP_URL=https://minetrax.live
+APP_URL="https://yourdomain.com" # This is the URL of your website. e.g. APP_URL=https://minetrax.world
 APP_THEME=default # This is used to change your website theme to any custom theme.
 APP_TIMEZONE=UTC # This is used to set the timezone of your website. Don't change it unless you know what you are doing.
 
@@ -88,27 +88,27 @@ MAXMIND_LICENSE_KEY=
 GITHUB_OAUTH_ENABLED=false # Set this true if you want to enable Login with GitHub.
 GITHUB_CLIENT_ID= # This is used to set the github client id. It is required if you are using github for oauth.
 GITHUB_CLIENT_SECRET= # This is used to set the github client secret. It is required if you are using github for oauth.
-GITHUB_AUTH_REDIRECT=http://minetrax.live/auth/callback/github # Just change the domain part of this url to your domain. You will need this url while creating github oauth app.
+GITHUB_AUTH_REDIRECT=http://minetrax.world/auth/callback/github # Just change the domain part of this url to your domain. You will need this url while creating github oauth app.
 
 GOOGLE_OAUTH_ENABLED=false # Set this true if you want to enable Login with Google.
 GOOGLE_CLIENT_ID= # This is used to set the google client id. It is required if you are using google for oauth.
 GOOGLE_CLIENT_SECRET= # This is used to set the google client secret. It is required if you are using google for oauth.
-GOOGLE_AUTH_REDIRECT=http://minetrax.live/auth/callback/google # Just change the domain part of this url to your domain. You will need this url while creating google oauth app.
+GOOGLE_AUTH_REDIRECT=http://minetrax.world/auth/callback/google # Just change the domain part of this url to your domain. You will need this url while creating google oauth app.
 
 FACEBOOK_OAUTH_ENABLED=false # Set this true if you want to enable Login with Facebook.
 FACEBOOK_CLIENT_ID= # This is used to set the facebook client id. It is required if you are using facebook for oauth.
 FACEBOOK_CLIENT_SECRET= # This is used to set the facebook client secret. It is required if you are using facebook for oauth.
-FACEBOOK_AUTH_REDIRECT=http://minetrax.live/auth/facebook/callback # Just change the domain part of this url to your domain. You will need this url while creating facebook oauth app.
+FACEBOOK_AUTH_REDIRECT=http://minetrax.world/auth/facebook/callback # Just change the domain part of this url to your domain. You will need this url while creating facebook oauth app.
 
 TWITTER_OAUTH_ENABLED=false # Set this true if you want to enable Login with Twitter.
 TWITTER_CLIENT_ID= # This is used to set the twitter client id. It is required if you are using twitter for oauth.
 TWITTER_CLIENT_SECRET= # This is used to set the twitter client secret. It is required if you are using twitter for oauth.
-TWITTER_AUTH_REDIRECT=http://minetrax.live/auth/twitter/callback # Just change the domain part of this url to your domain. You will need this url while creating twitter oauth app.
+TWITTER_AUTH_REDIRECT=http://minetrax.world/auth/twitter/callback # Just change the domain part of this url to your domain. You will need this url while creating twitter oauth app.
 
 DISCORD_OAUTH_ENABLED=false # Set this true if you want to enable Login with Discord.
 DISCORD_CLIENT_ID= # This is used to set the discord client id. It is required if you are using discord for oauth.
 DISCORD_CLIENT_SECRET= # This is used to set the discord client secret. It is required if you are using discord for oauth.
-DISCORD_REDIRECT_URI=http://minetrax.live/auth/discord/callback # Just change the domain part of this url to your domain. You will need this url while creating discord oauth app.
+DISCORD_REDIRECT_URI=http://minetrax.world/auth/discord/callback # Just change the domain part of this url to your domain. You will need this url while creating discord oauth app.
 DISCORD_BOT_TOKEN= # Bot token for discord bot.
 
 SETTINGS_CACHE_ENABLED=false # It is recommended to keep it as it is.

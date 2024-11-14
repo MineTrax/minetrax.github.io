@@ -14,6 +14,8 @@ MineTrax has lot of features, some of them are listed below:
  - Custom Theme & Branding - Customize website as per your server theme.
  - SkinChanger - Let players change their skin from website.
  - Command Runner - Run or schedule commands to be run on servers from website.
+ - Player Password Reset - Let users change their linked players password from website. (Useful for cracked servers)
+ - AskDB - AI based database query system.
  - Player Rating System let you calculate the rank of player based on your own custom ranking algorithm.
  - Let users to register in website and link to ingame player character.
  - Social Logins with Fb, Twitter etc.
@@ -30,7 +32,6 @@ MineTrax has lot of features, some of them are listed below:
  - Custom Forms.
  - Downloads.
  - Staff Recruitment System
- - AskDB - AI based database query system.
  - Dark Mode. Ofcoz (✿◠‿◠)
  - Language Switcher.
  - Discord Integration (Notifications, Linked Roles and Webhooks)
@@ -44,11 +45,11 @@ MineTrax has lot of features, some of them are listed below:
  - more...
 
 ## Demo Server
-You can check web demo at **[https://minetrax.xinecraft.com](https://minetrax.xinecraft.com)**
+You can check web demo at **[https://minetrax.world](https://minetrax.world)**
 
 **Join demo server**
 ```
-play.minetrax.live
+play.minetrax.world
 ```
 
 :::info
