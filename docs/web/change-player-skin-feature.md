@@ -1,5 +1,5 @@
 ---
-sidebar_position: 110
+sidebar_position: 111
 title: Change Player Skin
 id: change-player-skin
 ---
