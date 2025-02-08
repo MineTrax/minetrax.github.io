@@ -45,8 +45,41 @@ const config = {
     ({
       metadata: [
         {
+          name: "description",
+          content:
+            "MineTrax is a free, open-source analytics and web suite for Minecraft servers. Features include player analytics, store module, ban management, and more.",
+        },
+        {
+          name: "og:description",
+          content:
+            "MineTrax is a free, open-source analytics and web suite for Minecraft servers. Features include player analytics, store module, ban management, and more.",
+        },
+        {
+          name: "og:title",
+          content:
+            "MineTrax - Free Analytics & Web Suite for Minecraft Servers",
+        },
+        {
+          name: "og:type",
+          content: "website",
+        },
+        {
           name: "og:image",
           content: "https://minetrax.github.io/img/shots/hero-min.png",
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          name: "twitter:title",
+          content:
+            "MineTrax - Free Analytics & Web Suite for Minecraft Servers",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "MineTrax is a free, open-source analytics and web suite for Minecraft servers. Features include player analytics, store module, ban management, and more.",
         },
         {
           name: "twitter:image",
@@ -57,12 +90,13 @@ const config = {
           content: "@minetraxsuite",
         },
         {
-          name: 'keywords', 
-          content: 'Minecraft, MineTrax, Spigot, Bukkit, Minecraft analytics, web suite, free analytics tool, open source analytics, Minecraft server tools, player analytics, server performance, Minecraft plugins, server monitoring, Spigot plugins, Bukkit plugins, Minecraft web integration, Minecraft server suite, server statistics, player tracking, skinsrestorer, command runner'
-        }
+          name: "keywords",
+          content:
+            "Minecraft, MineTrax, Spigot, Bukkit, Minecraft analytics, web suite, free analytics tool, open source analytics, Minecraft server tools, player analytics, server performance, Minecraft plugins, server monitoring, Spigot plugins, Bukkit plugins, Minecraft web integration, Minecraft server suite, server statistics, player tracking, skinsrestorer, command runner, Minecraft server management, Minecraft server dashboard",
+        },
       ],
       colorMode: {
-        defaultMode: 'dark',
+        defaultMode: "dark",
       },
       navbar: {
         hideOnScroll: true,
@@ -100,9 +134,9 @@ const config = {
       footer: {
         style: "dark",
         logo: {
-          alt: 'MineTrax Logo',
-          src: 'img/minetrax-full-dark.png',
-          className: 'w-64'
+          alt: "MineTrax Logo",
+          src: "img/minetrax-full-dark.png",
+          className: "w-64",
         },
         links: [
           {
@@ -183,7 +217,7 @@ const config = {
         indexName: "minetrax",
       },
     }),
-  
+
   plugins: [
     async function myPlugin(context, options) {
       return {
@@ -196,7 +230,7 @@ const config = {
         },
       };
     },
-  ]
+  ],
 };
 
 module.exports = config;

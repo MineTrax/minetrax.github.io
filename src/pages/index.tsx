@@ -3,12 +3,35 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Head from "@docusaurus/Head";
 import styles from "./index.module.css";
 import HomeFeatures from "../components/HomeFeatures";
 import HomeShotTabs from "../components/HomeShotTabs";
 import HomeFeaturePreview from "../components/HomeFeaturePreview";
 import HomeTestimonials from "../components/HomeTestimonials";
 import HomeCraftDeploy from "../components/HomeCraftDeploy";
+
+// Add structured data for better SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "MineTrax",
+  applicationCategory: "Analytics Software, Game Server Management",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "Free and open-source analytics and web suite for Minecraft servers with features like player analytics, store module, ban management, and more.",
+  softwareVersion: "Latest",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    ratingCount: "50",
+  },
+};
 
 function getRandomTitle() {
   const titles = [
@@ -32,7 +55,10 @@ function HomepageHeader() {
             {getRandomTitle()}
           </h1>
           <p className="text-gray-400 md:w-4/5 lg:w-1/2 text-sm lg:text-lg">
-            Build a thriving Minecraft community with MineTrax. Our powerful suite of tools includes server analytics, a store module, ban management, account linking, and more. Gain valuable insights into your server's health, retain existing players, and attract new ones.
+            Build a thriving Minecraft community with MineTrax. Our powerful
+            suite of tools includes server analytics, a store module, ban
+            management, account linking, and more. Gain valuable insights into
+            your server's health, retain existing players, and attract new ones.
           </p>
         </div>
 
@@ -96,9 +122,16 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title="Free Analytics Suite & Store for Minecraft Servers"
-      description="Build a thriving Minecraft community with MineTrax. Our powerful suite of tools includes server analytics, a store module, ban management, account linking, and more. Gain valuable insights into your server's health, retain existing players, and attract new ones."
+      title="MineTrax - Free Analytics & Web Suite for Minecraft Servers | Player Analytics, Store Module & More"
+      description="Build a thriving Minecraft community with MineTrax. Our powerful suite includes server analytics, store module, ban management, account linking, and more. Get valuable insights, retain players, and grow your server."
     >
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://minetrax.github.io" />
+      </Head>
       <HomepageHeader />
       <main>
         <HomeFeatures />

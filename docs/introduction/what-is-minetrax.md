@@ -1,5 +1,15 @@
 ---
 title: What is Minetrax?
+description: MineTrax is a comprehensive web suite & analytics tool for Minecraft servers. Learn about its features including player analytics, ban management, skin changing, and more.
+keywords:
+  - minecraft server analytics
+  - minecraft web suite
+  - minecraft server management
+  - minecraft player tracking
+  - minecraft server dashboard
+  - minecraft ban management
+  - minecraft skin changer
+  - minecraft server tools
 id: what-is-minetrax
 sidebar_position: 1
 ---
