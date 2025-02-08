@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #var
-nodejs_version=20
-php_version=php8.3
+nodejs_version=22
+php_version=php8.4
 
 clear
 
