@@ -21,12 +21,12 @@ update_and_upgrade() {
 
 # Function to check and install MySQL if needed
 install_mysql() {
-    if ! dpkg -l | grep -q "mysql-server"; then
+    if ! dpkg -l | grep -q "mysql-server\|mariadb-server"; then
             echo "Installing MySQL..."
             sudo apt install mysql-server -y
             sudo service mysql restart
     else
-        echo "MySQL is already installed. continuing..."
+        echo "MySQL/MariaDB is already installed. continuing..."
     fi
 }
 
