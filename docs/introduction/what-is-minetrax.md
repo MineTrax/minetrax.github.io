@@ -52,6 +52,13 @@ You can check web demo at **[https://minetrax.world](https://minetrax.world)**
 play.minetrax.world
 ```
 
+## Servers using MineTrax
+
+- [CrazyMC Network](https://crazymc.net)
+- [Universal Network](https://universalmc.org/)
+- check more at discord...
+
+
 :::info
 If you are stuck in any step during installation, please free to join **[Discord](https://discord.gg/Hzfj27k)** and ask for help or report the issue. We will sort it out as soon as possible.
 :::
