@@ -96,7 +96,7 @@ sudo supervisorctl status all
 
 ```bash
 sudo service nginx restart
-sudo service php8.4-fpm restart
+sudo service php8.3-fpm restart
 ```
 
 #### Apache
