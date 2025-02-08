@@ -34,7 +34,7 @@ MineTrax has lot of features, some of them are listed below:
  - Staff Recruitment System
  - Dark Mode. Ofcoz (✿◠‿◠)
  - Language Switcher.
- - Discord Integration (Notifications, Linked Roles and Webhooks)
+ - Discord Integration (Notifications, Auto-Join Server, Linked Roles and Webhooks)
  - more...
 
 ## Upcoming
