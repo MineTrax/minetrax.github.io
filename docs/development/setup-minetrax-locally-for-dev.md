@@ -23,7 +23,7 @@ For development, we will need the following software:
 1. A Web Server. Apache or Nginx
 1. Git
 1. Node.js
-1. PHP 8.3
+1. PHP 8.3+
 1. Composer
 1. MySQL 8+
 1. Redis Server
