@@ -2,7 +2,7 @@
 
 #var
 nodejs_version=22
-php_version=php8.3
+php_version=php8.4
 
 clear
 
