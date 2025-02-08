@@ -8,6 +8,7 @@ Currently MineTrax has these integration with Discord:
 
 1. Social Authentication (OAuth) 
 2. Discord Notifications (with Bot)
+3. Discord Server Auto-Join when user login with Discord.
 3. Serverlog (Webhook)
 
 Future planned integrations:
@@ -78,3 +79,31 @@ For notification to work for a user, they will need to login with Discord at lea
 
 Next time whenever your user login with Discord, it will automatically link their account with Discord and do everything require to send notifications to him in DM.
 :::
+
+
+## Discord Server Auto-Join Feature
+
+You can auto-join your users to a specific Discord Server when they login with Discord.
+
+For this feature to work, you need to follow these steps:
+
+1. Make sure you follow the [Setup Discord OAuth and Bot for Notifications](#setup-discord-oauth-and-bot-for-notifications) guide to setup your bot and Discord OAuth is enabled.
+   
+
+2. Make sure your bot has the following additional permissions: (if not, go to Discord Developers Portal and add it)
+    - `CREATE_INSTANT_INVITE`
+
+3. Open `Admin > Settings > General` and fill your Discord Server ID in `Discord Server ID` field and save it.
+
+4. Open `.env` file in your minetrax directory and update the following variables:
+    ```php title=".env"
+    DISCORD_FORCE_JOIN_SERVER=true
+    ```
+
+5. Run update `sh update.sh` so that the changes get reflected in the application.
+    ```
+    cd /var/www/minetrax
+    sh update.sh
+    ```
+
+6. Now whenever your user login with Discord, they will be auto-joined to the Discord Server.

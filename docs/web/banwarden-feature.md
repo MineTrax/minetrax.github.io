@@ -12,7 +12,8 @@ Key Features:
 
 - View all the punishments in your server.
 - View the details of the punishment.
-- Manage the punishments (add, remove). (not implemented yet)
+- Remove/Pardon punishments from web.
+- Add new punishments from web. (not implemented yet)
 - Attach evidence to the punishment.
 - AI scoring for the punishment.
 
@@ -68,11 +69,30 @@ If you have old punishments that you want to sync with BanWarden, you can do so 
 
 BanWarden uses AI to score the punishments. You can enable or disable this feature using `BANWARDEN_AI_INSIGHTS_ENABLED` .env variable.
 
-This feature also requires OpenAI API key set.
+This feature also requires AI to be enabled in the `.env` file with a supported LLM provider.
+
+1. Enable BanWarden AI Insights in the `.env` file.
 ```php
 BANWARDEN_AI_INSIGHTS_ENABLED=true
-OPENAI_API_KEY=YOUR_OPENAI_API_KEY
 ```
+
+2. Enable AI in the `.env` file. with a supported LLM provider.
+Eg: for OpenAI,
+```php
+AI_ENABLED=true
+AI_PROVIDER=openai
+OPENAI_API_KEY=YOUR_OPENAI_APIKEY
+```
+
+Check [AskDB AI Bot Feature](./askdb-ai-bot-feature.md) for more details on supported LLM providers.
+
+3. Run update
+
+```bash
+cd /var/www/minetrax
+sh update.sh
+```
+
 
 ### BanWarden Evidence
 

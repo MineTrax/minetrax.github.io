@@ -88,12 +88,12 @@ MAXMIND_LICENSE_KEY=
 GITHUB_OAUTH_ENABLED=false # Set this true if you want to enable Login with GitHub.
 GITHUB_CLIENT_ID= # This is used to set the github client id. It is required if you are using github for oauth.
 GITHUB_CLIENT_SECRET= # This is used to set the github client secret. It is required if you are using github for oauth.
-GITHUB_AUTH_REDIRECT=http://minetrax.world/auth/callback/github # Just change the domain part of this url to your domain. You will need this url while creating github oauth app.
+GITHUB_AUTH_REDIRECT=http://minetrax.world/auth/github/callback # Just change the domain part of this url to your domain. You will need this url while creating github oauth app.
 
 GOOGLE_OAUTH_ENABLED=false # Set this true if you want to enable Login with Google.
 GOOGLE_CLIENT_ID= # This is used to set the google client id. It is required if you are using google for oauth.
 GOOGLE_CLIENT_SECRET= # This is used to set the google client secret. It is required if you are using google for oauth.
-GOOGLE_AUTH_REDIRECT=http://minetrax.world/auth/callback/google # Just change the domain part of this url to your domain. You will need this url while creating google oauth app.
+GOOGLE_AUTH_REDIRECT=http://minetrax.world/auth/google/callback # Just change the domain part of this url to your domain. You will need this url while creating google oauth app.
 
 FACEBOOK_OAUTH_ENABLED=false # Set this true if you want to enable Login with Facebook.
 FACEBOOK_CLIENT_ID= # This is used to set the facebook client id. It is required if you are using facebook for oauth.
@@ -111,7 +111,7 @@ DISCORD_CLIENT_SECRET= # This is used to set the discord client secret. It is re
 DISCORD_REDIRECT_URI=http://minetrax.world/auth/discord/callback # Just change the domain part of this url to your domain. You will need this url while creating discord oauth app.
 DISCORD_BOT_TOKEN= # Bot token for discord bot.
 
-SETTINGS_CACHE_ENABLED=false # It is recommended to keep it as it is.
+SETTINGS_CACHE_ENABLED=true # It is recommended to keep it as it is.
 RANDOM_USER_AVATARS=true # User who haven't uploaded any profile image get a unique randomly generated profile image by default. Set this false if you want to disable this feature.
 
 APP_LOCALE=en # This is used to set the app locale. Change it to your locale if you want to change the app locale. Eg: `de`
@@ -138,7 +138,16 @@ ALLOW_ANY_PROVIDER_SOCIAL_AUTH=false # By default, When a user signup using a So
 
 
 ASKDB_ENABLED=false # Enable AskDB - AI Based Database Query Feature.
-OPENAI_API_KEY= # OpenAI API Key used by AskDB.
+
+AI_ENABLED=true # Enable AI Based Features.
+OPENAI_API_KEY=
+GROQ_API_KEY=
+ANTHROPIC_API_KEY=
+OLLAMA_URL=
+MISTRAL_API_KEY=
+XAI_API_KEY=
+GEMINI_API_KEY=
+DEEPSEEK_API_KEY=
 
 BACKUP_ENABLED=true # Automatic Daily backup of database and files.
 BACKUP_APP_NAME="${APP_NAME}-backup" # It is recommended to keep it as it is.
@@ -168,4 +177,16 @@ PLAYER_SKIN_CHANGER_ENABLED=true # Enable Player Skin Changer Feature.
 PLAYER_SKIN_CHANGER_COOLDOWN_IN_SECONDS=60 # Cooldown in seconds for changing skin.
 
 HIDE_PLAYER_NEXT_RANK=false # Hide player's next rank in player profile.
+
+# BanWarden
+BANWARDEN_ENABLED=true # Enable BanWarden.
+BANWARDEN_AI_INSIGHTS_ENABLED=true # Enable AI Insights.
+BANWARDEN_AI_INSIGHTS_TYPES=ban,mute,kick,warn # Types of AI Insights.
+BANWARDEN_SHOW_PUBLIC=true # Should banwarden publishment data be shown to public.
+BANWARDEN_SHOW_MASKED_IP_PUBLIC=false # Should show masked ip to public or hide it completely.
+BANWARDEN_MODULE_DISK=private # Disk where BanWarden evidence should be stored.
+BANWARDEN_EVIDENCE_MAX_COUNT=2 # Maximum number of evidence allowed per punishment.
+BANWARDEN_EVIDENCE_ALLOWED_MIMETYPES=jpg,png,gif,bmp,webp,mp4,avi,mov,mkv,webm,zip,rar # Allowed mime types for evidence.
+BANWARDEN_EVIDENCE_MAX_SIZE_KB=51200 # Maximum size of evidence in KB.
+BANWARDEN_ALLOW_CONTROL_FROM_WEB=true # Should allow control from web. (If wanna allow staff to pardon players from web)
 ```

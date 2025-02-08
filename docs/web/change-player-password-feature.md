@@ -26,4 +26,6 @@ This feature requires your minecraft server to have webquery enabled where the p
 
 ## Permissions
 
+- `reset any_player_password` - This is staff(admin) permission. This allows staffs to reset password of any player.
+
 - `cannot player_password_reset` - Sometime you want to restrict this feature to some specific roles (eg: staffs). You can give this permission to the roles which you want to restrict from using this feature.
