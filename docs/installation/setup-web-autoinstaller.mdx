@@ -4,9 +4,6 @@ title: Setup Web (AutoInstaller)
 id: setup-web-autoinstaller
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 :::tip
 You only need to follow either AutoInstaller or Manual, not both.
 
@@ -23,16 +20,18 @@ AutoInstaller should only be used in a fresh VPS/Dedicated Server with Ubuntu (L
 As of today, MineTrax cannot be installed on a Shared Hosting. VPS or Dedicated Server is required.
 :::
 
-AutoInstaller requires a fresh VPS with Ubuntu (LTS). It is recommended to have atleast 1GB of RAM and 1 vCPU.
+AutoInstaller requires a fresh VPS with Ubuntu (LTS). It is recommended to have atleast 2GB of RAM and 1 vCPU.
 
 It is important that you choose LTS version of Ubuntu as AutoInstaller will fail on Non-LTS releases, Below are some Ubuntu releases and their support status:
 
 | Release | Codename | Supported
 | -------------- | -------- | ---------- |
+| Ubuntu 24.04 LTS | Noble Numbat | ✅ |
 | Ubuntu 22.04 LTS | Jammy Jellyfish | ✅ |
 | Ubuntu 20.04 LTS | Focal Fossa | ✅ |
 | Ubuntu 18.04 LTS | Bionic Beaver | ✅ |
 | Ubuntu 23.04 | Lunar Lobster | ❌ |
+
 | Ubuntu 22.10 | Kinetic Kudu | ❌ |
 
 Simply select one of supported releases during creation of the VPS in your provider panel.
@@ -42,6 +41,16 @@ If you looking for affordable & good VPS providers, you can try [DigitalOcean](h
 :::
 
 ## Installation
+:::caution
+**AutoInstaller should only be used in a fresh VPS/Dedicated Server.**
+
+DO NOT use it on a server with any other software already installed as it might override your existing files and data.
+
+Use [Manual Installation](../installation/setup-web-manually) instead for such case. When in doubt, contact us on [Discord](https://discord.gg/Hzfj27k).
+:::
+
+
+
 SSH into your VPS/Dedicated Server and run the following command (Make sure to run the script with `root` user, if you are not logged in as root, you can switch to root using `sudo su root` command):
 
 ```
@@ -80,7 +89,7 @@ It is very important that you change the **password** & **email** of the `supera
 
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file created at `/var/www/minetrax`.
 
-```bash title=.env
+```bash title=".env"
 APP_NAME="YOUR_DESIRED_APP_NAME"
 APP_ENV=production
 APP_DEBUG=false
@@ -98,5 +107,5 @@ Now you are all set to go, you can start using minetrax and add your servers to 
 Below are some steps to follow next:
 
 1. [Secure your Web with SSL Certificate](../installation/setup-web-ssl)
-2. [Add your First Minecraft Server to Web](../web/adding-minecraft-server)
+2. [Add your First Minecraft Server to Web](../installation/adding-minecraft-server)
 3. [Install Plugin on your Minecraft Server](../installation/setup-plugin)

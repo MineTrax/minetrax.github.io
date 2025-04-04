@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 40
 title: Custom Navbar
 id: custom-navbar
 ---

@@ -4,7 +4,9 @@ import image from "../../assets/images/taskmanager.png";
 import screenshotDashboard from "../../assets/images/screenshot-dashboard.png";
 import screenshotPerf from "../../assets/images/screenshot-perf.png";
 import screenshotChat from "../../assets/images/screenshot-chat.png";
+import screenshotChangeSkin from "../../assets/images/screenshot-change-skin.png";
 import screenshotPlayerStats from "../../assets/images/screenshot-playerrank.png";
+import screenshotBanwarden from "../../assets/images/screenshot-banwarden.png";
 
 type Props = {};
 
@@ -38,7 +40,7 @@ export default function HomeShotTabs({}: Props) {
             as="div"
             className="cursor-pointer ui-selected:bg-white px-4 py-1.5 rounded ui-selected:shadow ui-selected:font-semibold tracking-wide"
           >
-            <TabButton name="Server Analytics">
+            <TabButton name="Analytics">
               <svg
                 className="mr-2 -ml-1 w-5 h-5"
                 fill="none"
@@ -65,7 +67,7 @@ export default function HomeShotTabs({}: Props) {
             as="div"
             className="cursor-pointer ui-selected:bg-white px-4 py-1.5 rounded ui-selected:shadow ui-selected:font-semibold tracking-wide"
           >
-            <TabButton name="Server Performance">
+            <TabButton name="Performance">
               <svg
                 className="mr-2 -ml-1 w-5 h-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,11 +91,36 @@ export default function HomeShotTabs({}: Props) {
               </svg>
             </TabButton>
           </Tab>
+
           <Tab
             as="div"
             className="cursor-pointer ui-selected:bg-white px-4 py-1.5 rounded ui-selected:shadow ui-selected:font-semibold tracking-wide"
           >
-            <TabButton name="Ingame Chat">
+            <TabButton name="BanWarden">
+              <svg
+                data-slot="icon"
+                className="mr-2 -ml-1 w-5 h-5"
+                fill="none"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 0 1 3.15 0v1.5m-3.15 0 .075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 0 1 3.15 0V15M6.9 7.575a1.575 1.575 0 1 0-3.15 0v8.175a6.75 6.75 0 0 0 6.75 6.75h2.018a5.25 5.25 0 0 0 3.712-1.538l1.732-1.732a5.25 5.25 0 0 0 1.538-3.712l.003-2.024a.668.668 0 0 1 .198-.471 1.575 1.575 0 1 0-2.228-2.228 3.818 3.818 0 0 0-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0 1 16.35 15m.002 0h-.002"
+                ></path>
+              </svg>
+            </TabButton>
+          </Tab>
+
+          <Tab
+            as="div"
+            className="cursor-pointer ui-selected:bg-white px-4 py-1.5 rounded ui-selected:shadow ui-selected:font-semibold tracking-wide"
+          >
+            <TabButton name="Chat">
               <svg
                 className="mr-2 -ml-1 w-5 h-5"
                 fill="none"
@@ -115,7 +142,7 @@ export default function HomeShotTabs({}: Props) {
             as="div"
             className="cursor-pointer ui-selected:bg-white px-4 py-1.5 rounded ui-selected:shadow ui-selected:font-semibold tracking-wide"
           >
-            <TabButton name="Player Ranking">
+            <TabButton name="Ranking">
               <svg
                 className="mr-2 -ml-1 w-5 h-5"
                 fill="none"
@@ -133,6 +160,28 @@ export default function HomeShotTabs({}: Props) {
               </svg>
             </TabButton>
           </Tab>
+          <Tab
+            as="div"
+            className="cursor-pointer ui-selected:bg-white px-4 py-1.5 rounded ui-selected:shadow ui-selected:font-semibold tracking-wide"
+          >
+            <TabButton name="Change Skin">
+              <svg
+                className="mr-2 -ml-1 w-5 h-5"
+                fill="none"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
+                ></path>
+              </svg>
+            </TabButton>
+          </Tab>
         </Tab.List>
         <Tab.Panels className="mt-5 text-center">
           <Tab.Panel>
@@ -145,12 +194,21 @@ export default function HomeShotTabs({}: Props) {
             <img className="imgFeaturePreview w-full" src={screenshotPerf} />
           </Tab.Panel>
           <Tab.Panel>
+            <img className="imgFeaturePreview w-full" src={screenshotBanwarden} />
+          </Tab.Panel>
+          <Tab.Panel>
             <img className="imgFeaturePreview w-full" src={screenshotChat} />
           </Tab.Panel>
           <Tab.Panel>
             <img
               className="imgFeaturePreview w-full"
               src={screenshotPlayerStats}
+            />
+          </Tab.Panel>
+          <Tab.Panel>
+            <img
+              className="imgFeaturePreview w-full"
+              src={screenshotChangeSkin}
             />
           </Tab.Panel>
         </Tab.Panels>

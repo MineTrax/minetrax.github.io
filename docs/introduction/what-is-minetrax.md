@@ -1,5 +1,15 @@
 ---
 title: What is Minetrax?
+description: MineTrax is a comprehensive web suite & analytics tool for Minecraft servers. Learn about its features including player analytics, ban management, skin changing, and more.
+keywords:
+  - minecraft server analytics
+  - minecraft web suite
+  - minecraft server management
+  - minecraft player tracking
+  - minecraft server dashboard
+  - minecraft ban management
+  - minecraft skin changer
+  - minecraft server tools
 id: what-is-minetrax
 sidebar_position: 1
 ---
@@ -8,8 +18,14 @@ MineTrax is a web suite & analytics tool for your minecraft servers. Using it yo
 
 ## Features
 MineTrax has lot of features, some of them are listed below:
- - In-Depth Analytics for Server and Player (Intel)
+ - In-Depth Analytics for Server and Player (Intel).
  - Track player & server data and perform various analysis on them.
+ - BanWarden - Punishment tracking system which hooks into your favorite punishment plugin.
+ - Custom Theme & Branding - Customize website as per your server theme.
+ - SkinChanger - Let players change their skin from website.
+ - Command Runner - Run or schedule commands to be run on servers from website.
+ - Player Password Reset - Let users change their linked players password from website. (Useful for cracked servers)
+ - AskDB - AI based database query system.
  - Player Rating System let you calculate the rank of player based on your own custom ranking algorithm.
  - Let users to register in website and link to ingame player character.
  - Social Logins with Fb, Twitter etc.
@@ -23,30 +39,41 @@ MineTrax has lot of features, some of them are listed below:
  - Localization. Translate to any language you want.
  - Custom Navigation Menu. (Customize navbar as per your liking using drag and drop)
  - Custom Pages.
+ - Custom Forms.
+ - Downloads.
+ - Staff Recruitment System
  - Dark Mode. Ofcoz (✿◠‿◠)
+ - Language Switcher.
+ - Discord Integration (Notifications, Auto-Join Server, Linked Roles and Webhooks)
+ - more...
 
 ## Upcoming
- - Ban Management System
- - Staff Recruitment System
  - Store System
  - Automated Server Events
- - Custom Theme
  - Rewards & Achievements
- - Advertisements & Monetisations
+ - Advertisements & Server monetization
  - more...
 
 ## Demo Server
-You can check web demo at **[https://www.minetrax.live](https://www.minetrax.live)**
+You can check web demo at **[https://minetrax.world](https://minetrax.world)**
 
 **Join demo server**
 ```
-play.minetrax.live
+play.minetrax.world
 ```
+
+## Servers using MineTrax
+
+- [CrazyMC Network](https://crazymc.net)
+- [Universal Network](https://universalmc.org/)
+- check more at discord...
+
 
 :::info
 If you are stuck in any step during installation, please free to join **[Discord](https://discord.gg/Hzfj27k)** and ask for help or report the issue. We will sort it out as soon as possible.
 :::
 
 ## Inspirations
- - Player Analytics (Plans)
+ - Player Analytics (Plan)
  - DiscordSRV
+ - SkinsRestorer

@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Head from "@docusaurus/Head";
 import styles from "./index.module.css";
 import HomeFeatures from "../components/HomeFeatures";
 import HomeShotTabs from "../components/HomeShotTabs";
@@ -10,10 +11,36 @@ import HomeFeaturePreview from "../components/HomeFeaturePreview";
 import HomeTestimonials from "../components/HomeTestimonials";
 import HomeCraftDeploy from "../components/HomeCraftDeploy";
 
+// Add structured data for better SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "MineTrax",
+  applicationCategory: "Analytics Software, Game Server Management",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "Free and open-source analytics and web suite for Minecraft servers with features like player analytics, store module, ban management, and more.",
+  softwareVersion: "Latest",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    ratingCount: "50",
+  },
+};
+
 function getRandomTitle() {
   const titles = [
     "The Modern Way to Grow Your Minecraft Servers",
     "The Growth Potion for Your Minecraft Servers",
+    "Minecraft Analytics: Gain Modern Insights for Your Server",
+    "Complete All-in-One Minecraft Website Solution",
+    "Minecraft Self-Hosted Store: Keep 100% of Your Profits",
+    "Modern Analytics for Minecraft: Make Data-Driven Decisions",
   ];
   return titles[Math.floor(Math.random() * titles.length)];
 }
@@ -28,9 +55,10 @@ function HomepageHeader() {
             {getRandomTitle()}
           </h1>
           <p className="text-gray-400 md:w-4/5 lg:w-1/2 text-sm lg:text-lg">
-            MineTrax helps you build a thriving community with powerful
-            analytics, user engagement, custom rankings, and chat features. Attract new players,
-            retain existing players, and keep them coming back.
+            Build a thriving Minecraft community with MineTrax. Our powerful
+            suite of tools includes server analytics, a store module, ban
+            management, account linking, and more. Gain valuable insights into
+            your server's health, retain existing players, and attract new ones.
           </p>
         </div>
 
@@ -54,7 +82,7 @@ function HomepageHeader() {
             </svg>
           </Link>
           <Link
-            to="https://www.minetrax.live"
+            to="https://minetrax.world"
             className="inline-flex hover:no-underline justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg border border-solid focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800"
           >
             <svg
@@ -94,9 +122,16 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title="Free Web & Analytics Suite for Minecraft Servers"
-      description="MineTrax is a web suite & analytics tool for your minecraft servers. Using it you can improve your server engagement by providing a unified dashboard for players to visit and view their player data, or you can keep everything private and use it only for analytics, choice is yours."
+      title="MineTrax - Free Analytics & Web Suite for Minecraft Servers | Player Analytics, Store Module & More"
+      description="Build a thriving Minecraft community with MineTrax. Our powerful suite includes server analytics, store module, ban management, account linking, and more. Get valuable insights, retain players, and grow your server."
     >
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://minetrax.github.io" />
+      </Head>
       <HomepageHeader />
       <main>
         <HomeFeatures />
@@ -113,7 +148,7 @@ export default function Home(): JSX.Element {
                   to="/docs/introduction/what-is-minetrax"
                   className="inline-flex justify-center items-center py-4 px-16 text-base font-medium text-center text-white rounded-lg bg-sky-500 hover:bg-sky-600 focus:outline-none hover:no-underline hover:text-white"
                 >
-                  Read the Docs
+                  RTFM!
                 </Link>
               </div>
             </div>

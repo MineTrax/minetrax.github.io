@@ -23,14 +23,14 @@ The installation steps given in this docs consider you using debian based OS eg:
 :::
 MineTrax is designed to run on your web server of choice. It is recommended to use a VPS or Dedicated Server as hosting and not any shared hosting.
 
-Web requires a VPS or Dedicated Server with atleast 1GB of RAM and 1 CPU. Ubuntu 20.04 is recommended.
+Web requires a VPS or Dedicated Server with atleast 2GB of RAM and 1 CPU. Ubuntu 20.04 is recommended.
 
 Software Dependencies:
 
-- PHP 8.1+
-- MySQL 5.7+ or MariaDB 10.2.7+
+- PHP 8.3+
+- MySQL 8+ or MariaDB 10.3+
 - Apache2 or Nginx
-- NodeJS 12+
+- NodeJS 16+
 - Redis Server
 - Git
 - Composer
@@ -59,13 +59,14 @@ sudo apt install software-properties-common && sudo add-apt-repository ppa:ondre
 sudo apt update
 ```
 
-Install PHP 8.2 and all required extensions.
+Install PHP 8.4 and all required extensions.
 
 ```bash
-sudo apt -y install curl php8.2 php8.2-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip,intl,redis}
+sudo apt -y install curl php8.4 php8.4-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip,intl,redis}
 ```
 
 ### MySQL / MariaDB
+
 
 :::caution
 Make sure to only install one. Either MySQL or MariaDB. If installing MariaDB, make sure its version is >10.2.7.
@@ -101,7 +102,7 @@ Make sure to only install one. Either Nginx or Apache2.
 Install Apache2 server and php extension for it.
 
 ```bash
-sudo apt install apache2 libapache2-mod-php8.2
+sudo apt install apache2 libapache2-mod-php8.4
 sudo systemctl restart apache2
 ```
 
@@ -110,7 +111,7 @@ sudo systemctl restart apache2
 Install Nginx server and php-fpm runner.
 
 ```bash
-sudo apt install nginx php8.2-fpm
+sudo apt install nginx php8.4-fpm
 ```
 
   </TabItem>
@@ -206,7 +207,7 @@ php artisan key:generate --force
 
 Next, change the database related variables in the `.env` file to match your database user credentials
 
-```bash title=.env
+```bash title=".env"
 APP_URL=http://your_domain.com # Change this to the URL which you wanna setup minetrax on.
 
 DB_CONNECTION=mysql
@@ -288,7 +289,7 @@ Configuration file for supervisor are stored in folder `/etc/supervisor/conf.d`.
 
 Create a new file called `minetrax-worker-default.conf` and put below context in there.
 
-```bash title=/etc/supervisor/conf.d/minetrax-worker-default.conf
+```bash title="/etc/supervisor/conf.d/minetrax-worker-default.conf"
 [program:minetrax-worker-default]
 process_name=%(program_name)s_%(process_num)02d
 command=php /var/www/minetrax/artisan queue:work --sleep=3 --tries=3 --max-time=3600
@@ -306,7 +307,7 @@ stopwaitsecs=3660
 
 Create a new file called `minetrax-worker-long.conf` and put below context in there.
 
-```bash title=/etc/supervisor/conf.d/minetrax-worker-long.conf
+```bash title="/etc/supervisor/conf.d/minetrax-worker-long.conf"
 [program:minetrax-worker-long]
 process_name=%(program_name)s_%(process_num)02d
 command=php /var/www/minetrax/artisan queue:work --queue=longtask,default redis-longtask --timeout=0 --sleep=3 --tries=3 --max-jobs=500
@@ -365,7 +366,7 @@ cluster = "ap2";
 
 After this open your `.env` file and replace the pusher related credentials to match above.
 
-```bash title=.env
+```bash title=".env"
 PUSHER_APP_ID=1367909
 PUSHER_APP_KEY=4b48b850682acb371c34
 PUSHER_APP_SECRET=41cc8be68c0d57fea4f3
@@ -374,7 +375,7 @@ PUSHER_APP_CLUSTER=ap2
 
 Also change broadcast driver to pusher.
 
-```bash title=.env
+```bash title=".env"
 BROADCAST_DRIVER=pusher
 ```
 
@@ -410,7 +411,7 @@ First, Create a new file with any name(eg: `minetrax.conf`) in the Apache2 sites
 sudo nano /etc/apache2/sites-available/minetrax.conf
 ```
 
-```text title=/etc/apache2/sites-available/minetrax.conf
+```text title="/etc/apache2/sites-available/minetrax.conf"
 <VirtualHost *:80>
   // highlight-next-line
   ServerName your_domain.com
@@ -456,7 +457,7 @@ First, Create a new file with any name(eg: `minetrax.conf`) in the Nginx sites d
 sudo nano /etc/nginx/sites-available/minetrax.conf
 ```
 
-```text title=/etc/nginx/sites-available/minetrax.conf
+```text title="/etc/nginx/sites-available/minetrax.conf"
 server {
     listen 80;
     listen [::]:80;
@@ -481,7 +482,7 @@ server {
     error_page 404 /index.php;
 
     location ~ \.php$ {
-        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+        fastcgi_pass unix:/var/run/php/php8.4-fpm.sock;
         fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
         include fastcgi_params;
     }
@@ -536,7 +537,7 @@ _You can change password from `Edit Profile` section and email from `Admin > Use
 
 After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
 
-```bash title=.env
+```bash title=".env"
 APP_NAME="YOUR_DESIRED_APP_NAME"
 APP_ENV=production
 APP_DEBUG=false
@@ -554,5 +555,5 @@ Now you are all set to go, you can start using minetrax and add your servers to 
 Below are some steps to follow next:
 
 1. [Secure your Web with SSL Certificate](../installation/setup-web-ssl)
-2. [Add your First Minecraft Server to Web](../web/adding-minecraft-server)
+2. [Add your First Minecraft Server to Web](../installation/adding-minecraft-server)
 3. [Install Plugin on your Minecraft Server](../installation/setup-plugin)

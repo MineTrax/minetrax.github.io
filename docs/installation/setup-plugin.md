@@ -1,28 +1,29 @@
 ---
-sidebar_position: 4
-title: Setup Plugin
+sidebar_position: 6
+title: Setup Plugin on MC Server
 id: setup-plugin
 ---
 
 :::caution Add your minecraft server first!
 You need to add your minecraft server to web before continuing to add Minetrax plugin.
 
-[Click here](../web/adding-minecraft-server.md) to know how to add your server.
+[Click here](../installation/adding-minecraft-server.md) to know how to add your server.
 :::
 
 ## Download
-Firstly, download the latest __[MineTrax.jar](https://github.com/MineTrax/plugin/releases)__ file from releases section of github and put it inside of `plugins` folder of your Minecraft server. 
-
 :::note
-1. MineTrax plugin should not be added to Proxy servers (Bungee, Velocity etc). It is only for Spigot, Paper, Bukkit etc servers.
-2. Vault plugin is required for Minetrax to work. If you don't have it, download it from [here](https://github.com/MilkBowl/Vault/releases/latest).
-3. It is recomended to have ViaVersion in your servers if you want to track player's client version in Web.
+1. It is recommended to add MineTrax plugin to all servers you have. Both Proxy servers (Bungee, Velocity etc) as well as Spigot, Paper, Bukkit etc servers.
+2. Vault plugin is required for Minetrax to work (for spigot). If you don't have it, download it from [here](https://github.com/MilkBowl/Vault/releases/latest).
+3. It is recommended to have ViaVersion in your servers if you want to track player's client version in Web.
+4. It is recommended to have SkinsRestorer in your servers if you want to show correct skin of player in web for offline servers, or wanna allow player to change skin from web.
 :::
+
+Firstly, download the latest __[MineTrax.jar](https://github.com/MineTrax/plugin/releases)__ file from releases section of github and put it inside of `plugins` folder of your Minecraft server. 
 
 
 Start your server and it should create a `Minetrax/config.yml` file in your plugins folder, which should look something like:
 
-```yml title=plugins/Minetrax/config.yml
+```yml title="plugins/Minetrax/config.yml"
 enabled: true
 api-host:
 api-key:
@@ -50,7 +51,7 @@ In next step you need to know few things:
 
 ### server-id
 This is unique identifier of your server.
-After you have [added your server](../web/adding-minecraft-server.md), you can view your server id from listing page.
+After you have [added your server](../installation/adding-minecraft-server.md), you can view your server id from listing page.
 
 ### api-host
 API host is your url at which minetrax will be running. eg: `https://yourdomain.com`

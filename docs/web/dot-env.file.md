@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 100
 title: .env Config File
 id: dot-env-file
 ---
@@ -10,14 +10,18 @@ Most of the time you won't need to change anything in this file after initial se
 Read below to know about all variable and their usage:
 
 
-```bash title=".env"
+```php title=".env"
 APP_NAME=MineTrax # Name of your website. If your site name contains space, use quotes. e.g. APP_NAME="My Site"
 APP_ENV=production # This is environment of deployment. Always set this to production when you are ready to go live. e.g. APP_ENV=production
 APP_KEY=base64:Xk6mFYx... # This is key used to encrypt critical data and sessions. Never change it after initial setup.
 APP_DEBUG=false # This is used to enable debug mode. 
-APP_URL=https://yourdomain.com # This is the URL of your website. e.g. APP_URL=https://minetrax.live
+APP_URL="https://yourdomain.com" # This is the URL of your website. e.g. APP_URL=https://minetrax.world
+APP_THEME=default # This is used to change your website theme to any custom theme.
+APP_TIMEZONE=UTC # This is used to set the timezone of your website. Don't change it unless you know what you are doing.
+
 DEBUGBAR_ENABLED=false # This is used to enable debug bar. It is recommended to keep it disabled in production.
-TELESCOPE_ENABLED=false # This is used to enable telescope which is used to debug issues. It is recommended to keep it disabled in production.
+TELESCOPE_ENABLED=false # This is used to enable telescope which is used to debug issues. It is highly recommended to keep it disabled in production.
+PULSE_ENABLED=false # This is used to enable pulse which is used to monitor your application.
 
 LOG_CHANNEL=stack # This is used to set the log channel. It is recommended to keep it as it is.
 LOG_DEPRECATIONS_CHANNEL=null # This is used to set the log channel for deprecations. It is recommended to keep it as it is.
@@ -84,34 +88,38 @@ MAXMIND_LICENSE_KEY=
 GITHUB_OAUTH_ENABLED=false # Set this true if you want to enable Login with GitHub.
 GITHUB_CLIENT_ID= # This is used to set the github client id. It is required if you are using github for oauth.
 GITHUB_CLIENT_SECRET= # This is used to set the github client secret. It is required if you are using github for oauth.
-GITHUB_AUTH_REDIRECT=http://minetrax.live/auth/callback/github # Just change the domain part of this url to your domain. You will need this url while creating github oauth app.
+GITHUB_AUTH_REDIRECT=http://minetrax.world/auth/github/callback # Just change the domain part of this url to your domain. You will need this url while creating github oauth app.
 
 GOOGLE_OAUTH_ENABLED=false # Set this true if you want to enable Login with Google.
 GOOGLE_CLIENT_ID= # This is used to set the google client id. It is required if you are using google for oauth.
 GOOGLE_CLIENT_SECRET= # This is used to set the google client secret. It is required if you are using google for oauth.
-GOOGLE_AUTH_REDIRECT=http://minetrax.live/auth/callback/google # Just change the domain part of this url to your domain. You will need this url while creating google oauth app.
+GOOGLE_AUTH_REDIRECT=http://minetrax.world/auth/google/callback # Just change the domain part of this url to your domain. You will need this url while creating google oauth app.
 
 FACEBOOK_OAUTH_ENABLED=false # Set this true if you want to enable Login with Facebook.
 FACEBOOK_CLIENT_ID= # This is used to set the facebook client id. It is required if you are using facebook for oauth.
 FACEBOOK_CLIENT_SECRET= # This is used to set the facebook client secret. It is required if you are using facebook for oauth.
-FACEBOOK_AUTH_REDIRECT=http://minetrax.live/auth/facebook/callback # Just change the domain part of this url to your domain. You will need this url while creating facebook oauth app.
+FACEBOOK_AUTH_REDIRECT=http://minetrax.world/auth/facebook/callback # Just change the domain part of this url to your domain. You will need this url while creating facebook oauth app.
 
 TWITTER_OAUTH_ENABLED=false # Set this true if you want to enable Login with Twitter.
 TWITTER_CLIENT_ID= # This is used to set the twitter client id. It is required if you are using twitter for oauth.
 TWITTER_CLIENT_SECRET= # This is used to set the twitter client secret. It is required if you are using twitter for oauth.
-TWITTER_AUTH_REDIRECT=http://minetrax.live/auth/twitter/callback # Just change the domain part of this url to your domain. You will need this url while creating twitter oauth app.
+TWITTER_AUTH_REDIRECT=http://minetrax.world/auth/twitter/callback # Just change the domain part of this url to your domain. You will need this url while creating twitter oauth app.
 
 DISCORD_OAUTH_ENABLED=false # Set this true if you want to enable Login with Discord.
 DISCORD_CLIENT_ID= # This is used to set the discord client id. It is required if you are using discord for oauth.
 DISCORD_CLIENT_SECRET= # This is used to set the discord client secret. It is required if you are using discord for oauth.
-DISCORD_REDIRECT_URI=http://minetrax.live/auth/discord/callback # Just change the domain part of this url to your domain. You will need this url while creating discord oauth app.
+DISCORD_REDIRECT_URI=http://minetrax.world/auth/discord/callback # Just change the domain part of this url to your domain. You will need this url while creating discord oauth app.
+DISCORD_BOT_TOKEN= # Bot token for discord bot.
 
-SETTINGS_CACHE_ENABLED=false # It is recommended to keep it as it is.
+SETTINGS_CACHE_ENABLED=true # It is recommended to keep it as it is.
 RANDOM_USER_AVATARS=true # User who haven't uploaded any profile image get a unique randomly generated profile image by default. Set this false if you want to disable this feature.
 
 APP_LOCALE=en # This is used to set the app locale. Change it to your locale if you want to change the app locale. Eg: `de`
+AVAILABLE_LOCALES=en,es,ru,sk,de,pl,uk,hi,it,zh-hk,zh-cn,ja # This is used in language switcher. This is list of all locales which are made available in the switcher. Set it to empty if you want to disable language switcher.
+
 DISABLE_USER_REGISTRATION=false # Set this true if you want to disable user registration.
 VERIFY_USER_EMAIL=false # Set this true if you want to verify user email before allowing them to do major actions on web.
+DISABLE_EMAIL_PASSWORD_AUTH=false # Set this true if you want to disable email password authentication and only allow social auth.
 
 SHOW_POWERED_BY=true # Set this false if you don't want to show powered by text in footer.
 SHOW_HOME_BUTTON=false # Set this true if you want to show home button in default navbar. It is recommended to keep it as it is.
@@ -120,10 +128,65 @@ COOKIE_CONSENT_ENABLED=false # Set this true if you want to show cookie consent 
 USE_LEGACY_FTP_DRIVER=false # Sometimes FTP connection to your server fails which you are adding your server due to your hosting provider using old version of FTP server. In such cases you can set it to `true` and try adding your server again. It is recommended to keep it as it is unless you are sure that your hosting provider is using old version of FTP server.
 
 MARK_USER_VERIFYED_ON_ACCOUNT_LINK=true # When a user links their minecraft account to their web account, their web account is marked as verified. Set this to false if you want to disable this functionality.
+DISABLE_PLAYER_UNLINKING=false # Set this true if you want to disable unlinking of players from their web account.
 USE_USERNAME_FOR_SKINS=false # Set this true if you want to use username for fetching skins instead of uuid. It is useful if you are using cracked server or running server in offline mode.
 FETCH_AVATAR_FROM_URL_USING_CURL=false # It is recommended to keep it as it is.
 
 PLAYER_FETCHER_CRON_INTERVAL=hourly # MineTrax automatically scans your servers for new players every hour by default. You can change it to one of these: `everyThirtyMinutes`, `everyFifteenMinutes`, `everyFiveMinutes` if you want to do rescan more frequently. It is recommended to keep it as it is.
 
 ALLOW_ANY_PROVIDER_SOCIAL_AUTH=false # By default, When a user signup using a Social Auth like Google their account get created and attached to that social account. Now if the same user try to login using a different social account like Facebook having same email address, it will fail. Set this to true if you want to allow login to an account with email using any social auth. Eg: if you enable this, User will be able to login via Google, Facebook etc to same account given that they have same email address.
+
+
+ASKDB_ENABLED=false # Enable AskDB - AI Based Database Query Feature.
+
+AI_ENABLED=true # Enable AI Based Features.
+OPENAI_API_KEY=
+GROQ_API_KEY=
+ANTHROPIC_API_KEY=
+OLLAMA_URL=
+MISTRAL_API_KEY=
+XAI_API_KEY=
+GEMINI_API_KEY=
+DEEPSEEK_API_KEY=
+
+BACKUP_ENABLED=true # Automatic Daily backup of database and files.
+BACKUP_APP_NAME="${APP_NAME}-backup" # It is recommended to keep it as it is.
+BACKUP_DISK=local # Disk where backup should be stored. Available Options: local, sftp, s3-private
+BACKUP_ARCHIVE_PASSWORD=null # If you want to encrypt the archieve with a password
+BACKUP_NOTIFICATION_EMAIL= # If you want to email after backup is successful or failed.
+
+POWERED_BY_EXTRA_NAME= # Co-powered by name in footer
+POWERED_BY_EXTRA_LINK= # Co-powered by URL link in footer
+
+PING_PROXY_SERVER_USING_IP_ADDRESS=false # If want to PING minecraft server using IP address instead of hostname.
+QUERY_PROXY_SERVER_USING_IP_ADDRESS=true # If want to QUERY minecraft server using IP address instead of hostname.
+
+MAX_USER_PROFILE_PHOTO_SIZE_KB=512  # Maximum size of user profile photo in KB.
+MAX_USER_COVER_PHOTO_SIZE_KB=1024 # Maximum size of user cover photo in KB.
+MAX_POST_FEED_MEDIA_SIZE_KB=1024 # Maximum size of post feed media in KB.
+
+RATELIMIT_API_PER_MINUTE=600 # Maximum number of API requests per minute.
+
+# If you want SFTP backup, you need to set these variables.
+SFTP_DISK_HOST= # SFTP Hostname
+SFTP_DISK_USERNAME= # SFTP Username
+SFTP_DISK_PASSWORD= # SFTP Password
+SFTP_DISK_PORT=22 # SFTP Port
+
+PLAYER_SKIN_CHANGER_ENABLED=true # Enable Player Skin Changer Feature.
+PLAYER_SKIN_CHANGER_COOLDOWN_IN_SECONDS=60 # Cooldown in seconds for changing skin.
+
+HIDE_PLAYER_NEXT_RANK=false # Hide player's next rank in player profile.
+
+# BanWarden
+BANWARDEN_ENABLED=true # Enable BanWarden.
+BANWARDEN_AI_INSIGHTS_ENABLED=true # Enable AI Insights.
+BANWARDEN_AI_INSIGHTS_TYPES=ban,mute,kick,warn # Types of AI Insights.
+BANWARDEN_SHOW_PUBLIC=true # Should banwarden publishment data be shown to public.
+BANWARDEN_SHOW_MASKED_IP_PUBLIC=false # Should show masked ip to public or hide it completely.
+BANWARDEN_MODULE_DISK=private # Disk where BanWarden evidence should be stored.
+BANWARDEN_EVIDENCE_MAX_COUNT=2 # Maximum number of evidence allowed per punishment.
+BANWARDEN_EVIDENCE_ALLOWED_MIMETYPES=jpg,png,gif,bmp,webp,mp4,avi,mov,mkv,webm,zip,rar # Allowed mime types for evidence.
+BANWARDEN_EVIDENCE_MAX_SIZE_KB=51200 # Maximum size of evidence in KB.
+BANWARDEN_ALLOW_CONTROL_FROM_WEB=true # Should allow control from web. (If wanna allow staff to pardon players from web)
 ```

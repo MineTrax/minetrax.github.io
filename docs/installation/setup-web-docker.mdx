@@ -1,0 +1,213 @@
+---
+sidebar_position: 3
+title: Setup Web (Docker)
+id: setup-web-docker
+---
+
+MineTrax can be installed using Docker. This is quick and easy way to get started with MineTrax.
+
+## Server Requirements
+
+Web (Docker) requires a VPS or Dedicated Server with atleast 4GB of RAM and 2 vCPU. Docker and Git must be installed in your server.
+
+If you don't have Docker or Git installed, you can follow their official documentation to install them:
+
+- [Install Docker](https://docs.docker.com/engine/install/)
+- [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+## Installation
+
+### Cloning the codes from Github
+
+Create a folder in location of your choice and clone the MineTrax git repo to it.
+
+```bash
+mkdir -p ~/minetrax
+cd ~/minetrax
+```
+
+Now clone the MineTrax git repo to the newly created folder & copy the `.env.example` file to `.env`.
+
+```bash
+git clone https://github.com/MineTrax/minetrax.git .
+cp .env.example .env
+
+chmod u+x docker-run.sh
+```
+
+:::info Change default http Port
+By default MineTrax in Docker runs on port `80`. If you want to change the port, you can do so by adding `APP_PORT` variable in the `.env` file.
+```php title=".env"
+APP_PORT=8080
+```
+:::
+
+### Running the Docker
+
+Run the `docker-run.sh` script to start MineTrax.
+
+```bash
+bash docker-run.sh up
+```
+
+### Finalize
+
+Now minetrax should be up and running on your domain `http://your_server_ip`.
+
+A SuperAdmin user is created already for you, you can login and change the password:
+
+```
+Username: superadmin
+Password: admin123
+```
+
+:::danger CHANGE PASSWORD & EMAIL
+It is very important that you change the **password** & **email** of the `superadmin` user after logging in.
+
+_You can change password from `Edit Profile` section and email from `Admin > Users` section_
+:::
+
+After checking your site is up and running, make sure to change `APP_ENV=production` and `APP_DEBUG=false` in the `.env` file.
+
+```bash title=".env"
+APP_NAME="YOUR_DESIRED_APP_NAME"
+APP_URL=http://your_server_ip
+APP_ENV=production
+APP_DEBUG=false
+```
+
+Run `./docker-run.sh optimize` after updating the `.env` file to apply changes.
+```bash
+bash docker-run.sh optimize
+```
+
+:::danger DISABLE DEBUG MODE
+It is very important that you change your **APP_ENV** to `production` and **APP_DEBUG** to `false` in the `.env` file when you are done testing and setting up the site.
+
+**Keeping APP_ENV to `local` or APP_DEBUG to `true` might expose sensitive information to end users.**
+:::
+
+### SSL & Domain Setup
+
+Current docker setup does not include SSL setup and let you setup your own as per your needs.
+If you want to enable SSL on your site you can use Proxy (eg: Nginx) or Cloudflare.
+
+#### SSL with Nginx Reverse Proxy
+
+If you want to use SSL with Nginx Proxy, you can follow below steps:
+
+1. Point your domain/subdomain to the VPS IP address in your Domain Provider DNS setting with `A record`.
+
+2. Add `APP_PORT` variable in `.env` file with some different port than 80 (eg: 8080) so it does not conflict with Nginx.
+
+3. Update your `APP_URL` variable in `.env` file to use your domain with `https` & run `bash docker-run.sh optimize` again.
+    ```bash title=".env"
+    APP_URL=https://yourdomain.com
+    APP_PORT=8080
+    ```
+
+4. Install Nginx on your server if not already there and then setup a reverse proxy to the docker container.
+   ```
+   vim /etc/nginx/sites-available/minetrax.conf
+   ```
+
+    Add below configuration to the file and save it. Make sure to replace `yourdomain.com` with your actual domain.
+    ```nginx title="/etc/nginx/sites-available/minetrax.conf"
+    server {
+    listen 80;
+    // highlight-next-line
+    server_name yourdomain.com www.yourdomain.com;
+
+    location / {
+        proxy_pass http://localhost:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+    ```
+
+5. Enable the site and restart Nginx.
+    ```bash
+    ln -s /etc/nginx/sites-available/minetrax.conf /etc/nginx/sites-enabled/minetrax.conf
+    systemctl restart nginx
+    ```
+
+6. Install CertBot to get SSL certificate for your domain.
+    ```bash
+    apt-get install certbot python3-certbot-nginx
+    ```
+
+7. Run below command to get SSL certificate for your domain.
+    ```bash
+    certbot --nginx -d yourdomain.com -d www.yourdomain.com
+    ```
+
+8. Your site should now be accessible with `https` and SSL enabled.
+
+#### Others Ways
+
+There are multiple other ways to setup SSL on your site, you can use Cloudflare, Custom Certificate or any other service you prefer.
+Ping us on Discord if you need help with setting up SSL.
+
+### Updating to Latest Version
+
+To update to the latest version of minetrax, you can run below command (from minetrax directory):
+```bash
+bash docker-run.sh down
+bash docker-run.sh up
+```
+
+### What's Next?
+
+Now you are all set to go, you can start using minetrax and add your servers to it.
+Below are some steps to follow next:
+
+2. [Add your First Minecraft Server to Web](../installation/adding-minecraft-server)
+3. [Install Plugin on your Minecraft Server](../installation/setup-plugin)
+
+
+## Available Docker Commands
+
+### 1. `bash docker-run.sh up`
+
+This command is used to fetch latest version of minetrax and then run the containers.
+
+Whenever there is any change made to code you should run it to get latest changes.
+
+```bash
+bash docker-run.sh down
+bash docker-run.sh up
+```
+
+
+### 2. `bash docker-run.sh down`
+
+This command is used to stop and remove all the containers. This will **not** remove any data or database. You can safely run this command if you want to stop minetrax for some time.
+
+### 3. `bash docker-run.sh logs`
+
+This command is used to view logs of all the containers. You can use this command to debug any issues you might face.
+
+### 4. `bash docker-run.sh optimize`
+
+This command is used to clear old config cache and re-cache the config. This is useful when you change any environment variables or update your `.env` file.
+
+### 5. `bash docker-run.sh artisan {command}`
+
+This command is used to run any `artisan` commands. For example, if you want to clear cache, you can use this command.
+
+```bash
+# Clear cache
+bash docker-run.sh artisan cache:clear
+```
+
+### 6. `bash docker-run.sh buildfrontend`
+
+This command is used to build frontend assets. It will run `npm install` and then `npm run prod`.
+This can be helpful if you are developing and using your own theme.
+
+### 7. `docker compose exec -it minetrax bash`
+
+SSH into the main docker container to test things or run some commands.

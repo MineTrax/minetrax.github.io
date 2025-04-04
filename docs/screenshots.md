@@ -63,12 +63,23 @@ Below are some of screenshots you might wanna look at before considering.
 ## Link Players
 ![LinkPlayers](./../static/img/shots/new/linkplayers.png)
 
+## Change Player Skin
+![ChangePlayerSkin](./../static/img/shots/new/change-player-skin.png)
+
+## Command Runner
+![CommandRunner](./../static/img/shots/new/command-runner.png)
+![CommandHistory](./../static/img/shots/new/command-history.png)
+
 ## Players
 ![PlayerStats](./../static/img/shots/new/playerstats.png)
 
 ![PlayerDetails](./../static/img/shots/new/playerdetails.png)
 
 
+## BanWarden
+![Index](./../static/img/shots/new/index-banwarden.png)
+
+![Show](./../static/img/shots/new/show-banwarden.png)
 
 ## More screenshots
 ![HomepageWithHero](./../static/img/shots/homewithhero.png)
