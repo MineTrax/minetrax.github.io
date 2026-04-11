@@ -21,7 +21,7 @@ MineTrax has lot of features, some of them are listed below:
  - In-Depth Analytics for Server and Player (Intel).
  - Track player & server data and perform various analysis on them.
  - BanWarden - Punishment tracking system which hooks into your favorite punishment plugin.
- - Custom Theme & Branding - Customize website as per your server theme.
+ - Custom Theme & Branding - Customize website as per your server theme or Choose from our collection of predefined color schemes.
  - SkinChanger - Let players change their skin from website.
  - Command Runner - Run or schedule commands to be run on servers from website.
  - Player Password Reset - Let users change their linked players password from website. (Useful for cracked servers)
