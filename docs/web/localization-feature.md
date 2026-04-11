@@ -5,7 +5,7 @@ id: localization
 ---
 
 :::success Help Wanted! Contribute to Localization
-If you know a language and want to contribute to localization. Please join our [**Discord group**](https://discord.gg/Hzfj27k) and  ping `Xinecraft#2139`. It will be very helpful for the project as current translated text are mostly from Google Translate.
+If you know a language and want to contribute to localization. Please join our [**Discord group**](https://discord.gg/Hzfj27k) and  ping `Xinecraft#2139`. It will be very helpful for the project as current translated text are mostly from AI Translator.
 :::
 
 Localization feature allows you to translate the web in any language you want. You can choose from predefined language or add new one.
@@ -112,106 +112,50 @@ It is very simple to add new language if your desired language is not included i
 
 To add support for new language you have two methods:
 
-### Method 1 (Manual)
-1. Go to minetrax folder Eg: `cd /var/www/minetrax`
-1. copy `lang/en` folder to `lang/YOUR_LANGUAGE_CODE` Eg: `lang/hr`.
-1. copy `lang/en.json` file to `lang/YOUR_LANGUAGE_CODE.json` Eg: `lang/en.json`.
-1. Now start adding translations in the newly created files as [described above](#how-to-make-changes-to-language-files).
-1. Change the locale of your site to the new language by changing `APP_LOCALE` env variable as [described here](#how-to-change-default-language).
-
-Using the above method might get cumbersome as you will have to add translations for every text manually. Follow the second method instead if you prefer automatic translation from google translate.
-
-
-### Method 2 (Automatic)
-This method uses google translate to add translation for all text automatically.
+### Method 1 (Automatic)
+This method uses MineTrax AI translation support to generate translation for your language automatically.
 #### 1. Go to MineTrax installation folder
 ```bash
 cd /var/www/minetrax
 ```
 
-#### 2. Run the language creator script for PHP
+#### 2. Make sure AI feature is enabled and API key is configured
+For this to work, enable AI in your `.env` file and set up the API key for the provider you want to use.
+```bash title=".env"
+AI_ENABLED=true
+OPENAI_API_KEY=your_api_key_here
+```
+
+#### 3. Copy the PHP translation folder and create an empty JSON file
+Copy `lang/en` folder to `lang/YOUR_LANGUAGE_CODE` Eg: `lang/hr`.
+
+Create a new empty file named `lang/YOUR_LANGUAGE_CODE.json`.
+```bash
+cp -r lang/en lang/hr
+touch lang/hr.json
+```
+
+#### 4. Run the translation generator
 Run the command in console.
 ```bash
-php artisan translate:files
+php artisan translations:manage translate
 ```
 
-It will ask few questions, answer it as shown below:
-```text
- What is base locale? [en]:
- > en
+It will automatically detect the empty `lang/YOUR_LANGUAGE_CODE.json` file and generate the translations for it using AI.
 
- What are the target locales? Comma seperate each lang key [es,fr,ru,sk,de,pl,uk,hi]:
- // highlight-next-line
- > YOUR_DESIRED_LANGUAGE <- Replace with your desired language code
+#### 5. Review the language files
+AI generated text will reduce your work but you should still review it for incorrect or awkward translations.
 
- Force overwrite existing translations? [No]:
-  [0] No
-  [1] Yes
- > 0
+Now open `lang/YOUR_LANGUAGE_CODE` and `lang/YOUR_LANGUAGE_CODE.json` and review/edit them as required.
 
- Verbose each translation? [Yes]:
-  [0] No
-  [1] Yes
- > 1
-
- Use text exploration and json translation or php files? [php]:
-  [0] json
-  [1] php
- > php
-
- Are there specific target files to translate only? ex: file1,file2 []:
- >
-
- Are there specific files to exclude? [auth,pagination,validation,passwords]:
- > no
-
- 0/1 [>---------------------------]   0%
- en -> xx translating...
-```
-
-Let it run and it should create a new folder named as your language code inside `lang` folder, with all php translation files.
-
-#### 3. Run the language creator script for JSON
-Run the command in console.
-```bash
-php artisan translate:files
-```
-
-It will ask few questions, answer it as shown below:
-```text
- What is base locale? [en]:
- > en
-
- What are the target locales? Comma seperate each lang key [es,fr,ru,sk,de,pl,uk,hi]:
- // highlight-next-line
- > YOUR_DESIRED_LANGUAGE <- Replace with your desired language code
-
- Force overwrite existing translations? [No]:
-  [0] No
-  [1] Yes
- > 0
-
- Verbose each translation? [Yes]:
-  [0] No
-  [1] Yes
- > 1
-
- Use text exploration and json translation or php files? [php]:
-  [0] json
-  [1] php
- > json
-
- 0/1 [>---------------------------]   0%
-en -> xx translating...
-```
-
-It will take a while, let it complete and it should create a new json file `lang/YOUR_LANGUAGE_CODE.json`.
-
-#### 3. Review the language files
-Text translated by Google will reduced your work but you still should check for wrong translations and fix them.
-Eg: Google translate will translate to word `Steam` in translation text but it shouldn't be in some cases.
-
-Now open the newly created folder & files in `lang` directory for your language and review/edit them as required.
-
-#### 4. Finally change locale of Web to newly added language
+#### 6. Finally change locale of Web to newly added language
 Change the locale of your site to the new language by changing `APP_LOCALE` env variable as [described here](#how-to-change-default-language).
+
+If you do not want to use AI, you can use the manual method instead.
+
+### Method 2 (Manual)
+1. Go to minetrax folder Eg: `cd /var/www/minetrax`
+1. copy `lang/en` folder to `lang/YOUR_LANGUAGE_CODE` Eg: `lang/hr`.
+1. copy `lang/en.json` file to `lang/YOUR_LANGUAGE_CODE.json` Eg: `lang/hr.json`.
+1. Now start editing the values in the newly created PHP files and JSON file as [described above](#how-to-make-changes-to-language-files).
+1. Change the locale of your site to the new language by changing `APP_LOCALE` env variable as [described here](#how-to-change-default-language).
